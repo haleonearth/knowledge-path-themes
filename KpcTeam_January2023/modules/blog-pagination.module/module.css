@@ -1,0 +1,30 @@
+.blog-pagination__next-link {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #0E75BC!important;
+  letter-spacing: 2px;
+}
+
+.blog-pagination__prev-link {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #0E75BC!important;
+  letter-spacing: 2px;
+}
+
+.blog-pagination__link.blog-pagination__next-link--disabled, .blog-pagination__link.blog-pagination__prev-link--disabled{
+  opacity:0;
+}
+
+@media (max-width: 500px){
+  .blog-pagination {
+    display: block;
+  }
+  .blog-pagination a.blog-pagination__link {
+    margin-bottom: 10px;
+  }
+}

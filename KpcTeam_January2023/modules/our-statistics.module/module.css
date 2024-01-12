@@ -1,0 +1,123 @@
+.our-statistics {
+  padding-top: 60px;
+  padding-bottom: 110px;
+  background-color: #fcd21d;
+}
+
+.our-statistics .our-stat-con {
+  width: 80%;
+  max-width: 1080px;
+  margin: auto;
+  position: relative;
+}
+
+.our-statistics .our-stat-top {
+  text-align: center;
+}
+
+.our-statistics .our-stat-top-con {
+  margin-bottom: 2.75%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.our-statistics .our-stat-top-con h2 {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.3em;
+  color: #4a5359;
+}
+
+.our-statistics .text_inner p {
+  color: #353740;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.our-statistics .our-stat-bot-con {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.our-statistics .passthrough {
+  width: 20.875%;
+  margin-right: 5.5%;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+  text-align: center;
+}
+
+.our-statistics .passthrough:last-child {
+  margin: 0;
+}
+
+.our-statistics .title {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  color: #353740;
+  font-size: 18px;
+  position: relative;
+  line-height: 1.1em;
+  padding-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.our-statistics .percent-value {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #fff;
+  letter-spacing: 0;
+}
+
+.our-statistics .percent p {
+  padding: 0;
+}
+
+.our-statistics .our-stat-bot {
+  padding-top: 50px;
+}
+
+@media (max-width:767px){
+  .our-statistics .our-stat-top-con h2 {
+    font-size: 30px;
+  }
+
+  .our-statistics .percent-value {
+    font-size: 40px;
+  }
+
+  .our-statistics .title {
+    font-size: 16px;
+  }
+
+  .our-statistics .passthrough {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .our-statistics .our-stat-bot-con {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .our-statistics .our-stat-bot {
+    padding-top: 20px;
+  }
+
+  .our-statistics {
+    padding-bottom: 50px;
+  } 
+}

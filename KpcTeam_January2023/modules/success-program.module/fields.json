@@ -1,0 +1,102 @@
+[ {
+  "id" : "e0e316fd-5a4f-e61a-61d3-48340459b781",
+  "name" : "list_item",
+  "display_width" : null,
+  "label" : "List Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "d0276320-f72c-a308-6289-58c274ef9ae9",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "08687a24-6e37-8612-bb2b-e4e42b5efc86",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Align.png",
+      "alt" : "Align",
+      "loading" : "lazy",
+      "width" : 124,
+      "height" : 128,
+      "max_width" : 124,
+      "max_height" : 128
+    }
+  }, {
+    "id" : "d0276320-f72c-a308-6289-58c274ef9ae9",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Align"
+  }, {
+    "id" : "2d24683b-292c-12eb-fcad-b85f6a8d2c38",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "e1b1bd2d-2868-3397-4a05-1339c55a4edf",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Align your business needs with expectations and activities</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Align.png",
+      "alt" : "Align",
+      "loading" : "lazy",
+      "width" : 124,
+      "height" : 128,
+      "max_width" : 124,
+      "max_height" : 128
+    },
+    "heading" : "Align",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "content" : "<p>Align your business needs with expectations and activities</p>"
+  } ]
+} ]

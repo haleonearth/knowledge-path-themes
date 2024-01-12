@@ -1,0 +1,10 @@
+{% set href = module.logo_link.url.href %}
+{% if module.logo_link.url.type is equalto "EMAIL_ADDRESS" %}
+{% set href = "mailto:" + href %}
+{% endif %}
+<a href="{{ href }}"
+   {% if module.logo_link.open_in_new_tab %}target="_blank"{% endif %}
+   {% if module.logo_link.rel %}rel="{{ module.logo_link.rel }}"{% endif %}
+   >
+  <img src="{{ module.logo_image.src }}" alt="{{ module.logo_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+</a>

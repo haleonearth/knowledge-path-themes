@@ -1,0 +1,180 @@
+.award-winning-design {
+  padding: 27px 0;
+  box-shadow: inset 0px 100px 0px 0px #ffffff;
+  padding-top: 0px;
+  background-color: #f7f7f7;
+}
+
+.award-winning-design .left {
+  width: 50%;
+  padding-top: 140px;
+  padding-left: 10%;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+}
+
+.award-winning-design .right {
+  width: 50%;
+  padding: 2.855% 0;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+  padding-top: 0;
+}
+
+.award-winning-design span.parallax_bg_wrap {
+  display: block;
+  position: relative;
+  max-width: 100%;
+}
+
+.award-winning-design .award-winning-design-con {
+  display: flex;
+}
+
+.award-winning-design .heading {
+  max-width: 75%;
+}
+
+.award-winning-design .content {
+  max-width: 75%;
+}
+
+.award-winning-design .item {
+  max-width: 75%;
+}
+
+.award-winning-design .heading h1 {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.3em;
+  color: #4a5359;
+  margin: 0;
+  padding: 0;
+}
+
+.award-winning-design .heading {
+  margin-bottom: 5.82%;
+  max-width: 75%;
+  margin-top: 26px;
+}
+
+.award-winning-design .content p {
+  color: #747d88;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 1.8em;
+  font-size: 16px;
+}
+
+.award-winning-design .item {
+  display: flex;
+  padding: 5.82% 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.award-winning-design .blurb_content {
+  width: 44.17989%;
+  margin-right: 11.64%;
+  text-align: center;
+}
+
+.award-winning-design .main_blurb_image {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 30px;
+  line-height: 0;
+  max-width: 100%;
+}
+
+.award-winning-design span.image_wrap {
+  display: block;
+  margin: auto;
+}
+
+.award-winning-design span.et-waypoint {
+  font-size: 48px;
+  color: #fcd21d;
+  font-family: 'ETmodules';
+  font-weight: 400;
+  opacity: 1;
+  -webkit-animation: fadeTop 1s cubic-bezier(.77,0,.175,1) 1;
+  animation: fadeTop 1s cubic-bezier(.77,0,.175,1) 1;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  display: inline-block;
+  box-sizing: border-box;
+  direction: ltr;
+}
+
+.award-winning-design span.et-waypoint.product:before {
+  content: 'b';
+}
+
+.award-winning-design h4.module_header {
+  margin: 0;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  color: #353740;
+  line-height: 1.4em;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.award-winning-design .blurb_content:last-child {
+  margin: 0;
+}
+
+.award-winning-design span.et-waypoint.branding:before {
+  content: '';
+}
+
+
+@media (max-width:767px){
+  .award-winning-design .award-winning-design-con {
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  .award-winning-design .left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .award-winning-design .right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .award-winning-design .heading {
+    max-width: 100%;
+  }
+
+  .award-winning-design .heading h1 {
+    font-size: 26px;
+  }
+
+  .award-winning-design .content, .award-winning-design .item {
+    max-width: 100%;
+  } 
+
+  .award-winning-design .item{
+    flex-wrap:wrap;
+  }
+
+  .award-winning-design .blurb_content {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+}

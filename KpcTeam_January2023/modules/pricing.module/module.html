@@ -1,0 +1,48 @@
+<div class="pricing">
+  <div class="pricing-con page-center">
+    <div class="pb_divide"><div class="divider_internal"></div></div>
+    <div class="heading">
+      <h1>{{ module.heading }}</h1>
+    </div>
+    <div class="content">
+      {{ module.content }}
+    </div>
+    <div class="pricing-items-main">
+      {% for item in module.items %}
+      <div class="pricing-item {% if item.active_item %}item-active{% endif %}">
+        <div class="pricing-item-con">
+          <div class="pricing_heading">
+            <h2 class="pricing_title">{{ item.heading }}</h2>
+            <span class="best_value">{{ item.sub_heading }}</span>
+          </div>
+          <div class="pricing_content_top">
+            <span class="price"><span class="et_pb_sum">{{ item.prefix }}{{ item.price }}</span></span>
+          </div>
+          <div class="pricing_content">
+            {{ item.content }}
+          </div>
+          {%  if item.button_group.button_type == "std" %}
+          <div class="lm-button">
+            {% set href = item.button_group.button_link.url.href %}
+            {% if item.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.button_group.button_link.rel %}rel="{{ item.button_group.button_link.rel }}"{% endif %}
+               >
+              {{ item.button_group.button_text }}
+            </a>
+          </div>
+          {% endif %}
+          {%  if item.button_group.button_type == "cta" %}
+          <div class="lm-button">
+            {% cta guid="{{ item.button_group.cta_field }}" %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

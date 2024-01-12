@@ -1,0 +1,43 @@
+<div class="card-section" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});">
+  <div class="card-sec-con">
+    {% for item in module.card_items %}
+    <div class="card-item">
+      <div class="card-item-con">
+        {% if item.image_field.src %}
+        <div class="card-item-image">
+          <span>
+            <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+          </span>
+        </div>
+        {% endif %}
+        <div class="text-heading">
+          <h4>{{ item.heading }}</h4>
+        </div>
+        <div class="pb_space"><div class="divider_internal"></div></div>
+        <div class="text_inner">
+          {{ item.content }}
+        </div>
+        {%  if item.button_group.button_type == "std" %}
+        <div class="cm-button">
+          {% set href = item.button_group.button_link.url.href %}
+          {% if item.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if item.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.button_group.button_link.rel %}rel="{{ item.button_group.button_link.rel }}"{% endif %}
+             >
+            {{ item.button_group.button_text }}
+          </a>
+        </div>
+        {% endif %}
+        {%  if item.button_group.button_type == "cta" %}
+        <div class="cm-button">
+          {% cta guid="{{ item.button_group.cta_field }}" %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

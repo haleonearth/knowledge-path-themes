@@ -1,0 +1,63 @@
+<div class="events" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});">
+  <div class="events-con page-center">
+    <div class="events-top">
+      <div class="events-top-con">
+        <h3>{{ module.top_text }}</h3>
+        <h2>{{ module.heading }}</h2>
+        <div class="et_pb_text_inner">
+          {{ module.subheading }}
+        </div>
+      </div> 
+    </div>
+    {% set rec_posts = blog_recent_posts( module.select_blog ,  module.number_of_post ) %}
+    <div class="events-bottom">
+      <div class="events-bottom-con">
+        {% for rec_post in rec_posts %}
+        <div class="item">
+          <div class="item-con">
+            {% if rec_post.post_list_summary_featured_image %}
+            <div class="item-image">
+              <a href="{{ rec_post.absolute_url }}">
+                <img src="{{ resize_image_url( rec_post.post_list_summary_featured_image,767 ) }}" alt="{{ rec_post.name|striptags }}">
+              </a>
+            </div>
+            {% endif %}
+            <h4>
+              <a href="{{ rec_post.absolute_url }}">{{ rec_post.name }}</a>
+            </h4>
+            {% if rec_post.topic_list %}
+            <p class="post-meta">
+              {% for topic in rec_post.topic_list %}
+              <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+              {% endfor %}
+            </p>
+            {% endif %}
+            <div class="cm-content">
+              {{ rec_post.post_list_content|truncatehtml(100)|striptags|safe }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {%  if module.button_group.button_type == "std" %}
+    <div class="lm-button">
+      {% set href = module.button_group.button_link.url.href %}
+      {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a href="{{ href }}"
+         {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+         >
+        {{ module.button_group.button_text }}
+      </a>
+    </div>
+    {% endif %}
+    {%  if module.button_group.button_type == "cta" %}
+    <div class="lm-button">
+      {% cta guid="{{ module.button_group.cta_field }}" %}
+    </div>
+    {% endif %}
+  </div>
+</div>

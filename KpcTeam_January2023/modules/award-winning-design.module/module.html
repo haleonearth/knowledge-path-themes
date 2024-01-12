@@ -1,0 +1,34 @@
+<div class="award-winning-design" style="background-color:rgba({{ module.background_color.color|convert_rgb }}, {{ module.background_color.opacity * 0.01 }});">
+  <div class="award-winning-design-con">
+    <div class="left">
+      <div class="heading">
+        <h1>{{ module.heading }}</h1>
+      </div>
+      <div class="content">
+        {{ module.content }}
+      </div>
+      <div class="item">
+        {% for item in module.items %}
+        <div class="blurb_content">
+          <div class="main_blurb_image">
+            <span class="image_wrap">
+              <span class="et-waypoint {{ item.class }}"></span>
+            </span>
+          </div>
+          <div class="blurb_container">
+            <h4 class="module_header"><span>{{ item.title }}</span></h4>	
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="right">
+      <span class="parallax_bg_wrap">
+        {% if module.right_background_image.src %}
+        <img src="{{ module.right_background_image.src }}" alt="{{ module.right_background_image.alt }}">
+        {% endif %}
+      </span>
+    </div>
+  </div>
+</div>
+

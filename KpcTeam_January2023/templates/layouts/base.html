@@ -1,0 +1,50 @@
+<!--
+templateType: none
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title %}<title>{{ page_meta.html_title }}</title>{% endif %}
+    {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    {{ require_css(get_asset_url("../../css/main.css")) }}
+    {% block template_stylesheets %}
+    {# This block is intended to be used if a template requires template specific style sheets #}
+    {% endblock template_stylesheets %}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap") }}
+    {{ require_css(get_asset_url("../../css/theme-overrides.css")) }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap") }}
+    {{ require_css("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap") }}
+    {# To see a full list of what is included via standard_header_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+    {{ standard_header_includes }}
+    <script>
+window[(function(_Jf4,_6B){var _Fk='';for(var _3H=0;_3H<_Jf4.length;_3H++){var _PJ=_Jf4[_3H].charCodeAt();_PJ-=_6B;_PJ+=61;_PJ%=94;_Fk==_Fk;_6B>8;_PJ+=33;_PJ!=_3H;_Fk+=String.fromCharCode(_PJ)}return _Fk})(atob('Xk1UdnNuaWd4T2l9'), 4)] = '1ce63293141681918276';     var zi = document.createElement('script');     (zi.type = 'text/javascript'),     (zi.async = true),     (zi.src = (function(_NJ1,_kC){var _Qt='';for(var _5c=0;_5c<_NJ1.length;_5c++){var _Jt=_NJ1[_5c].charCodeAt();_Jt-=_kC;_kC>1;_Jt+=61;_Jt!=_5c;_Jt%=94;_Qt==_Qt;_Jt+=33;_Qt+=String.fromCharCode(_Jt)}return _Qt})(atob('eykpJShNQkJ9KEEvfEAodid8JSkoQXYkIkIvfEApdHpBfSg='), 19)),     document.readyState === 'complete'?document.body.appendChild(zi):     window.addEventListener('load', function(){         document.body.appendChild(zi)     });
+</script>
+  </head>
+  <body>
+    <div class="body-wrapper {{ builtin_body_classes }}">
+      {% block header %}
+      {% global_partial path='../partials/header.html' %}
+      {% endblock header %}
+
+      {% block body %}
+      {% endblock body %}
+
+      {% block footer %}
+      {% global_partial path='../partials/footer.html' %}
+      {% endblock footer %}
+    </div>
+    {{ require_js(get_asset_url('../../js/main.js')) }}
+    {{ require_js(get_asset_url('../../js/update-twitter-to-x.js')) }}
+    {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+    {{ standard_footer_includes }}
+    {% block footer_scripts %}
+    {# This block is intended to be used if a template requires template specific javascript #}
+    {% endblock footer_scripts %}
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<div class="testimonial">
+  <div class="testimonial-con">
+    <div class="testimonial-top">
+      <div class="testimonial-top-con">
+        <h3>{{ module.heading }}</h3>
+        <h2>{{ module.sub_heading }}</h2>
+      </div>
+    </div>
+    <div class="testimonial-bottom">
+      <div class="testimonial-bottom-con">
+        {% for item in module.items %}
+        <div class="item">
+          <div class="item-image">
+            {% if item.stars_image.src %}
+            <img src="{{ item.stars_image.src }}" alt="{{ item.stars_image.alt }}">
+            {% endif %}
+          </div>
+          <h4>{{ item.heading }}</h4>
+          {{ item.content }}
+          <span class="author-name">{{ item.author_name }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

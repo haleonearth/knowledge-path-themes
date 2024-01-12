@@ -1,0 +1,41 @@
+[ {
+  "id" : "fc89b5eb-1d9e-c393-2385-cb63136c9538",
+  "name" : "logo_image",
+  "display_width" : null,
+  "label" : "Logo Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KPC.png",
+    "alt" : "KnowledgePath",
+    "loading" : "lazy",
+    "width" : 824,
+    "height" : 223,
+    "max_width" : 824,
+    "max_height" : 223
+  }
+}, {
+  "id" : "56778623-5db6-ed09-6699-af127531150b",
+  "name" : "logo_link",
+  "display_width" : null,
+  "label" : "Logo Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "type" : "EXTERNAL",
+      "href" : "/",
+      "content_id" : null
+    },
+    "open_in_new_tab" : true,
+    "no_follow" : false
+  }
+} ]

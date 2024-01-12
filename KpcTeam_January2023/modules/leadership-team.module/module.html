@@ -1,0 +1,30 @@
+<div class="leadership-team-wrapper clearfix">
+  {% for item in module.team_item %}
+  <div class="leadership-team-item clearfix">
+    <div class="leadership-team-inner clearfix">
+      <div class="top-content clearfix">
+        {% if item.name_leader %}
+        <h4 class="name">
+          {{ item.name_leader }}
+        </h4>
+        {% endif %}
+        {% if item.designation %}
+        <h4 class="des">
+          {{ item.designation }}
+        </h4>
+        {% endif %}
+      </div>
+      <div class="two-col clearfix">
+        {% if item.image_field.src %}
+        <div class="image-col">
+          <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+        {% endif %}
+        <div class="content-col">
+          {{ item.about_leader }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

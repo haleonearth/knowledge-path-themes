@@ -1,0 +1,105 @@
+.back-to-top {
+  text-align: center;
+  background: rgba(0,0,0,0.65);
+  text-decoration: none;
+  position: fixed;
+  display: inline;
+  opacity: 1;
+  -webkit-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 99999;
+  bottom: 125px;
+  right: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 5px;
+  font-family: ETmodules;
+  speak: none;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  box-sizing: border-box;
+  direction: ltr;
+  color: #fff;
+  content: attr(data-icon);
+}
+
+.back-to-top:before {
+  content: '2';
+}
+.footer.no-nav .footer-top ul li:not(:first-child){
+  display:none;
+}
+.footer {
+  background-color: #1b659b;
+  font-family:Open Sans,Arial,sans-serif;
+  position:relative;
+  z-index:9;
+}
+
+.footer-top {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.footer-bottom {
+  background-color: #797c7e;
+  padding: 16px 0 6px;
+}
+
+.footer .container {
+  width: 80%;
+  max-width: 1080px;
+  margin: auto;
+  position: relative;
+}
+
+.footer .footer-top ul {
+  padding: 14px 0;
+  margin: 0;
+}
+
+.footer .footer-top ul li {
+  font-weight: 600;
+  display: inline-block;
+  font-size: 14px;
+  padding-right: 26px;
+}
+
+.footer .footer-top ul li a {
+  color: #bbb;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-size: 14px;
+}
+
+.footer-bottom p{
+  text-align: left;
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-family:Open Sans,Arial,sans-serif;
+  letter-spacing: normal;
+  font-weight:400;
+}
+@media (max-width: 980px){
+  .footer-top  ul, .footer-bottom p{
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px){
+  .footer .footer-top ul {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row !important;
+  }
+  .footer-bottom p {
+    line-height: 24px;
+  }
+}

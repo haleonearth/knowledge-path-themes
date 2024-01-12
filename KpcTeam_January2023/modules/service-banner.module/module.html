@@ -1,0 +1,60 @@
+
+{% if module.image_field.src || module.heading || module.content_alignment || module.sub_heading %}
+<div class="service-banner">
+  <div class="service-banner-con page-center">
+    <span class="service-parallax-wrap">
+      <span class="service-parallax_bg jarallax" style="background-image: url({{ module.image_field.src }});"></span>
+    </span>
+    <div class="service-banner-mc">
+      <div class="service-banner-content" style="text-align:{{ module.content_alignment }}">
+        <h1 class="service_header">{{ module.heading }}</h1>
+        <div class="service_text_wrapper">
+          {{ module.sub_heading }}
+        </div>
+        <div class="service-buttons">
+          <div class="service-button-one">
+            {% if module.learn_more_button.button_type == "std" %}
+            {% set href = module.learn_more_button.button_link.url.href %}
+            {% if module.learn_more_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if module.learn_more_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.learn_more_button.button_link.rel %}rel="{{ module.learn_more_button.button_link.rel }}"{% endif %}
+               >
+              {{ module.learn_more_button.button_text }}
+            </a>
+            {% endif %}
+            {% if module.learn_more_button.button_type == "cta" %}
+            {% cta guid="{{ module.learn_more_button.cta_field }}" %}
+            {% endif %}
+          </div>
+          <div class="service-button-two">
+            {% if module.contact_us_button.button_type == "std" %}
+            {% set href = module.contact_us_button.button_link.url.href %}
+            {% if module.contact_us_button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if module.contact_us_button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.contact_us_button.button_link.rel %}rel="{{ module.contact_us_button.button_link.rel }}"{% endif %}
+               >
+              {{ module.contact_us_button.button_text }}
+            </a>
+            {% endif %}
+            {% if module.contact_us_button.button_type == "cta" %}
+            {% cta guid="{{ module.contact_us_button.cta_field }}" %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="service-banner-overlay" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});"></div>
+      <div class="service_header_scroll">
+        <a href="#next" class="service-scroll">
+          <span class="service-scroll-down et-pb-icon">"</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,11 @@
+<div class="clients">
+  <div class="clients-con page-center">
+    {% for item in module.our_client %}
+    <div class="clients--item">
+      {% if item.logo.src %}	
+      <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

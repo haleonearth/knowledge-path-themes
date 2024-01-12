@@ -1,0 +1,24 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: It Services Page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<div class="banner-section services-page-banner">
+  {% dnd_area "Banner", label='Banner Area' %}
+  {% dnd_section full_width=true %}
+  {% dnd_module path='../modules/banner', width=12, offset=0, label="Banner" %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}  
+  {% end_dnd_area %}
+</div>
+<main id="main-content" class="body-container-wrapper services-page">
+  <div id="next">
+    {% dnd_area 'row1' class='body-container services-page-row1', label='Row 1' %}{% end_dnd_area %}
+  </div>
+  {% dnd_area 'row2' class='body-container services-page-row2', label='Row 2' %}{% end_dnd_area %}
+
+</main>
+{% endblock body %}

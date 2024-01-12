@@ -1,0 +1,87 @@
+[ {
+  "id" : "ad06eff5-8886-0bec-c7ec-1d7a996ef5a6",
+  "name" : "team_item",
+  "display_width" : null,
+  "label" : "Team Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 100,
+    "sorting_label_field" : "03d7fd59-6d4a-7ec7-3c8c-145c7c7deac6",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "03d7fd59-6d4a-7ec7-3c8c-145c7c7deac6",
+    "name" : "name_leader",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "David Warford"
+  }, {
+    "id" : "3d849387-319b-de81-2666-24b7e2595280",
+    "name" : "designation",
+    "display_width" : null,
+    "label" : "Designation",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Founder and Chief Executive Officer"
+  }, {
+    "id" : "2ab7bca7-38c6-0b1e-8f4d-433e54f54d64",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Warford-David.jpg",
+      "alt" : "Warford David",
+      "loading" : "lazy",
+      "width" : 600,
+      "height" : 600,
+      "max_width" : 600,
+      "max_height" : 600
+    }
+  }, {
+    "id" : "e10cffa7-405c-c725-69ff-e13448ba5984",
+    "name" : "about_leader",
+    "display_width" : null,
+    "label" : "About Leader",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>David founded KnowledgePath Consulting with the deep-seeded belief that to truly serve companies you must understand each unique business wholistically from the C-Suite though to the manufacturing floor; and that independent consulting firms are only truly independent when they are tryly vendor and technology agnostic.</p>\n<p>With over thirty-five years’ experience in the business and technology consulting industry, David has a proven track record of providing service to companies worldwide. He specializes in helping organizations through technology and business transformation and brings experience as a software implementer, consultant, business strategist and leader.</p>\n<p>David founded KnowledgePath Consulting with the goal of bringing genuine, time-to-value consulting to clients. His business philosophy stems from the pillars of trust, respect, and transparency, and all of KnowledgePath’s services are modeled in synch.</p>\n<p>Through his breadth of experience, including his service in the United States Armed Forces, David has built a reputation as a trusted leader in the enterprise software market. He has guided clients including well-respected names such as Toyota, Boeing, and Stanley Steamer, along with thousands of mid-sized organizations across the United States and globally.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "name_leader" : "David Warford",
+    "designation" : "Founder and Chief Executive Officer",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Warford-David.jpg",
+      "alt" : "Warford David",
+      "loading" : "lazy",
+      "width" : 600,
+      "height" : 600,
+      "max_width" : 600,
+      "max_height" : 600
+    },
+    "about_leader" : "<p>David founded KnowledgePath Consulting with the deep-seeded belief that to truly serve companies you must understand each unique business wholistically from the C-Suite though to the manufacturing floor; and that independent consulting firms are only truly independent when they are tryly vendor and technology agnostic.</p>\n<p>With over thirty-five years’ experience in the business and technology consulting industry, David has a proven track record of providing service to companies worldwide. He specializes in helping organizations through technology and business transformation and brings experience as a software implementer, consultant, business strategist and leader.</p>\n<p>David founded KnowledgePath Consulting with the goal of bringing genuine, time-to-value consulting to clients. His business philosophy stems from the pillars of trust, respect, and transparency, and all of KnowledgePath’s services are modeled in synch.</p>\n<p>Through his breadth of experience, including his service in the United States Armed Forces, David has built a reputation as a trusted leader in the enterprise software market. He has guided clients including well-respected names such as Toyota, Boeing, and Stanley Steamer, along with thousands of mid-sized organizations across the United States and globally.</p>"
+  } ]
+} ]

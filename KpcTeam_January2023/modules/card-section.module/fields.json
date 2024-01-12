@@ -1,0 +1,197 @@
+[ {
+  "id" : "0e78c772-65c9-6475-b40e-6b5a79571d0d",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#e3e7e6",
+    "opacity" : 100
+  }
+}, {
+  "id" : "344af762-fcf3-cb6f-22ef-d17f31408fbd",
+  "name" : "card_items",
+  "display_width" : null,
+  "label" : "Card Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "3be12f4f-f3ed-3991-bb79-c90507ca8f6b",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "7bbc8c82-e10d-90eb-3efa-dc82556f5e85",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/company.png",
+      "alt" : "company",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    }
+  }, {
+    "id" : "3be12f4f-f3ed-3991-bb79-c90507ca8f6b",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "TRUST"
+  }, {
+    "id" : "48e7acc8-0ad8-6c24-663a-3833e429aec4",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>In all facets of ERP evaluation or modernization, we have earned our clients’ trust as ERP evaluation experts through our deep industry knowledge and experience. With 30 years in the industry, we have experienced the evolution of ERP technology firsthand. We have built our transformation program for the business needs of today. We built this on our vast experience. As technology has evolved so has KnowledgePath.</p>"
+  }, {
+    "id" : "ad6ccb3a-aeb1-0e7f-ae63-3937be9c17ec",
+    "name" : "button_group",
+    "display_width" : null,
+    "label" : "Button Group",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "6691e8a9-a8d4-ab41-ac93-b668d2c04b2f",
+      "name" : "button_type",
+      "display_width" : null,
+      "label" : "Button Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "Cta" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice"
+    }, {
+      "id" : "aac4db08-cca5-5e76-02d8-79f3abd6ff46",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "6691e8a9-a8d4-ab41-ac93-b668d2c04b2f",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Learn More"
+    }, {
+      "id" : "f2472ded-6803-0cc4-3dc6-6e26c8ce5d8b",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "6691e8a9-a8d4-ab41-ac93-b668d2c04b2f",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "04181b6c-210d-2927-11b2-953a611d7336",
+      "name" : "cta_field",
+      "display_width" : null,
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "6691e8a9-a8d4-ab41-ac93-b668d2c04b2f",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "button_text" : "Learn More",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/company.png",
+      "alt" : "company",
+      "loading" : "lazy",
+      "width" : 512,
+      "height" : 512,
+      "max_width" : 512,
+      "max_height" : 512
+    },
+    "heading" : "TRUST",
+    "content" : "<p>In all facets of ERP evaluation or modernization, we have earned our clients’ trust as ERP evaluation experts through our deep industry knowledge and experience. With 30 years in the industry, we have experienced the evolution of ERP technology firsthand. We have built our transformation program for the business needs of today. We built this on our vast experience. As technology has evolved so has KnowledgePath.</p>",
+    "button_group" : {
+      "button_text" : "Learn More",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }
+  } ]
+} ]

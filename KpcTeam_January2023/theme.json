@@ -1,0 +1,16 @@
+{
+  "label": "Kpc Team January 2023",
+  "preview_path": "./templates/website-page.html",
+  "screenshot_path": "./images/template-previews/website-page.png",
+  "enable_domain_stylesheets": false,
+  "license": "./license.txt",
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 767px)",
+      "previewWidth": {
+        "value": 477
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<div class="bottom-contact">
+  <div class="bottom-contact-con page-center">
+    <span class="parallax_bg_wrap">
+      <span class="et_parallax_bg jarallax" style="background-image: url({{ module.image_field.src }});"></span>
+    </span>
+    <div class="bottom-contact-main">
+      <div class="bottom-cont-add">
+        <h1>{{ module.heading }}</h1>
+        <div class="text_inner">
+          {{ module.content }}
+        </div>
+        <div class="blurb_content address">
+          <div class="blurb_image">
+            <span class="image_wrap">
+              <span class="waypoint"></span>
+            </span>
+          </div>
+          <div class="blurb_container">	
+            <div class="blurb_description">
+              <p>{{ module.address }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="blurb_content number">
+          <div class="blurb_image">
+            <span class="image_wrap">
+              <span class="waypoint"></span>
+            </span>
+          </div>
+          <div class="blurb_container">	
+            <div class="blurb_description">
+              <p>{{ module.number }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="blurb_content email">
+          <div class="blurb_image">
+            <span class="image_wrap">
+              <span class="waypoint"></span>
+            </span>
+          </div>
+          <div class="blurb_container">	
+            <div class="blurb_description">
+              <p>{{ module.email }}</p>
+            </div>
+          </div>
+        </div>
+        <ul class="social_media">
+          <li class="social_network_link social-facebook">
+            {% set href = module.facebook_link.url.href %}
+            {% if module.facebook_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}" class="icon" title="Follow on Facebook" target="_blank"
+               {% if module.facebook_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.facebook_link.rel %}rel="{{ module.facebook_link.rel }}"{% endif %}
+               >
+            </a>
+          </li>
+          <li class="social_network_link social-twitter">
+            {% set href = module.twitter_link.url.href %}
+            {% if module.twitter_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}" class="icon" title="Follow on Twitter" target="_blank"
+               {% if module.twitter_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.twitter_link.rel %}rel="{{ module.twitter_link.rel }}"{% endif %}
+               >
+            </a>
+          </li>
+          <li class="social_network_link  et-social-linkedin">
+            {% set href = module.linkedin_link.url.href %}
+            {% if module.linkedin_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"class="icon" title="Follow on LinkedIn" target="_blank"
+               {% if module.linkedin_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.linkedin_link.rel %}rel="{{ module.linkedin_link.rel }}"{% endif %}
+               >
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-cont-form">
+        <h3>
+          {{ module.form_title }}
+        </h3>
+        {% form
+	form_to_use="{{ module.form_field.form_id }}"
+	response_response_type="{{ module.form_field.response_type }}"
+	response_message="{{ module.form_field.message }}"
+	response_redirect_id="{{ module.form_field.redirect_id }}"
+	response_redirect_url="{{module.form_field.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+%}
+      </div>
+    </div>
+  </div>
+</div>

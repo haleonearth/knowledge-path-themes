@@ -1,0 +1,35 @@
+[ {
+  "id" : "number_of_columns",
+  "name" : "number_of_columns",
+  "display_width" : null,
+  "label" : "Number of columns",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "full-width", "1" ], [ "two-col", "2" ], [ "three-col", "3" ], [ "four-col", "4" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : ""
+}, {
+  "id" : "featured_image",
+  "name" : "featured_image",
+  "display_width" : null,
+  "label" : "Featured image",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "post_title",
+  "name" : "post_title",
+  "display_width" : null,
+  "label" : "Post title",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+} ]

@@ -1,0 +1,17 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 97786043756,
+  "js_assets" : [ {
+    "url" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Js/gsap.min.js",
+    "autoload" : true,
+    "name" : "gsap.min.js"
+  }, {
+    "url" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Js/ScrollTrigger.min.js",
+    "autoload" : true,
+    "name" : "ScrollTrigger.min.js"
+  } ],
+  "label" : "Counter",
+  "is_available_for_new_content" : true
+}

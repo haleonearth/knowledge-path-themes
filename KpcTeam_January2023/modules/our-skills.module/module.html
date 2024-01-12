@@ -1,0 +1,39 @@
+<div class="our-skills">
+  <div class="our-skills-con page-center">
+    <div class="our-skills-top">
+      <div class="our-skills-top-con">
+        <h2>{{ module.heading }}</h2>
+        <div class="text_inner">
+          {{ module.content }}
+        </div>
+      </div>
+    </div>
+    <div class="our-skills-bot">
+      <div class="our-skills-bot-con">
+        <div class="left">
+          <div class="left-con">
+            {{ module.left_content }}
+          </div>
+        </div>  
+        <div class="right">
+          <div class="right-con">
+            <ul>
+              {% for item in module.skills %}
+              <li class="counter counter_0">
+                <span class="counter_title">{{ item.heading }} – {{ item.width }}</span>
+                <span class="counter_container">
+                  <span class="counter_amount wow rollIn" style="width:{{ item.width }}">
+                    <span class="counter_amount_number">
+                      <span class="counter_amount_number_inner"></span>
+                    </span>
+                  </span>
+                </span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>  
+      </div>
+    </div>  
+  </div>
+</div>

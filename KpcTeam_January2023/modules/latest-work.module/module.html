@@ -1,0 +1,71 @@
+<div class="latest-work" style="background-color:rgba({{ module.background_color.color|convert_rgb }}, {{ module.background_color.opacity * 0.01 }});">
+  <div class="latest-work-con">
+    <div class="latest-work-top">
+      <div class="latest-work-top-con">
+        <h2>{{ module.heading }}</h2>
+        <div class="text_inner">
+          {{ module.content }}
+        </div>
+      </div>
+    </div>
+    <div class="latest-work-bot">
+      <div class="latest-work-bot-con">
+        {% for item in module.image_group %}
+        <div class="work-image" style="width:{{ item.width }}">
+          <div class="box-shadow-overlay"></div>
+          <div class="latest-work-image">
+            {% set href = item.image_link.url.href %}
+            {% if item.image_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.image_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.image_link.rel %}rel="{{ item.image_link.rel }}"{% endif %}
+               >
+              {% if item.image_field.src %}
+              <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+              {% endif %}
+            </a>
+          </div>
+          {% for item2 in item.inner_images %}
+          <div class="latest-inner-image" style="width:{{ item2.width }}">
+            <div class="box-shadow-overlay"></div>
+            {% set href = item2.image_link.url.href %}
+            {% if item2.image_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item2.image_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item2.image_link.rel %}rel="{{ item2.image_link.rel }}"{% endif %}
+               >
+              {% if item2.image.src %}
+              <img src="{{ item2.image.src }}" alt="{{ item2.image.alt }}">
+              {% endif %}
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if module.button_group.button_type =="std" %}
+    <div class="lm-button">
+      {% set href = module.button_group.button_link.url.href %}
+      {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a href="{{ href }}"
+         {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+         >
+        {{ module.button_group.button_text }}
+      </a>
+    </div>
+    {% endif %}
+    {% if module.button_group.button_type =="cta" %}
+    <div class="lm-button">
+      {% cta guid="{{ module.button_group.cta_field }}" %}
+    </div>
+    {% endif %}
+  </div>
+</div>

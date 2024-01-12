@@ -1,0 +1,45 @@
+
+<div class="two-column-content {% if module.include_background_image %} full-image {% endif%}" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }}); {% if module.include_background_image %}background-image:url({{ module.left_image.src }}){% endif %}" id="{{ module.section_id }}">
+  <div class="two-column-con">
+    <div class="two-column-left" style="{% if not module.include_background_image %}background-image:url({{ module.left_image.src }}) {% endif %}">
+      <div class="two-column-left-can"></div>
+    </div>
+    <div class="two-column-right" style="background-color:rgba({{module.right_section_background_color.color|convert_rgb}},{{module.right_section_background_color.opacity / 100 }});">
+      <div class="two-column-right-can">
+        <div class="text_inner {{ name }}">
+          {% if module.title %}
+          <h5>{{ module.title }}</h5>
+          {% endif %}
+          {{ module.content }}
+        </div>
+        {% if module.button_group.button_type =="std" %}
+        <div class="cm-button">
+          {% set href = module.button_group.button_link.url.href %}
+          {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+             >
+            {{ module.button_group.button_text }}
+          </a>
+        </div>
+        {% endif %}
+        {% if module.button_group.button_type =="cta" %}
+        <div class="cm-button">
+          {% cta guid="{{ module.button_group.cta_field }}" %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .two-column-content .text_inner.{{ name }} * { 
+    color:rgba({{module.right_section_text_color.color|convert_rgb}},{{module.right_section_text_color.opacity / 100 }});
+  }
+</style>
+{% end_require_css%}

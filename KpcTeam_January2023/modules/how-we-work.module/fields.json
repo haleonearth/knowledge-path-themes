@@ -1,0 +1,109 @@
+[ {
+  "id" : "79b7f9da-9cca-048f-5096-2cf79171cd51",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "How <strong>We Work</strong>"
+}, {
+  "id" : "d2e82a4e-35a8-798a-9d35-b29b4765f8c9",
+  "name" : "sub_title",
+  "display_width" : null,
+  "label" : "Sub Title",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>The way we work with you is unique because your company is unique. Each organization has its own challenges, goals, and opportunities. A cookie cutter approach isn’t in your best interest, so we don’t use it. Instead, we developed the TrueNorth™ methodology and our Customer Success Program; both work together as a finely-tuned, individualized system to help you succeed.</p>"
+}, {
+  "id" : "d55f217f-286a-aae4-6e35-3082910b2bae",
+  "name" : "work_process",
+  "display_width" : null,
+  "label" : "Work Process",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "d5f9ab10-9b51-85e5-cdc6-cdcd4324e5e3",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "d5f9ab10-9b51-85e5-cdc6-cdcd4324e5e3",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "A TAILORED APPROACH TO MATCH YOUR UNIQUE NEEDS"
+  }, {
+    "id" : "6efdb236-a586-a9d9-8703-a1e8860d5c29",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>The way we work with you is unique because your company is unique. Each organization has its own challenges, goals, and opportunities. A cookie cutter approach isn’t in your best interest, so we don’t use it. Instead, we developed the TrueNorth™ methodology and our Customer Success Program; both work together as a finely-tuned, individualized system to help you succeed.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "heading" : "A TAILORED APPROACH TO MATCH YOUR UNIQUE NEEDS",
+    "content" : "<p>The way we work with you is unique because your company is unique. Each organization has its own challenges, goals, and opportunities. A cookie cutter approach isn’t in your best interest, so we don’t use it. Instead, we developed the TrueNorth™ methodology and our Customer Success Program; both work together as a finely-tuned, individualized system to help you succeed.</p>"
+  } ]
+}, {
+  "id" : "c8c6d5da-ac00-9180-1771-6f144eddef2a",
+  "name" : "background_image",
+  "display_width" : null,
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/businesstransformation.jpg",
+    "alt" : "businesstransformation",
+    "loading" : "lazy",
+    "width" : 1100,
+    "height" : 421,
+    "max_width" : 1100,
+    "max_height" : 421
+  }
+}, {
+  "id" : "2337fa9e-0ffb-a0d2-a66e-47ca23fdda85",
+  "name" : "overly_color_1",
+  "display_width" : null,
+  "label" : "Gradient Color 1",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#e3e7e6",
+    "opacity" : 92
+  }
+}, {
+  "id" : "d57bbe2b-1458-4dd9-462b-b451540d1e27",
+  "name" : "overly_color_2",
+  "display_width" : null,
+  "label" : "Gradient Color 2",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#1b75bb",
+    "opacity" : 100
+  }
+} ]

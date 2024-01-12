@@ -1,0 +1,13 @@
+<div class="meals-menu"  style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});">
+  <div class="meals-menu-con page-center">
+    {% for item in module.items %}
+    <div class="cm-item" 	{% if item.item_type=="img" %}{% if item.image_field.src %}style="background-image:url({{ item.image_field.src }})"{% endif %}{% endif %}>
+      {% if item.item_type=="cnt" %}
+      <div class="cm-price">{{ item.price }}</div>
+      <div class="cm-heading">{{ item.heading }}</div>
+      <div class="cm-text">{{ item.content }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

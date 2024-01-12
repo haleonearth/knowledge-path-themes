@@ -1,0 +1,120 @@
+[ {
+  "id" : "0e78c772-65c9-6475-b40e-6b5a79571d0d",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#e3e7e6",
+    "opacity" : 100
+  }
+}, {
+  "id" : "8ecb2703-89d4-eee2-bb4b-3eff2e225212",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Contact Details"
+}, {
+  "id" : "33728ab7-e9de-17a2-a0cb-e22244a801e2",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>1 Chase Corporate Dr.<br>Suite 400<br>Birmingham, AL 35244</p>\n<p><strong>Offices in:<br></strong>Alabama<br>Arkansas<br>Colorado<br>Florida<br>Georgia<br>Illinois<br>Michigan<br>North Carolina<br>South Carolina<br>Texas</p>\n<p><strong>P:</strong> 1-888-238-4205<br><strong>E:</strong> info@kpcteam.com</p>"
+}, {
+  "id" : "934eded1-f833-a814-a46d-35d3dba6be5c",
+  "name" : "linkedin_link",
+  "display_width" : null,
+  "label" : "Linkedin Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "type" : "EXTERNAL",
+      "href" : "https://www.linkedin.com/company/knowledgepath-consulting/",
+      "content_id" : null
+    },
+    "open_in_new_tab" : true,
+    "no_follow" : false
+  }
+}, {
+  "id" : "9857956e-a10c-fc94-4752-b1dff5867b89",
+  "name" : "twitter_link",
+  "display_width" : null,
+  "label" : "Twitter Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "type" : "EXTERNAL",
+      "href" : "https://twitter.com/KPC_Team",
+      "content_id" : null
+    },
+    "open_in_new_tab" : true,
+    "no_follow" : false
+  }
+}, {
+  "id" : "20cb8d10-3a6f-992b-b09e-755ddf7b4f09",
+  "name" : "right_content",
+  "display_width" : null,
+  "label" : "Right Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h5>SEND MESSAGE</h5>\n<p>For faster replies, please call us directly at 1-888-238-4205. Your inquiry will be replied to within one business day. Do note that we do not sell or distribute our database or lists.</p>"
+}, {
+  "id" : "386ace23-ac36-1a7a-b208-5f5ca87925bb",
+  "name" : "right_section_background_color",
+  "display_width" : null,
+  "label" : "Right Section Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#797C7E",
+    "opacity" : 100
+  }
+}, {
+  "id" : "3b280b98-394c-2fda-7ec7-d877875a07df",
+  "name" : "right_section_text_color",
+  "display_width" : null,
+  "label" : "Right Section Text Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#ffffff",
+    "opacity" : 100
+  }
+}, {
+  "id" : "32a81d61-83ea-3cfb-071f-f01f4ddee429",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "fe3ad772-eede-42dc-b464-9fea72049585",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+} ]

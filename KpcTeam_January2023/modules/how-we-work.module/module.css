@@ -1,0 +1,167 @@
+.how-we-work {
+  background-size: cover;
+  background-position: 50%;
+}
+
+.how-we-work .how-we-work-con {
+  padding-top: 92px;
+  padding-right: 0px;
+  padding-bottom: 75px;
+  padding-left: 0px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.how-we-work .how-we-work-top,.how-we-work-bott {
+  padding-bottom: 21px;
+  display: flex;
+  width: 90%;
+  max-width: 1170px;
+  margin: auto;
+  position: relative;
+}
+
+.how-we-work .how-we-work-top h3 {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 45px;
+  color: #000000!important;
+  line-height: 1.3em;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.how-we-work .how-we-work-top p {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Almarai',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  margin-top: -18px!important;
+  max-width: 579px;
+}
+
+.how-we-work .how-we-work-top-con {
+  text-align: center;
+}
+
+.how-we-work .how-we-work-top {
+  justify-content: center;
+}
+
+.how-we-work .how-we-work-bott-con {
+  display: flex;
+}
+
+.how-we-work .how-we-work-item {
+  width: 31.3333%;
+  margin-right: 3%;
+}
+
+.how-we-work .how-we-work-item:last-child {
+  margin: 0;
+}
+
+.how-we-work .how-we-work-item>p {
+  color: #000000;
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1em;
+  font-size: 60px;
+  padding: 0;
+}
+
+.how-we-work .et_pb_blurb_content {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  word-wrap: break-word;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.how-we-work .blurb_image {
+  width: 32px;
+  display: block;
+  line-height: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+  margin-top: -11px;
+}
+
+.how-we-work .image_wrap {
+  display: block;
+  margin: auto;
+}
+
+.how-we-work .et-waypoint {
+  font-size: 62px;
+  color: #000000;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'ETmodules';
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+  margin-left: -16px;
+}
+
+.how-we-work .blurb_container {
+  margin-left: 19px;
+  margin-top: 13px;
+}
+
+.how-we-work .work-module_header {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  color: #000000;
+  text-align: left;
+  line-height: 1.1em;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 0;
+  letter-spacing: 0;
+  margin-bottom: 2px;
+}
+
+.how-we-work .main-contant p {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #000000;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+
+@media (max-width:767px){
+  .how-we-work .how-we-work-top h3 {
+    font-size: 30px;
+  }
+
+  .how-we-work .how-we-work-top p {
+    font-size: 16px;
+  }
+
+  .how-we-work .how-we-work-item {
+    width: 100%;
+    margin: 0;
+  }
+
+  .how-we-work .how-we-work-bott-con {
+    flex-direction: column;
+  }
+
+  .how-we-work .how-we-work-con {
+    padding: 50px 0 50px;
+  } 
+}

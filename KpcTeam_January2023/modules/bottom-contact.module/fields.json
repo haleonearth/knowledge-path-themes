@@ -1,0 +1,163 @@
+[ {
+  "id" : "52575755-1dfc-6181-86f0-1e1ac89f5923",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Featured Case Studies"
+}, {
+  "id" : "37f51337-c858-d02f-c406-6a4d527ec431",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa.</p>"
+}, {
+  "id" : "e4e6c5a2-e752-bbd0-1a0f-52de0e0118e8",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "ba2a09a2-8345-4fde-8aee-bc6b855d3761",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "f1f50a50-e9e2-98b4-0957-6a2fafb92b5d",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/business-01.jpg",
+    "alt" : "business-01",
+    "loading" : "lazy",
+    "width" : 1920,
+    "height" : 1057,
+    "max_width" : 1920,
+    "max_height" : 1057
+  }
+}, {
+  "id" : "cb1cf446-0d16-0465-a30a-a322a93fa4b8",
+  "name" : "facebook_link",
+  "display_width" : null,
+  "label" : "Facebook Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "a9f65ade-10c5-7150-ab23-357b1c1c4927",
+  "name" : "twitter_link",
+  "display_width" : null,
+  "label" : "Twitter Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "dca281cc-e14d-e334-f8c5-aec69e73aa42",
+  "name" : "linkedin_link",
+  "display_width" : null,
+  "label" : "Linkedin Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "f14eb42a-9794-6cb8-e853-7cba2efd6eed",
+  "name" : "address",
+  "display_width" : null,
+  "label" : "Address",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "13005 Greenville Avenue, <br>California, TX 70240"
+}, {
+  "id" : "29d14ada-61e4-fed7-ba5d-37cf337fba5a",
+  "name" : "number",
+  "display_width" : null,
+  "label" : "Number",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "+22 140 006 754"
+}, {
+  "id" : "25718c1a-8542-f9af-1b53-bb16a0492ca8",
+  "name" : "email",
+  "display_width" : null,
+  "label" : "Email",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "contact@divifinance.com"
+}, {
+  "id" : "82322e28-768e-4a55-7b03-c800db528aed",
+  "name" : "form_title",
+  "display_width" : null,
+  "label" : "Form Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Leave A Message"
+} ]

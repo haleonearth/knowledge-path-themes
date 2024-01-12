@@ -1,0 +1,16 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Client Page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper clients-page">
+
+  {% dnd_area 'row1' class='body-container clients-page-row1', label='Row 1' %}{% end_dnd_area %}
+  {% dnd_area 'row2' class='body-container clients-page-row2', label='Row 2' %}{% end_dnd_area %}
+  {% dnd_area 'row3' class='body-container clients-page-row3', label='Row 3' %}{% end_dnd_area %}
+  
+</main>
+{% endblock body %}

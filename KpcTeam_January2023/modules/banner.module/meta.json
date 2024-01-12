@@ -1,0 +1,14 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/Module%20Icons/info-circle-solid.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 97416096864,
+  "js_assets" : [ {
+    "url" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Js/jarallax.min.js",
+    "autoload" : true,
+    "name" : "jarallax.min.js"
+  } ],
+  "label" : "Theme Banner",
+  "is_available_for_new_content" : true
+}

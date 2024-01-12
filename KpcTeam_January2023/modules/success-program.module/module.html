@@ -1,0 +1,43 @@
+<div class="success-program">
+  <div class="success-program-con page-center">
+    {% for item in module.list_item %}
+    <div class="success-prog-item">
+      <div class="success-prog-item-con">
+        <div class="et_pb_main_blurb_image">
+          {% set href = item.link_field.url.href %}
+          {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}
+             >
+            <span class="only_image_wrap">
+              {% if item.image_field.src %}
+              <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+              {% endif %}
+            </span>
+          </a>
+        </div>
+        <div class="blurb_container">
+          <h4 class="module_header">
+            {% set href = item.link_field.url.href %}
+            {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a href="{{ href }}"
+               {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+               {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}
+               >
+              {{ item.heading }}
+            </a>
+          </h4>
+          <div class="blurb_description">
+            {{ item.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,108 @@
+[ {
+  "id" : "52575755-1dfc-6181-86f0-1e1ac89f5923",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "FROM OUR CLIENTS"
+}, {
+  "id" : "37f51337-c858-d02f-c406-6a4d527ec431",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum. Sed ut perspiciatis unde omnis.</p>"
+}, {
+  "id" : "5ab5b03f-f09e-59b4-302c-6089c5e3b89a",
+  "name" : "client",
+  "display_width" : null,
+  "label" : "client",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "79ceba3c-1e62-d282-3527-aaac5d8750b2",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "82fd26f2-7b93-de0e-2935-dd892c480c56",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Mitch%20Skolnik.png",
+      "alt" : "Mitch Skolnik",
+      "loading" : "lazy",
+      "width" : 128,
+      "height" : 128,
+      "max_width" : 128,
+      "max_height" : 128
+    }
+  }, {
+    "id" : "79ceba3c-1e62-d282-3527-aaac5d8750b2",
+    "name" : "author_name",
+    "display_width" : null,
+    "label" : "Author Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Mitch Skolnik"
+  }, {
+    "id" : "610e4212-18ff-1dfa-5a75-c4e267ca1605",
+    "name" : "designation",
+    "display_width" : null,
+    "label" : "Designation",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "operation Director, Elegant Themes"
+  }, {
+    "id" : "f69765be-477e-4c32-a67c-f6da9d8be847",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration by injected humour.”</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Mitch%20Skolnik.png",
+      "alt" : "Mitch Skolnik",
+      "loading" : "lazy",
+      "width" : 128,
+      "height" : 128,
+      "max_width" : 128,
+      "max_height" : 128
+    },
+    "author_name" : "Mitch Skolnik",
+    "content" : "<p>“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration by injected humour.”</p>",
+    "designation" : "operation Director, Elegant Themes"
+  } ]
+} ]

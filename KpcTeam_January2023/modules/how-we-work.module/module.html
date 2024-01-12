@@ -1,0 +1,33 @@
+<div class="how-we-work" style="background-image:linear-gradient(180deg,rgba({{module.overly_color_1.color|convert_rgb}},{{module.overly_color_1.opacity / 100 }}) 1%,rgba({{module.overly_color_2.color|convert_rgb}},{{module.overly_color_2.opacity / 100 }}) 100%),url({{ module.background_image.src }})">
+  <div class="how-we-work-con">
+    <div class="how-we-work-top">
+      <div class="how-we-work-top-con">
+        <h3>{{ module.title }}</h3>
+        {{ module.sub_title }}
+      </div>
+    </div>
+    <div class="how-we-work-bott">
+      <div class="how-we-work-bott-con">
+        {% for item in module.work_process %}
+        <div class="how-we-work-item">
+          <p>0{{loop.index}}.</p>
+          <div class="et_pb_blurb_content">
+            <div class="blurb_image">
+              <span class="image_wrap">
+                <span class="et-waypoint">K</span>
+              </span>
+            </div>
+            <div class="blurb_container">
+              <h4 class="work-module_header">{{ item.heading }}</h4>
+            </div>
+          </div>
+          <div class="main-contant">
+            {{ item.content }}
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>

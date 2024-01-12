@@ -1,0 +1,27 @@
+<div class="counter">
+  <div class="counter-con page-center">
+    <div class="pb_divide"><div class="divider_internal"></div></div>
+    <div class="heading">
+      <h1>{{ module.heading }}</h1>
+    </div>
+    <div class="content">
+      {{ module.content }}
+    </div>
+    <div class="counter-row">
+      <div class="counter-row_column_empty"></div>
+      {% for item in module.counter_item %}
+      <div class="counter-row_column">
+        <div class="number_counter" >
+          <div class="percent"><p>
+            <span class="percent-value counts" data-number="{{ item.counter_number }}">0</span><span class="percent-sign">{{ item.counter_symble }}</span>
+            </p>
+          </div>
+          <h3 class="title">{{ item.counter_title }}</h3>
+          <canvas height="0" width="0"></canvas></div>
+      </div>
+      {% endfor %}
+      <div class="counter-row_column_empty"></div>
+    </div>
+    <div class="bottom-line"></div>
+  </div>
+</div>

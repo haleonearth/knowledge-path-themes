@@ -1,0 +1,109 @@
+.form-heading-main .form-inner-heading {
+  color: #424242!important;
+  text-align: left;
+  font-family: 'Almarai',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 24px!important;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.form-heading-main .form-inner-heading .et_pb_text_inner h2 {
+  font-family: 'Nunito Sans',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1B75BB;
+  line-height: 1.3em;
+  font-size: 26px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.form-heading-main .form-inner-heading .et_pb_text_inner h2 strong{
+  font-weight: 700;
+}
+
+.form-heading-main .form-inner-heading .et_pb_text_inner p {
+  padding-bottom: 0;
+  font-family: 'Almarai',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.7em;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form-heading-main .form-main {
+  position: relative;
+  border: 0 solid #333;
+  border-width: 1px;
+  border-color: #1B75BB;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.form-heading-main .form-main .hs_cos_wrapper_type_form {
+  background: transparent;
+  margin-bottom: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 10px;
+}
+
+.form-heading-main .form-main .hs_cos_wrapper_type_form h3 {
+  display: none;
+}
+
+.form-heading-main .form-main .hs-form-field {
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 3px;
+  padding-top: 10px;
+}
+
+.form-heading-main  .form-main .hs_submit.hs-submit {
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  padding-top: 0;
+}
+
+.form-heading-main .form-main input.hs-button.primary.large {
+  background: #0c3770;
+  border: 1px solid;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  color: #fff;
+  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 17px 0 0;
+  padding: 17px 30px;
+  transition: all .3s ease;
+  width: auto;
+}
+
+.form-heading-main .form-main input.hs-button.primary.large:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  border: 1px solid #868886;
+}
+
+.form-heading-main .form-main .hs-input::placeholder {
+  -webkit-font-smoothing: auto !important;
+}
+
+.form-heading-main form ul.no-list.hs-error-msgs.inputs-list label {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.form-heading-main form .hs_error_rollup {
+  padding-left: 10px !important;
+}

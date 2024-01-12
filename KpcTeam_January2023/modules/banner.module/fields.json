@@ -1,0 +1,60 @@
+[ {
+  "id" : "3aeacc67-d8b8-4b49-87de-04b1a82f325d",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : null,
+    "opacity" : null
+  }
+}, {
+  "id" : "151970c1-2259-3c32-f02e-988a63acd770",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/erp.jpeg",
+    "alt" : "erp",
+    "loading" : "lazy",
+    "width" : 2560,
+    "height" : 1499,
+    "max_width" : 2560,
+    "max_height" : 1499
+  }
+}, {
+  "id" : "a547b21f-b367-0bd3-9132-26a4c8d41feb",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "ERP and Enterprise Technology Modernization"
+}, {
+  "id" : "32130ec4-7351-f5f4-9abb-49ad624515cc",
+  "name" : "content_alignment",
+  "display_width" : null,
+  "label" : "Content Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "preset" : null,
+  "type" : "choice",
+  "default" : "center"
+} ]

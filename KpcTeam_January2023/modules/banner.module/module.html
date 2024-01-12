@@ -1,0 +1,22 @@
+
+{% if module.image_field.src || module.heading || module.content_alignment || module.background_color %}
+<div class="banner">
+  <div class="banner-con">
+    <span class="parallax_bg_wrap">
+      <span class="parallax_bg jarallax" style="background-image: url({{ module.image_field.src }});"></span>
+    </span>
+    {% if module.heading || module.content_alignment %}
+    <div class="banner-header-content" style="text-align:{{ module.content_alignment }}">
+      <h1 class="eb_module_header">{{ module.heading }}</h1>
+      <div class="header_content_wrapper"></div>
+    </div>
+    {% endif %}
+    <div class="banner-header_overlay" style="background-color:rgba({{ module.background_color.color|convert_rgb }},{{ module.background_color.opacity / 100 }});"></div>
+    <div class="fullwidth_header_scroll">
+      <a href="#next" class="scroll-down-container">
+        <span class="scroll-down et-pb-icon">"</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}

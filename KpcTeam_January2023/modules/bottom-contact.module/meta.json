@@ -1,0 +1,13 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 97793999966,
+  "js_assets" : [ {
+    "url" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Js/jarallax.min.js",
+    "autoload" : true,
+    "name" : "jarallax.min.js"
+  } ],
+  "label" : "Bottom Contact",
+  "is_available_for_new_content" : true
+}

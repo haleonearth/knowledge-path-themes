@@ -1,0 +1,49 @@
+.clients .clients-con.page-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clients .clients--item {
+  width: 15.6%;
+  margin-right: 5.5%;
+  padding: 27px 0;
+}
+
+.clients .clients--item:nth-child(5n) {
+  margin-right: 0;
+}
+
+.clients .clients--item img {
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay: 0ms;
+  max-width: 100%;
+  height: auto;
+  width:auto;
+}
+
+
+@media (max-width:767px){
+  .clients .clients--item {
+    margin-right: 0;
+    padding: 10px;
+    width: 33.3%;
+  } 
+}
+
+@media (max-width:480px){
+  .clients .clients--item {
+    margin-right: 0;
+    padding: 10px;
+    width: 50%;
+  } 
+}
+
+
+@media (max-width:400px){
+  .clients .clients--item {
+    margin-right: 0;
+    padding: 25px 10px;
+    width: 100%;
+  } 
+}

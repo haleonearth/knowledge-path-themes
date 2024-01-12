@@ -1,0 +1,41 @@
+<!--
+templateType: global_partial
+label: Website header
+-->
+<header class="header">
+  <div class="header-wrapper">
+    <div class="top-header">
+      <div class="header-container">
+        <div class="email-info">
+          {% module_block module "contact_info" path="@hubspot/rich_text" label="Contact Info" %}
+          {% module_attribute "html" %}
+          <span>1-888-238-4205&nbsp;
+            <a href="mailto:info@kpcteam.com">
+              <span>info@kpcteam.com</span>
+            </a>
+          </span>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+        <div class="search-field">
+          {% module "site_search" path="@hubspot/search_input", label="Search site",placeholder="Search KnowledgePath", include_search_button=true %}
+        </div>
+      </div>
+    </div>
+    <div class="bottom-header">
+      <div class="header-bottom-container">
+        <div class="img-wrapper">
+          {% module "header_logo" path="../../modules/header-logo", label="Header Logo" %}
+        </div>
+        <div class="menu-wrapper">
+          {% module "module_16729174868143" path="../../modules/menu-section", label="Primary Navigation" %}
+        </div>
+        <div class="mobile_nav_menu">
+          <div class="mobile_nav">
+            <span class="mobile_menu_bar"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

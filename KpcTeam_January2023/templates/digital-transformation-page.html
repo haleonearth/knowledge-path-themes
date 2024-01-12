@@ -1,0 +1,25 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Digital Transformation Page
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<div class="banner-section digital-transformation-banner">
+  {% dnd_area "Banner", label='Banner Area' %}
+  {% dnd_section full_width=true %}
+  {% dnd_module path='../modules/advanced-banner', width=12, offset=0, label="Banner" %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}  
+  {% end_dnd_area %}
+</div>
+<main id="main-content" class="body-container-wrapper digital-transformation-page">
+
+  {% dnd_area 'row1' class='body-container digital-transformation-page-row1', label='Row 1' %}{% end_dnd_area %}
+  {% dnd_area 'row2' class='body-container digital-transformation-page-row2', label='Row 2' %}{% end_dnd_area %}
+  {% dnd_area 'row3' class='body-container digital-transformation-page-row3', label='Row 3' %}{% end_dnd_area %}
+  {% dnd_area 'row4' class='body-container digital-transformation-page-row4', label='Row 4' %}{% end_dnd_area %}
+
+</main>
+{% endblock body %}

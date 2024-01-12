@@ -1,0 +1,41 @@
+<div class="sat-customers">
+  <div class="sat-customers-con page-center">
+    <div class="heading">
+      <h1>{{ module.heading }}</h1>
+    </div>
+    <div class="pb_divide"><div class="divider_internal"></div></div>
+    <div class="sat-customers-items-main">
+      {% for item in module.items %}
+      <div class="sat-customers-item">
+        <div class="sat-customers-item-con">
+          <div class="image" style="background-image:url({{ item.image_field.src }})"> 
+          </div>
+          <div class="sat-mers_description">
+            <p class="sat-ers-content">{{ item.content }}</p>	
+            <h4 class="author-name">{{ item.author_name }}</h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {%  if module.button_group.button_type == "std" %}
+    <div class="lm-button">
+      {% set href = module.button_group.button_link.url.href %}
+      {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+      {% set href = "mailto:" + href %}
+      {% endif %}
+      <a href="{{ href }}"
+         {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+         {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+         >
+        {{ module.button_group.button_text }}
+      </a>
+    </div>
+    {% endif %}
+    {%  if module.button_group.button_type == "cta" %}
+    <div class="lm-button">
+      {% cta guid="{{ module.button_group.cta_field }}" %}
+    </div>
+    {% endif %}
+  </div>
+</div>

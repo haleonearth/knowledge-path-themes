@@ -1,0 +1,204 @@
+.team-members {
+  padding-top: 117px;
+  padding-bottom: 90px;
+}
+
+.team-members .team-members-con.page-center {
+  padding: 0;
+}
+
+.team-members .pb_divide {
+  margin: 0 0 30px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5px;
+  padding-bottom: 20px;
+  margin-bottom: 8px;
+  max-width: 100px;
+}
+
+.team-members .pb_divide:before {
+  height: 1px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  position: absolute;
+  border-top-color: #4e5ed0;
+  border-top-width: 3px;
+  width: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 10;
+  content: "";
+}
+
+.team-members .heading h1 {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 36px;
+  color: #1f1f1f!important;
+  line-height: 1.3em;
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.team-members .content p {
+  color: #000000;
+  text-align: center;
+  font-family: 'Almarai',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.9em;
+  font-weight: 500;
+  max-width: 702px;
+  margin: auto;
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.team-members .team-members-items {
+  text-align: center;
+  display: flex;
+  margin-top: 57px;
+}
+
+.team-members .team-members-item {
+  width: 31.3333%;
+  margin-right: 3%;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+}
+
+.team-members .team-members-item:last-child {
+  margin: 0;
+}
+
+.team-members .team-members-item-con {
+  display: block;
+  width: auto;
+  padding: 0 0 12px;
+  max-width: 320px;
+}
+
+.team-members h4.name {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 22px;
+  color: #1f1f1f!important;
+  line-height: 2em;
+  margin: 0;
+  padding-bottom: 10px;
+  font-weight: 500;
+  margin-top: 10px;
+  letter-spacing: 0;
+}
+
+.team-members p.member_position {
+  color: #aaa;
+  font-family: Open Sans,Arial,sans-serif;
+  line-height: 1.7em;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.team-members .member_description {
+  padding-left: 19px;
+}
+
+.team-members ul.member_social_links {
+  list-style-type: none!important;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.team-members ul.member_social_links li {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.team-members ul.member_social_links li a {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: color .3s ease 0s;
+  transition: color .3s ease 0s;
+  color: #b2b2b2;
+  text-decoration: none;
+  font-family: ETmodules!important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0;
+  direction: ltr;
+}
+
+.team-members ul.member_social_links a.font_icon.facebook_icon:before {
+  content: "\E093";
+}
+
+.team-members ul.member_social_links li a:hover {
+    color: #0e75bc;
+}
+
+.team-members ul.member_social_links a.font_icon.twitter_icon:before {
+  content: "\E094";
+}
+
+.team-members ul.member_social_links a.font_icon.google_icon:before {
+  content: "\E096";
+}
+
+.team-members ul.member_social_links a.font_icon.linkedin_icon:before {
+  content: "\E09D";
+}
+
+
+@media (max-width:767px){
+  .team-members .team-members-con.page-center {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .team-members {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .team-members .team-members-items {
+    flex-direction: column;
+  }
+
+  .team-members .team-members-item {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .team-members h4.name {
+    font-size: 20px;
+    padding: 0;
+  }
+.team-members .team-members-item-con {
+    max-width: 100%;
+}
+  .team-members p.member_position {
+    padding: 0;
+  }
+
+  .team-members ul.member_social_links {
+    margin-top: 10px;
+  } 
+
+  .team-members .team-members-item-con {
+    margin: auto;
+  }
+}

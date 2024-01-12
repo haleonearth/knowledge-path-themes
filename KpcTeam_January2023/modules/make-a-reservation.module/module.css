@@ -1,0 +1,259 @@
+.make-a-rese {
+  padding-top: 100px;
+  padding-right: 0px;
+  padding-bottom: 100px;
+  padding-left: 0px;
+  background-color: rgba(0,0,0,0.75);
+  position: relative;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+  margin-bottom: -2px;
+}
+
+.make-a-rese .make-a-rese-con {
+  max-width: 1280px;
+  padding: 27px 0;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.make-a-rese .left {
+  width: 47.25%;
+  margin-right: 5.5%;
+}
+
+.make-a-rese .left,.make-a-rese .right {
+  background-color: #1f1f1f;
+  padding-top: 82px;
+  padding-right: 5%;
+  padding-bottom: 100px;
+  padding-left: 5%;
+}
+
+.make-a-rese .right {
+  margin: 0;
+  width: 47.25%;
+}
+
+.make-a-rese .right h3 {
+  font-size: 35px;
+  color: #fff;
+  line-height: 1.3em;
+  text-align: left;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  margin: 0;
+}
+
+.make-a-rese p {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  color: #fff;
+}
+
+.make-a-rese .left h3 {
+  font-family: 'Playfair Display',Georgia,"Times New Roman",serif;
+  font-size: 30px;
+  color: #fff !important;
+  line-height: 1.3em;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 5.82%;
+  display: block;
+  max-width: 400px;
+  padding-bottom: 41px;
+}
+
+.make-a-rese p.day {
+  padding: 0;
+  padding-bottom: 1px;
+}
+
+.make-a-rese .left-day-time {
+  margin-top: 11px;
+}
+
+.make-a-rese .time p {
+  line-height: 28.5px;
+}
+
+.make-a-rese .lm-button {
+  text-align: center;
+}
+
+.make-a-rese .lm-button a {
+  position: relative;
+  z-index: 2;
+  border: 2px solid transparent;
+  color: #ffffff;
+  border-width: 2px;
+  border-color: #c39d63;
+  font-size: 15px;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  background-color: #c39d63;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  padding-top: 14px;
+  padding-right: 45px;
+  padding-bottom: 12px;
+  display: inline-block;
+  padding-left: 35px;
+  font-weight: 500;
+}
+
+.make-a-rese .lm-button {
+  margin-top: 15px;
+}
+
+.make-a-rese .right-contact p {
+  font-size: 17px;
+  color: rgba(255,255,255,.8);
+  line-height: 29.6px;
+}
+
+.make-a-rese .right-contact {
+  margin-top: 2px;
+}
+
+.make-a-rese .right-con .lm-button {
+  margin-top: 11px;
+  margin-bottom: 80px;
+}
+
+.make-a-rese h3.form_header {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 1.8em;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.make-a-rese .main-form p {
+  line-height: 1.8em;
+  color: rgba(255,255,255,0.8);
+  font-size: 17px;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+
+.make-a-rese .form-title {
+  display: none;
+}
+
+.make-a-rese .hs_cos_wrapper_type_form {
+  padding: 0;
+  margin: 0;
+}
+
+.make-a-rese form .input input {
+  border: 1px solid #bbb;
+  background-color: #111111;
+  color: #ffffff;
+  -webkit-appearance: none;
+  padding: 14px 4%;
+  font-size: 16px;
+  font-weight: 400;
+  border-width: 0;
+  border-radius: 3px;
+  line-height: normal !important;
+}
+
+.make-a-rese form .input input::placeholder {
+  color: #ffffff;
+  font-family: 'Montserrat';
+}
+
+.make-a-rese .hs-form-field {
+  margin: 0;
+  padding-bottom: 17px;
+}
+
+.make-a-rese .hs-form-field>label {
+  display: none;
+}
+
+.make-a-rese form input[type=submit] {
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  color: #ffffff;
+  border-width: 3px;
+  border-color: #c39d63;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  background-color: #c39d63;
+  padding: 0.3em 1em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.7em;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.make-a-rese form input[type=submit]:hover {
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  color: #ffffff;
+  border-width: 3px;
+  border-color: #c39d63;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  background-color: #c39d63;
+  padding: 0.3em 1em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 1.7em;
+  margin-top: 0;
+}
+
+@media (max-width:767px){
+  .make-a-rese .left, .make-a-rese .right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .make-a-rese .left {
+    margin-bottom: 30px;
+  }
+
+  .make-a-rese {
+    padding: 50px 0;
+  }
+
+  .make-a-rese .make-a-rese-con {
+    padding: 0 20px;
+    width: 100%;
+  } 
+
+  .make-a-rese .right h3 {
+    font-size: 30px;
+  }
+
+  .make-a-rese .left h3 {
+    padding: 0;
+    padding-bottom: 20px;
+    font-size: 25px;
+  }
+}

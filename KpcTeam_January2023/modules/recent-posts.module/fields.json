@@ -1,0 +1,166 @@
+[ {
+  "id" : "a2fc82ac-81ff-96a9-06e8-0c24d4f9a59c",
+  "name" : "top_text",
+  "display_width" : null,
+  "label" : "Top Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "DON’T MISS"
+}, {
+  "id" : "204bfc1e-9043-981b-36f8-7f9540a21735",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Testimonials"
+}, {
+  "id" : "3fac25aa-b5d3-08d3-6e5e-8057af5098fe",
+  "name" : "subheading",
+  "display_width" : null,
+  "label" : "SubHeading",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>"
+}, {
+  "id" : "31cde785-c7ea-e089-b3ce-b2b091d04c44",
+  "name" : "select_blog",
+  "display_width" : null,
+  "label" : "Select Blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 98050777262
+}, {
+  "id" : "91659aaf-0fd9-1408-3c2b-acd77ee834f5",
+  "name" : "number_of_post",
+  "display_width" : null,
+  "label" : "Number Of Post",
+  "required" : false,
+  "locked" : false,
+  "display" : "text",
+  "min" : 3,
+  "step" : 1,
+  "type" : "number",
+  "default" : 3
+}, {
+  "id" : "dfcc4eef-524c-8c2d-e053-78db4a3f2b58",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#000",
+    "opacity" : 3
+  }
+}, {
+  "id" : "f27753c0-6175-2682-04ca-f9a38d8a47bc",
+  "name" : "button_group",
+  "display_width" : null,
+  "label" : "Button Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "722597de-ab13-505f-ed90-92f432410eec",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "std", "Standard" ], [ "cta", "Cta" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "5a3ed3f0-5ffc-ae11-ea3d-1a95899254dd",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "722597de-ab13-505f-ed90-92f432410eec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Read More"
+  }, {
+    "id" : "c9a2a9b9-4f06-5715-a798-5ca3b9b406de",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "722597de-ab13-505f-ed90-92f432410eec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "3a3c92d6-1ad5-c979-08b1-850810f25fd4",
+    "name" : "cta_field",
+    "display_width" : null,
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "722597de-ab13-505f-ed90-92f432410eec",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_text" : "Read More",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

@@ -1,0 +1,111 @@
+[ {
+  "id" : "204bfc1e-9043-981b-36f8-7f9540a21735",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Testimonials"
+}, {
+  "id" : "e350d128-ac4e-0ed8-ca87-a650b73e9b14",
+  "name" : "sub_heading",
+  "display_width" : null,
+  "label" : "Sub Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "What People are Saying"
+}, {
+  "id" : "e16d728b-4394-b875-4292-f3fddb4dd726",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "641acdea-4bb3-febe-42d1-8cf790939f2b",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "8b146d32-df97-ce26-d89c-c9224a5c9d9a",
+    "name" : "stars_image",
+    "display_width" : null,
+    "label" : "Stars Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/stars.png",
+      "alt" : "stars",
+      "loading" : "lazy",
+      "width" : 144,
+      "height" : 23,
+      "max_width" : 144,
+      "max_height" : 23
+    }
+  }, {
+    "id" : "6b9b8a81-53f6-868b-0ac0-1955d877326c",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "“A Great Find”"
+  }, {
+    "id" : "49cc5909-aed5-c244-6d6b-f859cbc03b4f",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu ante eu lectus ornare porta.“</p>"
+  }, {
+    "id" : "641acdea-4bb3-febe-42d1-8cf790939f2b",
+    "name" : "author_name",
+    "display_width" : null,
+    "label" : "Author Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Divi"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "stars_image" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/stars.png",
+      "alt" : "stars",
+      "loading" : "lazy",
+      "width" : 144,
+      "height" : 23,
+      "max_width" : 144,
+      "max_height" : 23
+    },
+    "heading" : "“A Great Find”",
+    "richtext_field" : "<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu ante eu lectus ornare porta.“</p>",
+    "author_name" : "Divi"
+  } ]
+} ]

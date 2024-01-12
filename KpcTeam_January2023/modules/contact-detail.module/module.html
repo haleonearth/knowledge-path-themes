@@ -1,0 +1,63 @@
+<div class="contact-details" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});">
+  <div class="bottom-pane-con">
+    <div class="bottom-pane-left">
+      <div class="bottom-pane-left-con">
+        <h5>{{ module.heading }}</h5>
+        <div class="pane-left-content">
+          {{ module.content }}
+        </div>
+        <div class="bottom-pane-social">
+          <ul>
+            <li class="bottom-pane-linkedin">
+              {% set href = module.linkedin_link.url.href %}
+              {% if module.linkedin_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if module.linkedin_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if module.linkedin_link.rel %}rel="{{ module.linkedin_link.rel }}"{% endif %}
+                 >
+              </a>
+            </li>
+            <li class="bottom-pane-twitter">
+              {% set href = module.twitter_link.url.href %}
+              {% if module.twitter_link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}"
+                 {% if module.twitter_link.open_in_new_tab %}target="_blank"{% endif %}
+                 {% if module.twitter_link.rel %}rel="{{ module.twitter_link.rel }}"{% endif %}
+                 >
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-pane-right" style="background-color:rgba({{module.right_section_background_color.color|convert_rgb}},{{module.right_section_background_color.opacity / 100 }});">
+      <div class="bottom-pane-right-con">
+        <div class="right-content {{name}}">
+          {{ module.right_content }}
+        </div>
+        <div class="right-form">
+          {% form
+	form_to_use="{{ module.form_field.form_id }}"
+	response_response_type="{{ module.form_field.response_type }}"
+	response_message="{{ module.form_field.message }}"
+	response_redirect_id="{{ module.form_field.redirect_id }}"
+	response_redirect_url="{{module.form_field.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.form_field.gotowebinar_webinar_key }}"
+%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .contact-details .right-content.{{ name }}*{
+    color:rgba({{module.right_section_text_color.color|convert_rgb}},{{module.right_section_text_color.opacity / 100 }});
+  }
+</style>
+{% end_require_css%}

@@ -1,0 +1,19 @@
+<div class="accordionWrapper">
+  {% if module.heading %}
+  <div class="top-content">
+    <h3>
+      {{ module.heading }}
+    </h3>
+  </div>
+  {% endif %}
+  <div class="itemWrapper">
+    {% for item in module.item %}
+    <div class="accordionItem">
+      <h5 class="accordionItemHeading">{{ item.title }}</h5>
+      <div class="accordionItemContent">
+        {{ item.content }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

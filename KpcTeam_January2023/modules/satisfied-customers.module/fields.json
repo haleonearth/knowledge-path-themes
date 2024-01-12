@@ -1,0 +1,187 @@
+[ {
+  "id" : "52575755-1dfc-6181-86f0-1e1ac89f5923",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Creative Team"
+}, {
+  "id" : "078c8feb-74a9-00e8-2f67-86493dcdc52c",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "5504651f-dff0-5d9e-8384-cf51e597b544",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "e7b64339-e28a-e98b-606b-e84f20e3a566",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&nbsp;&nbsp;When an unknown printer took a galley of type and scrambled it to make a type specimen book.”</p>"
+  }, {
+    "id" : "c0466351-2be9-e553-e2b7-1ab656fe0a79",
+    "name" : "author_name",
+    "display_width" : null,
+    "label" : "Author Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Janet Renolds"
+  }, {
+    "id" : "68456bf2-7b10-d78c-7660-c228c6525946",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Janet%20Renolds.jpg",
+      "alt" : "Janet Renolds",
+      "loading" : "lazy",
+      "width" : 180,
+      "height" : 180,
+      "max_width" : 180,
+      "max_height" : 180
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "content" : "<p>“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.&nbsp;&nbsp;When an unknown printer took a galley of type and scrambled it to make a type specimen book.”</p>",
+    "author_name" : "Janet Renolds",
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Janet%20Renolds.jpg",
+      "alt" : "Janet Renolds",
+      "loading" : "lazy",
+      "width" : 180,
+      "height" : 180,
+      "max_width" : 180,
+      "max_height" : 180
+    }
+  } ]
+}, {
+  "id" : "aef2e2ad-23ba-5fc0-4368-33429d467a35",
+  "name" : "button_group",
+  "display_width" : null,
+  "label" : "Button Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "092bf0b6-6917-1420-6b20-cfa07f7f271d",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "std", "standard" ], [ "cta", "Cta" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "std"
+  }, {
+    "id" : "03ec2690-b5fb-0d06-5bd0-96cb1e19c059",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "092bf0b6-6917-1420-6b20-cfa07f7f271d",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "View All"
+  }, {
+    "id" : "50e5cc17-f57e-bb5e-5512-3d1453ce2141",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "092bf0b6-6917-1420-6b20-cfa07f7f271d",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "43745fd4-6bd7-fe64-0bc7-1c817cd8bc45",
+    "name" : "cta_field",
+    "display_width" : null,
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "092bf0b6-6917-1420-6b20-cfa07f7f271d",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_type" : "std",
+    "button_text" : "View All",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+} ]

@@ -1,0 +1,183 @@
+[ {
+  "id" : "70d81332-1239-285a-7b2e-e98e06f1177e",
+  "name" : "top_content",
+  "display_width" : null,
+  "label" : "Top Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext"
+}, {
+  "id" : "899c0fac-9336-7edc-d85e-78023afdbe2e",
+  "name" : "column_item",
+  "display_width" : null,
+  "label" : "Column Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "5f9b2ed9-2090-cd6d-b125-d14c1316715d",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "b69fbdd8-9c6e-bf89-97a8-a0392404297b",
+    "name" : "icon_choice",
+    "display_width" : null,
+    "label" : "Icon Choice",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "fontawesome", "Font Awesome" ], [ "etmodules", "Etmodules" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "61a10e39-725a-ff73-6304-807e1599d733",
+    "name" : "icon_field",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "b69fbdd8-9c6e-bf89-97a8-a0392404297b",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "fontawesome",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : {
+      "name" : "Alternate Map Marker",
+      "unicode" : "f3c5",
+      "type" : "SOLID"
+    }
+  }, {
+    "id" : "ae1ed10c-65a6-9497-ea95-311282add733",
+    "name" : "icon_class",
+    "display_width" : null,
+    "label" : "Icon Class",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "b69fbdd8-9c6e-bf89-97a8-a0392404297b",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "etmodules",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "email"
+  }, {
+    "id" : "acb9b421-67fd-4d9d-aff6-196d9c4d20ad",
+    "name" : "icon_color",
+    "display_width" : null,
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#4e5ed0",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "df9c0fe2-96a4-e1c9-245f-eb73ae363452",
+    "name" : "content_color",
+    "display_width" : null,
+    "label" : "Title Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#1f1f1f",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "5f9b2ed9-2090-cd6d-b125-d14c1316715d",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "ADDRESS"
+  }, {
+    "id" : "86e2ebff-5192-4017-9ac0-6094c6745e0e",
+    "name" : "description_color",
+    "display_width" : null,
+    "label" : "Description Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#424242",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "ac5db4f4-900f-771c-ca5a-0dd396efcf26",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>1 Chase Corporate<br>Dr. Suite 400<br>Birmingham, AL 35244</p>"
+  }, {
+    "id" : "a9e73711-b80e-16da-8e40-e5ee234f09e5",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "icon_field" : {
+      "name" : "Alternate Map Marker",
+      "unicode" : "f3c5",
+      "type" : "SOLID"
+    },
+    "icon_class" : "email",
+    "icon_color" : {
+      "color" : "#4e5ed0",
+      "opacity" : 100
+    },
+    "content_color" : {
+      "color" : "#1f1f1f",
+      "opacity" : 100
+    },
+    "title" : "ADDRESS",
+    "description_color" : {
+      "color" : "#424242",
+      "opacity" : 100
+    },
+    "description" : "<p>1 Chase Corporate<br>Dr. Suite 400<br>Birmingham, AL 35244</p>"
+  } ]
+}, {
+  "id" : "15ff3c5f-99e2-c2d0-03d7-9478e2a23663",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#fff",
+    "opacity" : 100
+  }
+} ]

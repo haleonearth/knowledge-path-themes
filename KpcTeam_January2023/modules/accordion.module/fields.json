@@ -1,0 +1,55 @@
+[ {
+  "id" : "b9b032aa-35d8-3b41-4767-fdfbe3046979",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "WE’RE HIRING!"
+}, {
+  "id" : "53d75f62-14a3-dd9f-bbb5-d55fed491e56",
+  "name" : "item",
+  "display_width" : null,
+  "label" : "Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : "d9da6c82-9d77-0265-8cb2-61c4d3f74db4",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "d9da6c82-9d77-0265-8cb2-61c4d3f74db4",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Open Positions"
+  }, {
+    "id" : "3898e954-cfe4-b1a3-fff8-7e41718e5251",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>We have a number of positions available. Please submit your interest through the form below. We look forward to hearing from you.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "content" : "<p>We have a number of positions available. Please submit your interest through the form below. We look forward to hearing from you.</p>",
+    "title" : "Open Positions"
+  } ]
+} ]

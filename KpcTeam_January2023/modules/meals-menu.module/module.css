@@ -1,0 +1,66 @@
+.meals-menu .meals-menu-con.page-center {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+}
+
+.meals-menu .cm-item {
+  width: 33.3333%;
+  background-color: #ffffff;
+  padding-top: 48px;
+  padding-right: 24px;
+  padding-bottom: 48px;
+  padding-left: 24px;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.meals-menu .cm-price {
+  color: #c39d63;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.meals-menu .cm-heading {
+  font-family: 'Playfair Display',Georgia,"Times New Roman",serif;
+  font-size: 24px;
+  color: #1f1f1f!important;
+  line-height: 1.3em;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.meals-menu .cm-text p {
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  color: #939393;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  font-weight: 500;
+  padding-bottom: 2px;
+}
+
+@media (max-width:991px){
+  .meals-menu .cm-item {
+    width: 100%;
+    min-height: 300px;
+  } 
+}
+
+@media (max-width:767px){
+  .meals-menu .meals-menu-con.page-center {
+    width: 100%;
+  }
+
+}

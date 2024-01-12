@@ -1,0 +1,212 @@
+[ {
+  "id" : "70a0211f-6e58-5eae-6755-0620668e9f16",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#e3e7e6",
+    "opacity" : 100
+  }
+}, {
+  "id" : "b9b1992f-5435-be71-a941-d8cb45af6b28",
+  "name" : "include_background_image",
+  "display_width" : null,
+  "label" : "Include Background Image",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "c3060824-c1e6-3fdb-c3e2-72763174b4a0",
+  "name" : "left_image",
+  "display_width" : null,
+  "label" : "Left Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/OurStory.jpg",
+    "alt" : "OurStory",
+    "loading" : "lazy",
+    "width" : 1000,
+    "height" : 714,
+    "max_width" : 1000,
+    "max_height" : 714
+  }
+}, {
+  "id" : "fbe507d4-8942-122f-d03a-2d360edf7c32",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "OUR STORY"
+}, {
+  "id" : "8151611f-b37b-4c72-88b5-a8383b4765ae",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>David Warford started KnowledgePath Consulting because he had a desire for companies to be able to make better decisions based on better information and advice. He saw the need for an independent and unbiased voice to advise companies on their ERP options. Today, KnowledgePath’s consultants remain fully independent and vendor-neutral. We advise companies with a well-rounded approach, addressing people and processes along with technology.</p>"
+}, {
+  "id" : "559ac067-4594-8a4b-4edd-8b1c962531cc",
+  "name" : "right_section_background_color",
+  "display_width" : null,
+  "label" : "Right Section Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#1B75BB",
+    "opacity" : 100
+  }
+}, {
+  "id" : "f7f6e930-e45d-36bc-4ef0-a6087d03cba9",
+  "name" : "right_section_text_color",
+  "display_width" : null,
+  "label" : "Right Section Text Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#fff",
+    "opacity" : 100
+  }
+}, {
+  "id" : "450a4f1b-2876-fb06-fa23-093d78009798",
+  "name" : "button_group",
+  "display_width" : null,
+  "label" : "Button Group",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b4483ef9-5171-9961-bdd9-9d9de83808e7",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "std", "Standard" ], [ "cta", "Cta" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "9853860d-e0ea-6561-1dd0-feb16d2cb9b9",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "b4483ef9-5171-9961-bdd9-9d9de83808e7",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learn More"
+  }, {
+    "id" : "a34e1324-e845-5860-15bf-4e188936c142",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "b4483ef9-5171-9961-bdd9-9d9de83808e7",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "4b33c2c7-2618-4a1e-d32a-f3d0a9c32388",
+    "name" : "cta_field",
+    "display_width" : null,
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "b4483ef9-5171-9961-bdd9-9d9de83808e7",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_text" : "Learn More",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "4a26fa25-64ee-fd6e-7017-6ba1317b1a7c",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "4eebe951-910f-24b4-b58c-03ebc36a0ecd",
+  "name" : "section_id",
+  "display_width" : null,
+  "label" : "Section ID",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : ""
+} ]

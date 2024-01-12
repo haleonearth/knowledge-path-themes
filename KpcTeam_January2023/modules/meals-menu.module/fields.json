@@ -1,0 +1,144 @@
+[ {
+  "id" : "e6c4d842-103a-b27b-7d31-3e70f4fb974e",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "8852ddce-6280-f011-42a3-7d9aadfda88e",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "8852ddce-6280-f011-42a3-7d9aadfda88e",
+    "name" : "item_type",
+    "display_width" : null,
+    "label" : "Item Type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "img", "Image" ], [ "cnt", "Content" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice"
+  }, {
+    "id" : "c914d296-5d4d-71cc-908a-fa25bf2829a7",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "8852ddce-6280-f011-42a3-7d9aadfda88e",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "img",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Grilled%20Fillet.jpg",
+      "alt" : "Grilled Fillet",
+      "loading" : "lazy",
+      "width" : 800,
+      "height" : 510,
+      "max_width" : 800,
+      "max_height" : 510
+    }
+  }, {
+    "id" : "e0614e97-7c56-a4be-044d-9e9232b744c3",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "8852ddce-6280-f011-42a3-7d9aadfda88e",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cnt",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Grilled Fillet"
+  }, {
+    "id" : "13fa6d21-ac38-57a5-d66b-29d109d33291",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "8852ddce-6280-f011-42a3-7d9aadfda88e",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cnt",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "default" : "<p>Sed ut perspiciatis unde omnis iste error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>"
+  }, {
+    "id" : "405d548c-12ab-4485-3fa7-f0af209bf037",
+    "name" : "price",
+    "display_width" : null,
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "8852ddce-6280-f011-42a3-7d9aadfda88e",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cnt",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$26.95"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/KpcTeam_January2023/Image/Grilled%20Fillet.jpg",
+      "alt" : "Grilled Fillet",
+      "loading" : "lazy",
+      "width" : 800,
+      "height" : 510,
+      "max_width" : 800,
+      "max_height" : 510
+    },
+    "heading" : "Grilled Fillet",
+    "content" : "<p>Sed ut perspiciatis unde omnis iste error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.</p>",
+    "price" : "$26.95"
+  }
+}, {
+  "id" : "c2d52e64-23c5-f680-2ebd-763fbd100f02",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#1f1f1f",
+    "opacity" : 100
+  }
+} ]

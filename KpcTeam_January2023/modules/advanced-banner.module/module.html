@@ -1,0 +1,65 @@
+{% if module.background_image.src || module.title || module.email_text || module.number %}
+<div class="advanced-banner">
+  <div class="advanced-banner-can">
+    <div class="advanced-left" style="background-image:url({{ module.background_image.src }})">
+      <div class="advanced-left-can"></div>
+    </div>
+    <div class="advanced-right">
+      <div class="advanced-right-can">
+        {% if module.supper_title %}
+        <h3 class="supper-title">{{ module.supper_title }}</h3>
+        {% endif %}
+        {% if module.title %}
+        <h1>{{ module.title }}</h1>
+        {% endif %}
+        {% if module.sub_title %}
+        <h3 class="sub-title">{{ module.sub_title }}</h3>
+        {% endif %}
+        {%  if module.button_group.button_type == "std" %}
+        <div class="button__pb">
+          {% set href = module.button_group.button_link.url.href %}
+          {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+             >
+            {{ module.button_group.button_text }}
+          </a>
+        </div>
+        {% endif %}
+        {%  if module.button_group.button_type == "cta" %}
+        <div class="button__pb">
+          {% cta guid="{{ module.button_group.cta_field }}" %}
+        </div>
+        {% endif %}
+        {% if module.email_text || module.number %}
+        <div class="advanced-icons">
+          <div class="content mail">
+            <div class="blurb_image">
+              <span class="image_wrap">
+                <span class="animated"></span>
+              </span>
+            </div>
+            <div class="blurb_container">
+              <h4 class="module_header"><span>{{ module.email_text }}</span></h4>
+            </div>
+          </div>
+          <div class="content number">
+            <div class="blurb_image">
+              <span class="image_wrap">
+                <span class="animated"></span>
+              </span>
+            </div>
+            <div class="blurb_container">
+              <h4 class="module_header"><span>{{ module.number }}</span></h4>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

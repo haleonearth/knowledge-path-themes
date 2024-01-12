@@ -1,0 +1,100 @@
+[ {
+  "id" : "204bfc1e-9043-981b-36f8-7f9540a21735",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "GENERATING NEW IDEAS. SOLVING BIG PROBLEMS"
+}, {
+  "id" : "87669dd5-4ecb-abd8-8d4b-3ff31f6df202",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum. Sed ut perspiciatis unde omnis.</p>"
+}, {
+  "id" : "635945f0-2fe9-f40b-f34f-478cd3545254",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "78b2e200-9f18-a009-7031-259d7eb839f9",
+  "name" : "items",
+  "display_width" : null,
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "2a93e709-247b-1d2a-bbc6-073049f699c6",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "c20e45e7-86cb-71a3-8d84-a290e1855d46",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "PROJECTS"
+  }, {
+    "id" : "3e0709e6-91cf-0d8e-8765-cefd8d151816",
+    "name" : "number",
+    "display_width" : null,
+    "label" : "Number",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "99f66c51-4f25-7b5b-15ad-be40dde8c1f6",
+    "name" : "prefix",
+    "display_width" : null,
+    "label" : "Prefix",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "heading" : "PROJECTS"
+  } ]
+}, {
+  "id" : "00411e3e-e2f4-47ef-40bb-44d5b139838f",
+  "name" : "background_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#fcd21d",
+    "opacity" : 100
+  }
+} ]

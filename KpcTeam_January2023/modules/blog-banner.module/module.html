@@ -1,0 +1,26 @@
+
+<div class="banner blog-banner">
+  <div class="banner-con">
+    <span class="parallax_bg_wrap">
+      {% if is_listing_view %}
+      <span class="parallax_bg jarallax" style="background-image:url('{{ module.listing_background_image.src }}');"></span>
+      {% else %}
+      <span class="parallax_bg jarallax" style="background-image:url('{{content.featured_image}}');"></span>
+      {% endif %}
+    </span>
+    <div class="banner-header-content">
+      {% if is_listing_view %}
+      <h1 class="blog-header__title">{{ group.public_title }}</h1>
+      {% else %}
+      <h1 class="blog-post__title">{{ content.name }}</h1>
+      {% endif %}
+      <div class="header_content_wrapper"></div>
+    </div>
+    <div class="banner-header_overlay" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});"></div>
+    <div class="fullwidth_header_scroll">
+      <a href="#next" class="scroll-down-container">
+        <span class="scroll-down et-pb-icon">"</span>
+      </a>
+    </div>
+  </div>
+</div>

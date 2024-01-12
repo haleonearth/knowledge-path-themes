@@ -1,0 +1,47 @@
+<div class="design-agency">
+  <div class="design-agency-con page-center" style="background-image: url({{ module.background_image.src }});">
+    <div class="left">
+      <div class="top-heading">
+        <h3>{{ module.top_heading }}</h3>
+      </div>
+      <div class="heading">
+        <h1>{{ module.heading }}</h1>
+      </div>
+      <div class="content">
+        {{ module.content }}
+      </div>
+      {% if module.button_group.button_type =="std" %}
+      <div class="lm-button">
+        {% set href = module.button_group.button_link.url.href %}
+        {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}"
+           {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+           >
+          {{ module.button_group.button_text }}
+        </a>
+      </div>
+      {% endif %}
+      {% if module.button_group.button_type =="cta" %}
+      <div class="lm-button">
+        {% cta guid="{{ module.button_group.cta_field }}" %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="right">
+      <span class="parallax_bg_wrap">
+        <span class="parallax_bg jarallax" style="background-image: url({{ module.right_background_image.src }});"></span>
+      </span>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .design-agency-con{
+    background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});
+  }    
+</style>
+{% end_require_css %}

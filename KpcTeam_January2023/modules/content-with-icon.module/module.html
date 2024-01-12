@@ -1,0 +1,35 @@
+<div class="content-with-top-icon" style="background-color:rgba({{ module.background_color.color|convert_rgb }},{{ module.background_color.opacity/100 }});">
+  <div class="content-wrapper">
+    {% if module.top_content %}
+    <div class="top-content">
+      {{ module.top_content }}
+    </div>
+    {% endif %}
+    <div class="item-wrapper">
+      {% for item in module.column_item %}
+      <div class="content-col">
+        <div class="content-image">
+          <span class="{% if item.icon_choice == "etmodules" %} etmodules {{ item.icon_class }} {% endif %}"  style="fill:rgba({{ item.icon_color.color|convert_rgb }},{{ item.icon_color.opacity/100 }}); color:rgba({{ item.icon_color.color|convert_rgb }},{{ item.icon_color.opacity/100 }});">
+            {% if item.icon_choice == "fontawesome" %}
+            {% icon
+              name="{{ item.icon_field.name }}"
+              style="{{ item.icon_field.type }}"
+              unicode="{{ item.icon_field.unicode }}"
+              icon_set="{{ item.icon_field.icon_set }}"
+            %}
+            {% endif %}
+          </span>
+        </div>
+        <div class="content-dese">
+          <h4 style="color:rgba({{ item.content_color.color|convert_rgb }},{{ item.content_color.opacity/100 }});">
+            {{ item.title }}
+          </h4>
+          <div class="content" style="color:rgba({{ item.description_color.color|convert_rgb }},{{ item.description_color.opacity/100 }});">
+            {{ item.description }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

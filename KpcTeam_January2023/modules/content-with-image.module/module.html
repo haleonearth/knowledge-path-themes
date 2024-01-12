@@ -1,0 +1,38 @@
+<div class="content-with-image {{ module.content_alignment }}">
+  <div class="cont-with-img-con">
+    <div class="content-image" style="background-image:url({{ module.background_image.src }})">
+      <div class="cont-img-con"> </div>
+    </div>
+    <div class="content--text" style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});">
+
+      <div class="cont--text-con">
+        {% if module.boolean_field %}
+        <div class="pb_divider">
+          <div class="divider_internal"></div>
+        </div>
+        {% endif %}
+        <h2 class="cont-header">{{ module.heading }}</h2>
+        {{ module.content }}
+        {%  if module.button_group.button_type == "std" %}
+        <div class="lm-button">
+          {% set href = module.button_group.button_link.url.href %}
+          {% if module.button_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href }}"
+             {% if module.button_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.button_group.button_link.rel %}rel="{{ module.button_group.button_link.rel }}"{% endif %}
+             >
+            {{ module.button_group.button_text }}
+          </a>
+        </div>
+        {% endif %}
+        {%  if module.button_group.button_type == "cta" %}
+        <div class="lm-button">
+          {% cta guid="{{ module.button_group.cta_field }}" %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

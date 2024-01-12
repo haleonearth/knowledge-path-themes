@@ -1,0 +1,74 @@
+<div class="team-members">
+  <div class="team-members-con page-center">
+    <div class="pb_divide"><div class="divider_internal"></div></div>
+    <div class="heading">
+      <h1>{{ module.heading }}</h1>
+    </div>
+    <div class="content">
+      {{ module.content }}
+    </div>
+    <div class="team-members-items">
+      {% for item in module.items %}
+      <div class="team-members-item">
+        <div class="team-members-item-con">
+          <div class="image">
+            {% if item.image_field.src %}
+            <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}">
+            {% endif %}    
+          </div>
+          <div class="member_description">
+            <h4 class="name">{{ item.member_name }}</h4>
+            <p class="member_position">{{ item.member_desigation }}</p>	
+            <ul class="member_social_links">
+              <li>
+                {% set href = item.facebook_link.url.href %}
+                {% if item.facebook_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}" class="font_icon facebook_icon"
+                   {% if item.facebook_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.facebook_link.rel %}rel="{{ item.facebook_link.rel }}"{% endif %}
+                   >
+                </a>
+              </li>
+              <li>
+                {% set href = item.twitter_link.url.href %}
+                {% if item.twitter_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}" class="font_icon twitter_icon"
+                   {% if item.twitter_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.twitter_link.rel %}rel="{{ item.twitter_link.rel }}"{% endif %}
+                   >
+                </a>
+              </li>
+              <li>
+                {% set href = item.google_link.url.href %}
+                {% if item.google_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}" class="font_icon google_icon"
+                   {% if item.google_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.google_link.rel %}rel="{{ item.google_link.rel }}"{% endif %}
+                   >
+                </a>
+              </li>
+              <li>
+                {% set href = item.linkedin_link.url.href %}
+                {% if item.linkedin_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a href="{{ href }}"  class="font_icon linkedin_icon"
+                   {% if item.linkedin_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.linkedin_link.rel %}rel="{{ item.linkedin_link.rel }}"{% endif %}
+                   >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

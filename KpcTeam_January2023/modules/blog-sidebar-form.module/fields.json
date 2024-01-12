@@ -1,0 +1,40 @@
+[ {
+  "id" : "8d8d1771-52fc-dade-5b46-ee136941f4b9",
+  "name" : "heading_text",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Want to read more?"
+}, {
+  "id" : "891bb820-5719-f926-e71c-1f909115bbf5",
+  "name" : "sub_heading_text",
+  "display_width" : null,
+  "label" : "Sub Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Sign up for notifications when we post - about three to four times per month."
+}, {
+  "id" : "b600605a-3dd0-33cf-c0ff-430398cd03c3",
+  "name" : "form_field",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : false,
+  "type" : "form",
+  "default" : {
+    "form_id" : "050cae3b-16cd-4f30-b59f-1a5033cffdbe",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+} ]

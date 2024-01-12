@@ -1,0 +1,129 @@
+.content-with-image {
+  position: relative;
+}
+
+.content-with-image .cont-with-img-con {
+  display: flex;
+}
+
+.content-with-image .content-image {
+  background-position: left top;
+  width: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+}
+
+.content-with-image .content--text {
+  width: 50%;
+  padding-top: 8%;
+  padding-right: 6%;
+  padding-bottom: 8%;
+  padding-left: 6%;
+}
+
+.content-with-image .cont--text-con {
+  max-width: 450px;
+}
+
+.content-with-image h2.cont-header {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif!important;
+  font-size: 36px;
+  color: #1f1f1f;
+  font-weight: 500;
+  line-height: 1.4em;
+  padding-bottom: 10px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.content-with-image .pb_divider {
+  margin: 0 0 30px;
+  position: relative;
+  margin-left: 0px;
+  margin-right: auto;
+  height: 5px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  max-width: 100px;
+}
+
+.content-with-image .pb_divider:before {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid rgba(0,0,0,.1);
+  position: absolute;
+  border-top-color: #4e5ed0;
+  border-top-width: 3px;
+  width: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  content: "";
+  z-index: 10;
+}
+
+.content-with-image .cont--text-con p {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  line-height: 1.9em;
+  font-weight: 500;
+  color: #424242;
+  letter-spacing: 0;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.content-with-image .lm-button a {
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  color: #ffffff;
+  border-color: #6eba01;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  text-transform: uppercase;
+  background-color: #6eba01;
+  padding: 0.3em 1em;
+  display: inline-block;
+  line-height: 1.7em;
+  font-weight: 500;
+}
+
+.content-with-image .lm-button a:hover {
+  color: #6eba01;
+  border-color: #6eba01;
+  border-radius: 0;
+  letter-spacing: 2px;
+  background-image: initial;
+  background-color: rgba(0,0,0,0);
+}
+
+
+@media (max-width:980px){
+  .content-with-image h2.cont-header {
+    font-size: 30px;
+  } 
+}
+
+@media (max-width:767px){
+  .content-with-image .cont-with-img-con {
+    flex-direction: column;
+  }
+
+  .content-with-image .content-image {
+    width: 100%;
+    min-height: 300px;
+  }
+
+  .content-with-image .content--text {
+    width: 100%;
+  }
+
+  .content-with-image h2.cont-header {
+    font-size: 25px;
+  } 
+}

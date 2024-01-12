@@ -1,0 +1,281 @@
+.contact-details {
+  background-image: linear-gradient(180deg,#1b75bb 3%,#1b75bb 35%,#1b75bbb3 126%);
+}
+
+.contact-details  .bottom-pane-con {
+  width: 100%;
+  max-width: 1290px;
+  box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 12%);
+  margin: auto;
+  position: relative;
+  DISPLAY: FLEX;
+}
+
+.contact-details  .bottom-pane-left {
+  width: 50%;
+  background-color: #FFFFFF;
+  padding-top: 38px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+}
+
+.contact-details  .bottom-pane-right {
+  background-color: #797C7E;
+  padding-top: 38px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+  width: 50%;
+}
+
+.contact-details .bottom-pane-left h5 {
+  margin: 0;
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #000000!important;
+  text-align: left;
+  letter-spacing: 1px;
+  padding-bottom: 3px;
+}
+
+.contact-details .pane-left-content p {
+  font-size: 15px;
+  color: #797C7E;
+}
+
+.contact-details .pane-left-content p strong {
+  font-weight: 700;
+}
+
+.contact-details .bottom-pane-social ul {
+  list-style-type: none;
+  margin: 0 0 22px;
+  padding: 0;
+  text-align: center;
+  margin-top: 5px;
+  line-height: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-details .bottom-pane-social ul li {
+  display: inline-block;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.contact-details .bottom-pane-social ul li a {
+  height: 88px;
+  margin: 0;
+  border-radius: 0px 0px 0px 0px;
+  width: 88px;
+  padding: 0;
+  vertical-align: middle;
+  background-color: #1B75BB;
+  margin-right: 4px;
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details .bottom-pane-social ul li a:hover:before {
+  color: #000;
+}
+
+.contact-details .bottom-pane-social ul li a:before {
+  transition: color 300ms ease 0ms;
+  font-size: 44px;
+  line-height: 88px;
+  height: 88px;
+  width: 88px;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 10;
+  font-family: ETmodules;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0;
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-details .bottom-pane-social ul li.bottom-pane-linkedin a:before {
+  content: "\E09D";
+}
+
+.contact-details .bottom-pane-social ul li.bottom-pane-twitter a:before {
+  content: none;
+}
+
+.contact-details .bottom-pane-social ul li.bottom-pane-linkedin {
+  margin-right: 4px;
+}
+
+.contact-details .bottom-pane-social ul li.bottom-pane-twitter a {
+  margin: 0;
+}
+
+.contact-details .right-content h5 {
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #FFFFFF;
+  text-align: left;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: 3px;
+}
+
+.contact-details .right-content p {
+  color: #F1E7DA;
+  font-family: 'Sora',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+.contact-details  .right-form .hs_cos_wrapper_type_form {
+  background: transparent;
+  padding: 8px;
+  padding-top: 0;
+}
+
+.contact-details .right-form form .hs-form-field input::placeholder {
+  color: #868886;
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.contact-details  .right-form .form-title {
+  display: none;
+}
+
+.contact-details  .right-form form .hs-form-field {
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.contact-details  .right-form form .hs-form-field>label {
+  display: none;
+}
+
+.contact-details  .right-form ..right-form actions {
+  padding-left: 10px;
+}
+
+.contact-details  .right-form form .hs-form-field .actions input[type=submit] {
+  margin-top: 0px !important;
+}
+
+
+.contact-details  .right-form form .hs_message.hs-message.hs-fieldtype-textarea.field.hs-form-field {
+  padding-bottom: 0px;
+}
+
+.contact-details  .right-form form .actions {
+  padding-left: 10px;
+}
+
+.contact-details .right-form form .hs-button {
+  border: none;
+}
+
+.contact-details .right-form form .hs-button:hover {
+  border: 1px solid #868886;
+}
+
+.contact-details .right-form form .hs-form-field select.hs-input {
+  background-color: #fff;
+  color: #868886;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 140%;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border: 1px solid #ddd;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+  background-position: calc(100% - 12px);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+}
+
+.contact-details .bottom-pane-right form .hs-input::placeholder {
+  -webkit-font-smoothing: auto;
+}
+
+@media (max-width:980px){
+  .contact-details .bottom-pane-con {
+    width: 90%;
+  }
+  .contact-details .bottom-pane-con {
+    display: block;
+  }
+  .contact-details .bottom-pane-left {
+    width: 100%;
+  }
+
+  .contact-details .bottom-pane-right {
+    width: 100%;
+  }
+}
+
+@media (max-width:767px){
+  .contact-details .bottom-pane-con {
+    flex-wrap: wrap;
+  }
+
+  .contact-details .bottom-pane-left {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-details .bottom-pane-right {
+    width: 100%;
+    padding: 20px;
+  } 
+
+  .contact-details .right-form .hs_cos_wrapper_type_form {
+    padding: 0;
+  }
+}
+
+
+
+/* Update Twitter icon to X */
+.bottom-pane-twitter a svg {
+  width: 50px;
+  margin-top: 8px;
+  fill: #fff !important;
+}
+
+.bottom-pane-twitter a:hover svg {
+  fill: #000 !important;
+}

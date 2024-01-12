@@ -1,0 +1,146 @@
+.why-we-are {
+  padding-top: 109px;
+  padding-bottom: 110px;
+}
+
+.why-we-are .why-we-are-con {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 86%;
+  margin: auto;
+  position: relative;
+  max-width: 86%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.why-we-are .why-we-left {
+  width: 46%;
+  margin-right: 8%;
+}
+
+.why-we-are .why-we-left-con img {
+  opacity: 1;
+  transition: opacity 400ms;
+  transition-delay: 0ms;
+}
+
+.why-we-are .why-we-right {
+  width: 46%;
+  padding-top: 5.85%;
+  padding-bottom: 7%;
+  position: relative;
+  z-index: 2;
+  min-height: 1px;
+}
+
+.why-we-are .why-we-right-con h2 {
+  margin: 0;
+  margin-bottom: 8.696%;
+  letter-spacing: 1px;
+  max-width: 700px;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.3em;
+  color: #4a5359;
+}
+
+.why-we-are .text_inner {
+  margin-bottom: 8.696%;
+  max-width: 700px;
+}
+
+.why-we-are .text_inner p {
+  color: #747d88;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.why-we-are .lm-button a {
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  color: #747d88;
+  border-width: 4px;
+  border-color: #747d88;
+  border-radius: 100px;
+  line-height: 1.7em;
+  letter-spacing: 2px;
+  font-size: 17px;
+  font-family: 'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #0C3770;
+  padding-top: 14px;
+  padding-right: 45px;
+  padding-bottom: 12px;
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  box-shadow: 0px 12px 18px -6px rgb(0 0 0 / 30%);
+}
+
+.why-we-are .lm-button a:after {
+  color: #747d88;
+  line-height: inherit;
+  font-size: inherit;
+  opacity: 1;
+  margin-left: 0.3em;
+  left: auto;
+  font-family: 'ETmodules';
+  font-weight: 400;
+  content: 'E';
+  position: absolute;
+}
+
+.why-we-are .lm-button {
+  margin-top: 16px;
+  padding-top: 4px;
+}
+
+.why-we-are .lm-button a:hover {
+  color: #747d88;
+  border-color: #747d88;
+  letter-spacing: 2px;
+  background-image: initial;
+  background-color: rgba(0,0,0,0);
+}
+
+
+@media (max-width:767px){
+  .why-we-are .why-we-are-con {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .why-we-are .why-we-left {
+    width: 100%;
+    margin: 0;
+  }
+
+  .why-we-are .why-we-right {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .why-we-are .why-we-right-con h2 {
+    font-size: 30px;
+    margin: 0 0 -0.304%;
+  }
+
+  .why-we-are .text_inner {
+    margin-bottom: 0;
+  }
+
+  .why-we-are {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  } 
+}

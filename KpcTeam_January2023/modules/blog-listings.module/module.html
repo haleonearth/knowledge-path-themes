@@ -1,0 +1,56 @@
+<div class="sidebar {{ module.number_of_columns }}">
+  <section class="blog-index">
+    {% if tag %}
+    <div class="blog-index__tag-header">
+      <div class="blog-index__tag-subtitle">Posts about</div>
+      <h1 class="blog-index__tag-heading">{{ page_meta.html_title|split(' | ')|last }}</h1>
+    </div>
+    {% endif %}
+
+    {# Blog listing #}
+    {% for content in contents %}
+
+    {# Set featured image #}
+    {# This checks to see if a user is opted into the blog listing editing experience. If they are it uses the conditional from the module. If they are not it uses the conditional from blog settings #}
+    {% set show_featured_image = false %}
+    {% if content.featured_image %}
+    {% if blog.listing_page_id %}
+    {% if module.featured_image %}
+    {% set show_featured_image = true %}
+    {% endif %}
+    {% else %}
+    {% if group.use_featured_image_in_summary %}
+    {% set show_featured_image = true %}
+    {% endif %}
+    {% endif %}
+    {% endif %}
+    {# End set featured image #}
+
+    <article class="blog-index__post blog-index__post--small" aria-label="Blog post summary: {{ content.name }}" id="{{ content.name|lower|replace(' ','')|replace('$','')|replace(",","")|replace("#","") }}">
+
+      <div class="blog-index__post-inner-card{% if not content.featured_image %} no-image{% endif %}">
+        {% if show_featured_image == true %}
+        <a class="blog-index__post-image blog-index__post-image--small" href="{{ content.absolute_url }}">
+          <img src="{{content.featured_image}}" aria-label="{% if content.featured_image_alt_text %}Featured image: {{ content.featured_image_alt_text }} - {% endif %}Read full post: {{ content.name|striptags }}" alt="{{ content.name|striptags }}">
+        </a>
+        {% endif %}
+        <div class="blog-index__post-content  blog-index__post-content--small">
+
+          {# Title #}
+          {% if module.post_title %}
+          <h2><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
+          {% endif %}
+          {# End title #}
+          <div class="blog-post__meta">
+            <time datetime="{{ content.publish_date }}" class="blog-post__timestamp">
+              {{ content.publish_date_local_time.strftime('%b') }} {{ content.publish_date_local_time.strftime('%e') }}, {{ content.publish_date_local_time.strftime('%Y') }}
+            </time>
+          </div>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+    {# End blog listing #}
+
+  </section>
+</div>

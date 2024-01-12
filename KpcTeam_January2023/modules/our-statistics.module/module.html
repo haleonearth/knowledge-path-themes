@@ -1,0 +1,29 @@
+<div class="our-statistics"  style="background-color:rgba({{module.background_color.color|convert_rgb}},{{module.background_color.opacity / 100 }});">
+  <div class="our-stat-con">
+    <div class="our-stat-top">
+      <div class="our-stat-top-con">
+        <h2>{{ module.heading }}</h2>
+        <div class="text_inner">
+          {{ module.content }}
+        </div>
+      </div>
+    </div>
+    <div class="our-stat-bot">
+      <div class="our-stat-bot-con">
+        {% for item in module.items %}
+        <div class="passthrough">
+          <div class="had_animation">
+            <div class="percent">
+              <p>
+                <span class="percent-value count">{{ item.number }}</span>
+                <span class="percent-sign">{{ item.prefix }}</span>
+              </p>
+            </div>
+            <h3 class="title">{{ item.heading }}</h3>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

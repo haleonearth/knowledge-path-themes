@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "content_types" : [ "BLOG_LISTING", "BLOG_POST" ],
+  "icon" : "fontawesome-5.14.0:Alternate%20List",
+  "host_template_types" : [ "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 97416961174,
+  "label" : "Blog Topic List",
+  "is_available_for_new_content" : true
+}

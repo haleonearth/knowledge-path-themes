@@ -1,0 +1,86 @@
+[ {
+  "id" : "204bfc1e-9043-981b-36f8-7f9540a21735",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "OUR SKILLS"
+}, {
+  "id" : "87669dd5-4ecb-abd8-8d4b-3ff31f6df202",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum. Sed ut perspiciatis unde omnis.</p>"
+}, {
+  "id" : "3365353c-457e-1c24-326e-cb8a70407b11",
+  "name" : "left_content",
+  "display_width" : null,
+  "label" : "Left Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum. Sed ut perspiciatis unde omnis.</p>"
+}, {
+  "id" : "635945f0-2fe9-f40b-f34f-478cd3545254",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : { }
+}, {
+  "id" : "78b2e200-9f18-a009-7031-259d7eb839f9",
+  "name" : "skills",
+  "display_width" : null,
+  "label" : "Skills",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "2a93e709-247b-1d2a-bbc6-073049f699c6",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "9d64f7e7-e81b-9ae5-8cd5-bbb3f0faddf9",
+    "name" : "width",
+    "display_width" : null,
+    "label" : "Skill Percentage",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "90%"
+  }, {
+    "id" : "89f373ce-2a9b-f5fd-ff26-7bedfcbd702e",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "width" : "90%"
+  } ]
+} ]

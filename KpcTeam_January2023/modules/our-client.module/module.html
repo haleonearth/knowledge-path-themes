@@ -1,0 +1,29 @@
+<div class="our-client">
+  <div class="our-client-con page-center">
+    <div class="left">
+      <div class="heading">
+        <h1>{{ module.heading }}</h1>
+      </div>
+      <div class="content">
+        {{ module.content }}
+      </div>
+      <div class="item">
+        {% for item in module.client %}
+        <div class="blurb_content">
+          <div class="image_bg">		
+            <div style="background-image: url({{ item.image_field.src }})" class="testimonial_portrait"></div>
+            <div class="testimonial_description">
+              <div class="testimonial_description_inner">
+                <div class="testimonial_content">{{ item.content }}</div>
+              </div>
+              <span class="testimonial_author">{{ item.author_name }}</span>
+              <p class="testimonial_meta">{{ item.designation }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+

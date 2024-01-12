@@ -1,0 +1,78 @@
+[ {
+  "id" : "1f3edef7-05cb-a395-f98d-b97cc4dfb5fd",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Global Leader<strong> 10</strong> Years In a Row&nbsp;"
+}, {
+  "id" : "9809ae7a-9c6c-9e47-5bbd-daf0da15bf3c",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>"
+}, {
+  "id" : "301b06d7-2a71-7ba7-ddc6-97fe470db53d",
+  "name" : "counter_item",
+  "display_width" : null,
+  "label" : "Counter Item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "1e5b8a8f-65a8-42bc-e224-9606712e1cbb",
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "1e5b8a8f-65a8-42bc-e224-9606712e1cbb",
+    "name" : "counter_title",
+    "display_width" : null,
+    "label" : "Counter Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Average profit per year"
+  }, {
+    "id" : "28af3dc1-78eb-3b9c-b85e-391414b2621a",
+    "name" : "counter_symble",
+    "display_width" : null,
+    "label" : "Counter Symble",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "%"
+  }, {
+    "id" : "498124b7-63f0-10a8-0c8d-53c24918c1ea",
+    "name" : "counter_number",
+    "display_width" : null,
+    "label" : "Counter Number",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "counter_title" : "Average profit per year",
+    "counter_symble" : "%"
+  } ]
+} ]
