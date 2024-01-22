@@ -1,0 +1,186 @@
+{% from '../../templates/macros/macros.html' import color %}
+
+{% set link = color(module.style.menu.link, module.style.menu.custom_link.css )|trim %}
+{% set link_hover = color(module.style.menu.link_hover, module.style.menu.custom_link_hover.css )|trim %}
+
+{% set dropdown_link = color(module.style.dropdown.link, module.style.dropdown.custom_link.css )|trim %}
+{% set dropdown_link_hover = color(module.style.dropdown.link_hover, module.style.dropdown.custom_link_hover.css )|trim %}
+{% set dropdown_bg = color(module.style.dropdown.background, module.style.dropdown.custom_background.css )|trim %}
+{% set dropdown_border = color(module.style.dropdown.border.color, module.style.dropdown.border.custom_color.css )|trim %}
+{% set dropdown_border_hover = color(module.style.dropdown.border.border_hover, module.style.dropdown.border.custom_border_hover.css )|trim %}
+
+{% set megamenu_link = color(module.style.mega_menu.link, module.style.mega_menu.custom_link.css )|trim %}
+{% set megamenu_link_hover = color(module.style.mega_menu.link_hover, module.style.mega_menu.custom_link_hover.css )|trim %}
+{% set megamenu_bg = color(module.style.mega_menu.background, module.style.mega_menu.custom_background.css )|trim %}
+{% set megamenu_border = color(module.style.mega_menu.border.color, module.style.mega_menu.border.custom_color.css )|trim %}
+{% set megamenu_border_hover = color(module.style.mega_menu.border.border_hover, module.style.mega_menu.border.custom_border_hover.css )|trim %}
+
+{% require_css %}
+<style>
+{% scope_css %}
+  .megamenu__container {
+    max-width: {{ theme.spacing.max_width }}px;    
+  }
+  .megamenu__content {
+    background-color: {{ megamenu_bg }};
+  }
+  .megamenu .megamenu__level-0 > .megamenu__item:not(:first-child) {
+    margin-left: {{ theme.header.menu.space_between }}px;
+  }
+  .megamenu__link {
+		font-size: {{ module.style.general_styles.font_size.desktop ~ "px" }};
+    line-height: {{ module.style.general_styles.line_height.desktop ~ "px" }};		
+		{{ module.style.general_styles.font.css }}
+    color: {{ link }};
+  }
+  .megamenu__item svg path {
+    fill: {{ link }};
+  }
+  .megamenu__item:hover .megamenu__link, .megamenu .megamenu__item .submenu-toggle:checked ~ .megamenu__link { 
+    color: {{ link_hover }};
+	}
+  .megamenu__item:hover svg path, .megamenu .megamenu__item .submenu-toggle:checked ~ .menu-arrow svg path {
+    fill: {{ link_hover }};
+  }
+  .megamenu .megamenu__col .megamenu__link {
+    color: {{ megamenu_link }};
+    border-bottom: {{ module.style.mega_menu.border.width ~ 'px' }} solid {{ megamenu_border }};
+  }
+  .megamenu__col .megamenu__item:hover .megamenu__link,
+  .megamenu__col .megamenu__item:focus .megamenu__link {
+    color: {{ megamenu_link_hover }};
+    border-bottom: {{ module.style.mega_menu.border.width ~ 'px' }} solid {{ megamenu_border_hover }};
+  }
+  {# Dropdown #}
+  
+  .dropdown .menu-item .megamenu__link {
+    color: {{ dropdown_link }};
+  } 
+  .dropdown .menu-item:hover .megamenu__link, .megamenu .dropdown  .menu-item .submenu-toggle:checked ~ .megamenu__link {
+    color: {{ dropdown_link_hover }};
+  } 
+  .dropdown {
+    background: {{ dropdown_bg }};
+  }
+  .dropdown .menu-item {
+    border-bottom: {{ module.style.dropdown.border.width ~ 'px' }} solid {{ dropdown_border }};
+  }
+  .dropdown .menu-item:hover,
+  .dropdown .menu-item:focus {
+    border-bottom: {{ module.style.dropdown.border.width ~ 'px' }} solid {{ dropdown_border_hover }};
+  }
+  {# End Dropdown #}
+  
+  @media screen and (max-width: {{ theme.layout.responsive_breakpoint ~ 'px' }}){
+    .megamenu .megamenu__level-0 > .megamenu__item:not(:first-child) {
+      margin-left: 0;
+    }    
+    .megamenu__link {
+      font-size: {{ module.style.general_styles.font_size.tablet ~ "px" }};
+      line-height: {{ module.style.general_styles.line_height.tablet ~ "px" }};
+    }
+  }
+  @media(max-width: 767px){
+    .megamenu__link {
+      font-size: {{ module.style.general_styles.font_size.mobile ~ "px" }};
+      line-height: {{ module.style.general_styles.line_height.mobile ~ "px" }};
+    }
+  }
+{% end_scope_css %} 
+</style>
+{% end_require_css %}
+
+
+
+{% set arrow = 
+  '<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.98325 8.74227C8.2715 8.73261 8.5463 8.61747 8.75556 8.41872L14.6382 2.77137C14.8634 2.55497 14.9937 2.2579 15 1.94528C15.0063 1.63266 14.8882 1.33096 14.6714 1.10532C14.455 0.880094 14.1575 0.749835 13.8453 0.743953C13.5331 0.73765 13.2306 0.856144 13.0058 1.07254L7.93913 5.9333L2.8729 1.07296C2.56952 0.781349 2.13336 0.67378 1.72914 0.790593C1.32492 0.907826 1.01398 1.23137 0.91271 1.6398C0.811864 2.04822 0.936661 2.47976 1.24004 2.77137L7.1227 8.41872C7.35422 8.6389 7.66474 8.75572 7.98325 8.74227Z" fill="#323232"/>
+  </svg>' 
+%}
+<div class="header__navigation"> 
+  <nav class="megamenu">
+    <ul class="megamenu__level-0">
+      {% for item in module.item %}
+      <li class="megamenu__item" >
+        {% set href = item.link.url.href %}
+        {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+        {% endif %}       
+        
+        
+        {% if item.type_of_link == "link" %}
+          <a href="{{ href }}" class="megamenu__link {% if item.add_mega_menu %}megamenu__link--notlink {% endif %}"
+             {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}
+             >       
+            {{ item.text }}
+          </a>
+        {% elif item.type_of_link == "dropdown" %}
+          <input type="checkbox" name="megamenu" id="megamenu-{{ name ~ loop.index }}" class="submenu-toggle">
+          <label class="menu-arrow megamenu__link " for="megamenu-{{ name ~ loop.index }}">
+            {{ item.text }}
+            {{ arrow }}
+          </label>
+          <ul class="dropdown submenu">
+            {% for item2 in item.dropdowm %}              
+              {% set href = item2.link.url.href %}
+              {% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+              {% endif %}
+              <li class="no-submenu menu-item">
+                <a href="{{ href }}" class="megamenu__link"
+                  {% if item2.link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if item2.link.rel %}rel="{{ item2.link.rel }}"{% endif %}
+                  >
+                  {{ item2.text }}
+                </a>
+              </li>              
+            {% endfor %}
+          </ul>
+        {% elif item.type_of_link == "megamenu" %}
+          <input type="checkbox" name="megamenu" id="megamenu-{{ name ~ loop.index }}" class="submenu-toggle">
+          <label class="menu-arrow megamenu__link " for="megamenu-{{ name ~ loop.index }}">
+            {{ item.text }}
+            {{ arrow }}
+          </label>
+          <div class="megamenu__content">
+            <div class="megamenu__container">
+              {% for item2 in item.mega_menu.column %}
+              <div class="megamenu__col">
+                {% if item2.add_content %}
+                <div class="megamenu__text">
+                  {{ item2.content }}
+                </div>              
+                {% endif %}
+
+                {% if item2.add_menu %}
+                <ul class="megamenu__submenu">
+                  {% for item3 in item2.item %}
+                  <li class="megamenu__item">
+                    {% set href = item3.link.url.href %}
+                    {% if item3.link.url.type is equalto "EMAIL_ADDRESS" %}
+                      {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a href="{{ href }}" class="megamenu__link"
+                      {% if item3.link.open_in_new_tab %}target="_blank"{% endif %}
+                      {% if item3.link.rel %}rel="{{ item3.link.rel }}"{% endif %}
+                      >
+                      {{ item3.text }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+<div class="header__navigation--toggle">
+  <span aria-hidden="true"></span>
+</div>

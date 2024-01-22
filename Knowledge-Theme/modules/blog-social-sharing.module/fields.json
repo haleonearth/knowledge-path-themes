@@ -1,0 +1,42 @@
+[ {
+  "id" : "7befc72d-f6ef-58e5-f653-df4e1d91e1ad",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Share"
+}, {
+  "id" : "09154be6-7cd0-e75e-f7ca-43ae5d64dbb9",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style Options",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "bf4834af-078f-2256-a33b-4be40e006abc",
+    "name" : "icon_color",
+    "display_width" : null,
+    "label" : "Icon Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#82BCF2",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : true,
+  "type" : "group",
+  "default" : {
+    "icon_color" : {
+      "color" : "#82BCF2",
+      "opacity" : 100
+    }
+  }
+} ]

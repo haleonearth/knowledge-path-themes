@@ -1,0 +1,632 @@
+{
+  "name" : {
+    "message" : "blog-search-input",
+    "description" : "",
+    "placeholders" : null
+  },
+  "style.color.button_color.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.button_color.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.button_color.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.button_color.label" : {
+    "message" : "Button Color",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.button_color.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.label" : {
+    "message" : "Grupo de campos",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.color.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.font.input.name" : {
+    "message" : "blog-search-input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.font.labels.name" : {
+    "message" : "blog-search-input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.font.name" : {
+    "message" : "blog-search-input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.label" : {
+    "message" : "Style",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.name" : {
+    "message" : "blog-search-input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.desktop.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.desktop.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.desktop.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.desktop.label" : {
+    "message" : "Desktop",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.desktop.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.mobile.label" : {
+    "message" : "Mobile",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.tablet.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.tablet.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.tablet.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.tablet.label" : {
+    "message" : "Tablet",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.font_size.tablet.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.label" : {
+    "message" : "Copia de Label",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.desktop.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.desktop.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.desktop.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.desktop.label" : {
+    "message" : "Desktop Line Height",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.desktop.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.mobile.label" : {
+    "message" : "Mobile Line Height",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.tablet.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.tablet.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.tablet.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.tablet.label" : {
+    "message" : "Tablet Line Height",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.line_height.tablet.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.name" : {
+    "message" : "blog-search-input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.input.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.label" : {
+    "message" : "Grupo de campos",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font.label" : {
+    "message" : "Fuente",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.desktop.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.desktop.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.desktop.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.desktop.label" : {
+    "message" : "Desktop",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.desktop.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.mobile.label" : {
+    "message" : "Mobile",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.tablet.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.tablet.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.tablet.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.tablet.label" : {
+    "message" : "Tablet",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.font_size.tablet.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.label" : {
+    "message" : "Grupo de campos",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.desktop.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.desktop.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.desktop.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.desktop.label" : {
+    "message" : "Desktop Line Height",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.desktop.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.label" : {
+    "message" : "Field group",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.mobile.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.mobile.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.mobile.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.mobile.label" : {
+    "message" : "Mobile Line Height",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.mobile.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.tablet.default" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.tablet.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.tablet.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.tablet.label" : {
+    "message" : "Tablet Line Height",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.line_height.tablet.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.name" : {
+    "message" : "blog-search-input",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.labels.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "style.typography.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  }
+}

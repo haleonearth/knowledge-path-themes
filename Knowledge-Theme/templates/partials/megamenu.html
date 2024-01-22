@@ -1,0 +1,168 @@
+<!--
+  templateType: global_partial
+  label: Mega Menu
+-->
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      {% module "header_logo" 
+        path="@hubspot/logo", 
+        label='Logo',
+        img={
+          'alt':'Horizon Logo',
+          "override_inherited_src" : true,
+          'src': get_asset_url('../../images/style-guide-images/logo-header.png'),
+          'height': '65',
+          'width': '60',
+        }
+      %}
+    </div>
+    
+    {% module "megamenu" path="../../modules/megamenu", label="Mega Menu",
+      item = [
+        {
+        "text": "Pages",
+        "type_of_link": "link",
+        },
+        {
+        "text": "Blog",
+        "type_of_link": "dropdown",
+        "dropdowm": [{
+          "text": "Item 1"
+        },
+        {
+          "text": "Item 2"
+        },
+        {
+          "text": "Item 3"
+        },
+        {
+          "text": "Item 4"
+        }]
+        },
+        {
+        "text": "Help",
+        "type_of_link": "link",
+        },
+        {
+        "text": "Components",
+        "type_of_link": "megamenu",
+        "mega_menu": {
+          "column": [{
+            "add_content": true,
+            "content": "<h4>Components</h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare sed consequat tempus sed adipiscing pellentesque ullamcorper .</p>"
+          },
+          {
+            "add_menu": true,
+            "item": [{
+              "text": "Accordion"
+            },
+            {
+              "text": "Breadcrumb"
+            },
+            {
+              "text": "Button"
+            },
+            {
+              "text": "Content"
+            },
+            {
+              "text": "Countdown"
+            },
+            {
+              "text": "Counter"
+            },
+            {
+              "text": "Divider"
+            },
+            {
+              "text": "FAQ"
+            },
+            {
+              "text": "Flipbox"
+            },
+            {
+              "text": "Form"
+            },
+            {
+              "text": "Gallery"
+            }]
+          },
+          {
+            "add_menu": true,
+            "item": [{
+              "text": "Header"
+            },
+            {
+              "text": "Headline"
+            },
+            {
+              "text": "Hero"
+            },
+            {
+              "text": "Icon Box"
+            },
+            {
+              "text": "Image"
+            },
+            {
+              "text": "Image Box"
+            },
+            {
+              "text": "Label"
+            },
+            {
+              "text": "List"
+            },
+            {
+              "text": "Offer"
+            },
+            {
+              "text": "Parallax Background"
+            },
+            {
+              "text": "PopUp"
+            }]
+          },
+          {
+            "add_menu": true,
+            "item": [{
+              "text": "Pricing"
+            },
+            {
+              "text": "Progress"
+            },
+            {
+              "text": "Social links"
+            },
+            {
+              "text": "Table"
+            },
+            {
+              "text": "Team"
+            },
+            {
+              "text": "Testimonial"
+            },
+            {
+              "text": "Thumbnail Slider"
+            },
+            {
+              "text": "Timeline"
+            },
+            {
+              "text": "Toogle"
+            },
+            {
+              "text": "Video"
+            },
+            {
+              "text": "Widget"
+            }]
+          }]
+        }
+        }
+      ]
+    %}
+  </div>
+</header>

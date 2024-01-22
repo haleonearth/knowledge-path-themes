@@ -1,0 +1,274 @@
+[ {
+  "id" : "d7c6efe3-cfc4-be46-d75f-606dfcede0fc",
+  "name" : "slider",
+  "display_width" : null,
+  "label" : "Slider",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "children" : [ {
+    "id" : "3baf3763-6aab-a6e6-600a-8cbccab40325",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent40.net/hubfs/6113045/cisco-logo.png",
+      "alt" : "cisco-logo",
+      "width" : 194,
+      "height" : 114,
+      "max_width" : 194,
+      "max_height" : 114
+    }
+  } ]
+}, {
+  "id" : "f1099c6e-a664-46cf-4700-36046b7db8c8",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5cc56d00-36ac-77ad-27f8-9dd500624d73",
+    "name" : "arrow_color",
+    "display_width" : null,
+    "label" : "Arrow Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ae47a46b-af94-b830-487d-6cc919c5b5dc",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#6e6f72",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "64ee5524-736c-8c1d-8643-b6026af92c1a",
+    "name" : "add_grayscale_filter",
+    "display_width" : null,
+    "label" : "Add Grayscale Filter",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "arrow_color" : {
+      "color" : "#6e6f72",
+      "opacity" : 100
+    },
+    "add_grayscale_filter" : true
+  }
+}, {
+  "id" : "9da3818c-541f-18ff-71a4-56a2ab198e41",
+  "name" : "slider_opts",
+  "display_width" : null,
+  "label" : "Slider Options",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ae47a46b-af94-b830-487d-6cc919c5b5dc",
+    "name" : "add_arrows",
+    "display_width" : null,
+    "label" : "Add Arrows",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "cda4f61f-ff5d-ce41-df8a-f8c990e14b07",
+    "name" : "autoplay",
+    "display_width" : null,
+    "label" : "Autoplay",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "bda2027f-1b31-5e67-aecc-5627014ccf36",
+    "name" : "autoplay_speed",
+    "display_width" : null,
+    "label" : "Autoplay Speed",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "cda4f61f-ff5d-ce41-df8a-f8c990e14b07",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "display" : "text",
+    "min" : 0,
+    "max" : 10000,
+    "step" : 1,
+    "type" : "number",
+    "default" : 5000
+  }, {
+    "id" : "80c1197a-f1d7-e298-fec2-76d54f5890cf",
+    "name" : "slides",
+    "display_width" : null,
+    "label" : "Slides to Show",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ad18df3b-430d-5ffc-b896-2b521d9fc6bd",
+      "name" : "desktop",
+      "display_width" : null,
+      "label" : "Desktop",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1,
+      "max" : 7,
+      "step" : 1,
+      "type" : "number",
+      "default" : 7
+    }, {
+      "id" : "d0d0b6a9-d7d9-706b-747e-df37e43536db",
+      "name" : "tablet",
+      "display_width" : null,
+      "label" : "Tablet",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1,
+      "max" : 7,
+      "step" : 1,
+      "type" : "number",
+      "default" : 3
+    }, {
+      "id" : "1978ca6a-1895-3dee-8d15-9f83cf078644",
+      "name" : "mobile",
+      "display_width" : null,
+      "label" : "Mobile",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1,
+      "max" : 7,
+      "step" : 1,
+      "type" : "number",
+      "default" : 2
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "desktop" : 7,
+      "tablet" : 3,
+      "mobile" : 2
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "add_arrows" : false,
+    "autoplay" : true,
+    "autoplay_speed" : 5000,
+    "slides" : {
+      "desktop" : 7,
+      "tablet" : 3,
+      "mobile" : 2
+    }
+  }
+} ]

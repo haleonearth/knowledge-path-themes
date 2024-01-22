@@ -1,0 +1,194 @@
+{# ----- Module Styles ----- #}
+{% require_css %}
+<style>
+  {% scope_css %}
+      .swiper-slide{
+        text-align: {{ module.styles.text_alignment.desktop.text_align }};
+      }
+      .testimonial-slider__myswiper-{{name}}{
+        padding: 20px 22px;
+        max-width: 98%;
+      }
+    .swiper-slide {
+      background-color: rgba({{ module.styles.bg_color.color | convert_rgb }}, calc({{ module.styles.bg_color.opacity }} / 100));
+      {{ module.styles.spacing.desktop.css }};
+      border-radius: {{ module.styles.border_radius }}px;
+      box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
+    }
+		.testimonial-slider--layout-b .swiper-slide{
+			display: flex;
+			padding: 0;
+			overflow: hidden;
+		}
+		.testimonial-slider--layout-b .testimonial-slider__right{
+			width: 60%;
+			{{ module.styles.spacing.desktop.css }};
+		}
+		.testimonial-slider--layout-b .testimonial-slider__left{
+			width: 40%;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.testimonial-slider--layout-b .author-information img{
+			display: none;
+		}
+    .swiper-button-next:after, .swiper-button-prev:after{
+			color: {{ module.styles.arrow_color.css || "gray" }};
+    }
+  
+    .testimonial-slider .star-rating path {
+      fill: {{ module.styles.rating_stars.css }};
+    }
+  
+    .testimonial-slider__icon path {
+      fill: {{ module.styles.quotes_color.css }};
+    }
+    {# ---- Tablet Breakpoint ---- #}
+
+    @media (max-width: 992px) {
+      .swiper-slide {
+        {{ module.styles.spacing.tablet.css }};
+        text-align: {{ module.styles.text_alignment.tablet.text_align }};
+      }
+			.testimonial-slider--layout-b .swiper-slide{
+				display: block;
+			}
+			.testimonial-slider--layout-b .testimonial-slider__left{
+				width: 100%;
+				height: 250px;
+			}
+			.testimonial-slider--layout-b .testimonial-slider__right{
+				{{ module.styles.spacing.tablet.css }};
+				width: 100%; 
+			}
+    }
+
+    {# ---- Mobile Breakpoint ---- #}
+
+    @media (max-width: 765px) {
+      .swiper-slide {
+        {{ module.styles.spacing.mobile.css }};
+        text-align: {{ module.styles.text_alignment.mobile.text_align }};
+      }
+      .testimonial-slider-prev , .testimonial-slider-next{
+        display: none;
+      }
+			.testimonial-slider--layout-b .testimonial-slider__right{
+				{{ module.styles.spacing.mobile.css }};
+			}
+    }
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{# ----- END Module Styles ----- #}
+
+
+{% set quotes_icon = '
+<svg width="42" height="36" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.4241 0L17.306 5.66763C14.7422 8.3965 12.853 10.9854 11.6386 13.4344C10.4241 15.8134 9.81687 18.4023 9.81687 21.2012L5.86988 16.4781H19.1277V36H0V23.8251C0 19.3469 0.775904 15.2886 2.32771 11.6501C3.94699 7.94169 6.64578 4.05831 10.4241 0ZM33.2964 0L40.1783 5.66763C37.6145 8.3965 35.7253 10.9854 34.5108 13.4344C33.2964 15.8134 32.6892 18.4023 32.6892 21.2012L28.7422 16.4781H42V36H22.8723V23.8251C22.8723 19.3469 23.6482 15.2886 25.2 11.6501C26.8193 7.94169 29.5181 4.05831 33.2964 0Z" fill="#333333"/>
+</svg>
+' %}
+
+<div class="testimonial-slider testimonial-slider--layout-{{module.styles.layout}}" id="{{ name }}">
+  <div class="swiper testimonial-slider__myswiper-{{name}}">
+    <div class="swiper-wrapper">
+      {% for item in module.slides %}
+        <div class="swiper-slide">
+					<div class="testimonial-slider__left" style="background-image: url({{item.author.photo.src}})"></div>
+					<div class="testimonial-slider__right">
+						<div class="testimonial-slider__icon">
+							{{ quotes_icon }}
+						</div>
+						{% inline_rich_text field="text_content" value="{{ item.text_content }}" %}
+						<div class="star-rating mt-3 d-flex">
+							{% if item.star_rating == '1' %}
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							{% endif %}
+							{% if item.star_rating == '2' %}
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							{% endif %}
+							{% if item.star_rating == '3' %}
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							{% endif %}
+							{% if item.star_rating == '4' %}
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-outline">{% icon name="Star" unicode="f005" %}</span>
+							{% endif %}
+							{% if item.star_rating == '5' %}
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							<span class="star-solid">{% icon name="Star" style="SOLID" unicode="f006" %}</span>
+							{% endif %}
+						</div>
+						<div class="author-information d-flex align-items-center mx-0 mt-2">
+							{% if item.author.photo.src %}
+								 {% set loadingAttr = item.author.photo.loading != 'disabled' ? 'loading="{{ item.author.photo.loading }}"' : '' %}
+								<img class="mr-2" src="{{ item.author.photo.src }}" alt="{{ item.author.photo.alt }}" {{ loadingAttr }} width="40" height="40">
+							{% endif %}
+								{% inline_rich_text field="author.text_content" value="{{ item.author.text_content }}" %}
+						</div>
+					</div>
+        </div>
+      {% endfor %}
+    </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+{{ require_css(get_asset_url('../../vendor/swiperjs/swiper-bundle.min.css')) }}
+{{ require_js(get_asset_url('../../vendor/swiperjs/swiper-bundle.min.js')) }}
+
+{% require_js %}
+<script>
+     var swiper{{name|regex_replace("[^a-zA-Z]", "")}} = new Swiper(".testimonial-slider__myswiper-{{name}}", {
+        slidesPerView: {{module.slider_opts.slides.desktop}},
+        grabCursor: true, 
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+       {% if module.slider_opts.autoplay %}
+        autoplay: {
+         delay: {{ module.slider_opts.autoplay_speed }},
+         disableOnInteraction: true,
+       },
+        {% endif %}
+       
+        breakpoints: {
+          150: {
+            slidesPerView: {{ module.slider_opts.slides.mobile }},
+          },
+          480: {
+            slidesPerView: {{ module.slider_opts.slides.tablet }},
+          },
+          992: {
+            slidesPerView: {{ module.slider_opts.slides.desktop }},
+          },
+        },
+      });
+</script>
+{% end_require_js %}

@@ -1,0 +1,521 @@
+[ {
+  "id" : "cffaefae-df2e-0351-de73-e9647fdf1a38",
+  "name" : "form_content",
+  "display_width" : null,
+  "label" : "Form Content",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "9aff2f4b-d460-7b54-b565-9a27670937f9",
+    "name" : "form_title",
+    "display_width" : null,
+    "label" : "Form Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "SEND MESSAGE"
+  }, {
+    "id" : "101ea785-bd52-ba05-2710-bd303509fa67",
+    "name" : "form_description",
+    "display_width" : null,
+    "label" : "Form Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "For faster replies, please call us directly at 1-888-238-4205. Your inquiry will be replied to within one business day. Do note that we do not sell or distribute our database or lists."
+  }, {
+    "id" : "74945eda-1c2a-f203-3b88-3ac9cf245f0d",
+    "name" : "footer_form",
+    "display_width" : null,
+    "label" : "Footer Form",
+    "required" : false,
+    "locked" : true,
+    "type" : "form",
+    "default" : {
+      "form_id" : "0ab53ace-647f-46a4-810a-177c6351e3c3",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "gotowebinar_webinar_key" : null,
+      "form_type" : "HUBSPOT"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "form_title" : "SEND MESSAGE",
+    "form_description" : "For faster replies, please call us directly at 1-888-238-4205. Your inquiry will be replied to within one business day. Do note that we do not sell or distribute our database or lists.",
+    "footer_form" : {
+      "form_id" : "0ab53ace-647f-46a4-810a-177c6351e3c3",
+      "response_type" : "inline",
+      "message" : "Thanks for submitting the form.",
+      "gotowebinar_webinar_key" : null,
+      "form_type" : "HUBSPOT"
+    }
+  }
+}, {
+  "id" : "6e49b23a-0f6d-88ee-9d44-2f08aa60a803",
+  "name" : "contact_details",
+  "display_width" : null,
+  "label" : "Contact Details",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "c971036d-2848-6254-ad53-a9709f8829b7",
+    "name" : "contact_details_title",
+    "display_width" : null,
+    "label" : "Contact Details Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "CONTACT DETAILS"
+  }, {
+    "id" : "596aec69-98a9-010e-231f-be288cfb08ff",
+    "name" : "contact_details_description",
+    "display_width" : null,
+    "label" : "Contact Details Description",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "1 Chase Corporate Dr.Suite 400Birmingham, AL 35244" ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "contact_details_title" : "CONTACT DETAILS",
+    "contact_details_description" : [ "1 Chase Corporate Dr.Suite 400Birmingham, AL 35244" ]
+  }
+}, {
+  "id" : "71a41c52-5fea-3874-71b8-5715e1c9bd1c",
+  "name" : "offices",
+  "display_width" : null,
+  "label" : "Offices",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "1a7590f4-0eef-47c1-f08e-4b7e37c95ed3",
+    "name" : "offices_in_title",
+    "display_width" : null,
+    "label" : "Offices in: Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Offices in:"
+  }, {
+    "id" : "02c84c42-49b9-0dab-cdf9-c1eb62873839",
+    "name" : "offices_column_1",
+    "display_width" : null,
+    "label" : "Offices Column 1",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 6,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Alabama", "Alabama", "Alabama", "Alabama" ]
+  }, {
+    "id" : "85e9d7af-33ab-87bb-e0c7-9facce92924f",
+    "name" : "offices_column_2",
+    "display_width" : null,
+    "label" : "Offices Column 2",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 6,
+      "sorting_label_field" : null,
+      "default" : 6
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Georgia", "Georgia", "Georgia", "Georgia", "Georgia", "Georgia" ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "offices_in_title" : "Offices in:",
+    "offices_column_1" : [ "Alabama", "Alabama", "Alabama", "Alabama" ],
+    "offices_column_2" : [ "Georgia", "Georgia", "Georgia", "Georgia", "Georgia", "Georgia" ]
+  }
+}, {
+  "id" : "ed9657a7-e677-a18e-3cf4-eb73137562d8",
+  "name" : "contact_info",
+  "display_width" : null,
+  "label" : "Contact Info",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "76042ff5-3456-e4ab-626a-1c006d514e1c",
+    "name" : "contact_phone",
+    "display_width" : null,
+    "label" : "Contact Phone",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "ebfc5513-d7f5-e94e-99f9-5788e9f18d60",
+      "name" : "contact_phone",
+      "display_width" : null,
+      "label" : "Contact Phone",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "1-888-238-4205"
+    }, {
+      "id" : "f882d392-44d9-03d4-a209-b9426e1448de",
+      "name" : "contact_phone_link",
+      "display_width" : null,
+      "label" : "Contact Phone Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "type" : "url",
+      "default" : {
+        "type" : "EXTERNAL",
+        "href" : "tel:1-888-238-4205",
+        "content_id" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "contact_phone" : "1-888-238-4205",
+      "contact_phone_link" : {
+        "type" : "EXTERNAL",
+        "href" : "tel:1-888-238-4205",
+        "content_id" : null
+      }
+    }
+  }, {
+    "id" : "c1ba3b2e-231f-8367-73b5-c27b09518e4a",
+    "name" : "contact_email",
+    "display_width" : null,
+    "label" : "Contact Email",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "0f49fed8-4ae0-2d6d-d95b-400b1962c834",
+      "name" : "contact_email",
+      "display_width" : null,
+      "label" : "Contact Email",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "info@kpcteam.com"
+    }, {
+      "id" : "4d7bb4cc-d8bb-09d1-8faf-ef8c7864f43c",
+      "name" : "contact_email_link",
+      "display_width" : null,
+      "label" : "Contact Email Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "type" : "url",
+      "default" : {
+        "type" : "EMAIL_ADDRESS",
+        "href" : "info@kpcteam.com",
+        "content_id" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "contact_email" : "info@kpcteam.com",
+      "contact_email_link" : {
+        "type" : "EMAIL_ADDRESS",
+        "href" : "info@kpcteam.com",
+        "content_id" : null
+      }
+    }
+  }, {
+    "id" : "87f01a2f-cdcd-57ad-8efc-796f696e600a",
+    "name" : "social_media_footer",
+    "display_width" : null,
+    "label" : "Social Media Footer",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 5,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "children" : [ {
+      "id" : "d1014ee0-0a68-04f0-518a-fbd0b41dd937",
+      "name" : "social_media_url",
+      "display_width" : null,
+      "label" : "Social Media URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "type" : "url",
+      "default" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    }, {
+      "id" : "ada30608-7ed4-78af-eb7f-efe0f6909c6e",
+      "name" : "social_media_icon",
+      "display_width" : null,
+      "label" : "Social Media Icon",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/linkedin-footer.png",
+        "alt" : "linkedin-footer",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "social_media_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      },
+      "social_media_icon" : {
+        "size_type" : "auto",
+        "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/linkedin-footer.png",
+        "alt" : "linkedin-footer",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      }
+    }, {
+      "social_media_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      },
+      "social_media_icon" : {
+        "size_type" : "auto",
+        "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/linkedin-footer.png",
+        "alt" : "linkedin-footer",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "contact_phone" : {
+      "contact_phone" : "1-888-238-4205",
+      "contact_phone_link" : {
+        "type" : "EXTERNAL",
+        "href" : "tel:1-888-238-4205",
+        "content_id" : null
+      }
+    },
+    "contact_email" : {
+      "contact_email" : "info@kpcteam.com",
+      "contact_email_link" : {
+        "type" : "EMAIL_ADDRESS",
+        "href" : "info@kpcteam.com",
+        "content_id" : null
+      }
+    },
+    "social_media_footer" : [ {
+      "social_media_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      },
+      "social_media_icon" : {
+        "size_type" : "auto",
+        "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/linkedin-footer.png",
+        "alt" : "linkedin-footer",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      }
+    }, {
+      "social_media_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      },
+      "social_media_icon" : {
+        "size_type" : "auto",
+        "src" : "https://21128909.fs1.hubspotusercontent-na1.net/hubfs/21128909/linkedin-footer.png",
+        "alt" : "linkedin-footer",
+        "loading" : "lazy",
+        "width" : 14,
+        "height" : 14,
+        "max_width" : 14,
+        "max_height" : 14
+      }
+    } ]
+  }
+}, {
+  "id" : "5e2d09ed-894b-3f86-906b-7c8d13035202",
+  "name" : "footer_under",
+  "display_width" : null,
+  "label" : "Footer Under",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "cfbe584c-ee18-0173-45fa-da3f0eced82e",
+    "name" : "footer_under_list",
+    "display_width" : null,
+    "label" : "Footer Under List",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "c7379763-925b-b167-af3b-8babb1064c65",
+      "name" : "footer_under_list",
+      "display_width" : null,
+      "label" : "Footer Under List",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Privacy Policy"
+    }, {
+      "id" : "5cfd3588-9075-c056-c661-df0c53aeae05",
+      "name" : "footer_under_list_url",
+      "display_width" : null,
+      "label" : "Footer Under List URL",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "type" : "url",
+      "default" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "footer_under_list" : "Privacy Policy",
+      "footer_under_list_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    }, {
+      "footer_under_list" : "Privacy Policy",
+      "footer_under_list_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    }, {
+      "footer_under_list" : "Privacy Policy",
+      "footer_under_list_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    } ]
+  }, {
+    "id" : "ac0893ea-9ae2-6753-60cc-3df04bf4bfa9",
+    "name" : "footer_copyright",
+    "display_width" : null,
+    "label" : "Footer Copyright",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "© Copyright KnowledgePath. All Rights Reserved."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "footer_under_list" : [ {
+      "footer_under_list" : "Privacy Policy",
+      "footer_under_list_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    }, {
+      "footer_under_list" : "Privacy Policy",
+      "footer_under_list_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    }, {
+      "footer_under_list" : "Privacy Policy",
+      "footer_under_list_url" : {
+        "type" : "EXTERNAL",
+        "href" : "https://google.com",
+        "content_id" : null
+      }
+    } ],
+    "footer_copyright" : "© Copyright KnowledgePath. All Rights Reserved."
+  }
+} ]

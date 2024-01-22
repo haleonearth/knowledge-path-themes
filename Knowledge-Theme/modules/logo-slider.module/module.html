@@ -1,0 +1,87 @@
+<div class="logo-slider" id="{{name}}">
+  <div class="container px-0">
+    <div class="row align-items-center mx-0 mx-md-n3 logo-slider-wrapper">
+      <div class="col-12 px-0">
+        <div class="swiper logo-slider__myswiper-{{name}}">
+            <div class="swiper-wrapper">
+              {% for item in module.slider%}
+                <div class="swiper-slide text-center px-3"> 
+                  {% if item.image.src %}
+                    {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+                    {% if item.image.size_type == 'auto' %}
+                      {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                    {% elif item.image.size_type == 'auto_custom_max' %}
+                      {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ item.image.max_width }}px; max-height: {{ item.image.max_height }}px"' %}
+                    {% endif %}
+                    <img class="d-inline" src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+	{% if module.slider_opts.add_arrows %}
+		<div class="logo-slider__navigation text-center mt-3">
+			<a class="swiper-control-prev" role="button" data-slide="prev">
+				<i class="arrow left"></i>
+			</a>
+			<a class="swiper-control-next" role="button" data-slide="next">
+				<i class="arrow right"></i>
+			</a>
+		 </div>
+	{% endif %}
+</div>
+{{ require_css(get_asset_url('../../vendor/swiperjs/swiper-bundle.min.css')) }}
+{{ require_js(get_asset_url('../../vendor/swiperjs/swiper-bundle.min.js')) }}
+{% require_css %}
+<style>
+    {% scope_css %}
+     .logo-slider .arrow {
+        color: rgba({{ module.style.arrow_color.color | convert_rgb }}, calc({{ module.style.arrow_color.opacity }}/100));
+      }
+		{% if module.style.add_grayscale_filter %}
+			.logo-slider img {
+				-webkit-filter: grayscale(100%) brightness(110%) contrast(0.9);
+				filter: grayscale(100%) brightness(110%) contrast(0.9);
+			}
+		{% endif %}
+   {% end_scope_css %}
+</style>
+{% end_require_css %}
+{% require_js %}
+<script>
+     var swiper{{name|regex_replace("[^a-zA-Z]", "")}} = new Swiper(".logo-slider__myswiper-{{name}}", {
+        slidesPerView: {{module.slider_opts.slides.desktop}},
+        grabCursor: true, 
+        spaceBetween: 0,
+        slidesPerGroup: 1,
+        loop: true,
+				{% if module.slider_opts.add_arrows %}
+					navigation: {
+						nextEl: ".swiper-control-next",
+						prevEl: ".swiper-control-prev",
+					},
+			  {% endif %}
+       {% if module.slider_opts.autoplay %}
+        autoplay: {
+         delay: {{ module.slider_opts.autoplay_speed }},
+         disableOnInteraction: true,
+       },
+        {% endif %}
+       
+        breakpoints: {
+          150: {
+            slidesPerView: {{ module.slider_opts.slides.mobile }},
+          },
+          480: {
+            slidesPerView: {{ module.slider_opts.slides.tablet }},
+          },
+          992: {
+            slidesPerView: {{ module.slider_opts.slides.desktop }},
+          },
+        },
+      });
+</script>
+{% end_require_js %}

@@ -1,0 +1,18 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "fontawesome-5.14.0:Sort%20Numeric%20Up:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 94199716213,
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../vendor/jquery/jquery.min.js",
+    "name" : "jquery.min.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../vendor/scrollreveal/scrollreveal.js",
+    "name" : "scrollreveal.js"
+  } ],
+  "label" : "Counter",
+  "is_available_for_new_content" : true
+}

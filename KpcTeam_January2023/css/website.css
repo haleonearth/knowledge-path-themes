@@ -2065,7 +2065,13 @@ a.link_social img {
 
 .container_form {
   padding: 40px 15px 30px;
-  background-color: #1b75bb;
+  background-color: none;
+  background: rgb(27, 117, 187);
+  background: linear-gradient(
+    315deg,
+    rgba(27, 117, 187, 1) 0%,
+    rgba(130, 188, 242, 1) 100%
+  ) !important;
 }
 
 .container_form .wrap_form {

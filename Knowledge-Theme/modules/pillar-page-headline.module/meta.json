@@ -1,0 +1,10 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "inline_help_text" : "This is an anchor for the Pillar Page template, for each headline automatically generates one link within the Pillar Page - Index module",
+  "icon" : "fontawesome-5.14.0:heading:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 94199716229,
+  "label" : "Pillar Page - Headline",
+  "is_available_for_new_content" : true
+}

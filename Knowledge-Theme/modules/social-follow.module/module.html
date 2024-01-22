@@ -1,0 +1,62 @@
+<div class="social-links {{ module.style.horizontal_alignment.desktop }} {{ module.style.horizontal_alignment.mobile }} {{ module.style.horizontal_alignment.tablet }}">
+  {% for item in module.social_links %}
+    {% if item.social_account != 'custom_icon' %}
+      {% set social_icon = item.social_account %}
+    {% else %}
+      {% set social_icon = item.custom_icon.name %}
+    {% endif %}
+    {% set href = item.social_link.url.href %}
+    {% if item.social_link.url.type is equalto 'EMAIL_ADDRESS' %}
+      {% set href = 'mailto:' + href %}
+    {% endif %}
+    <a href="{{ href }}"
+        class="social-links__link"
+      {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if item.social_link.no_follow %}rel="nofollow"{% endif %}
+      >
+      {% icon
+        extra_classes='social-links__icon',
+        name='{{ social_icon }}',
+        purpose='semantic',
+        style='SOLID',
+        title='{{ item.accessibility.title }}'
+      %}
+    </a>
+  {% endfor %}
+</div>
+
+
+{% require_css %}
+<style>
+  {% scope_css %}
+   .social-links__icon {
+    background-color: rgba({{ module.style.bg_color.color|convert_rgb }},{{ module.style.bg_color.opacity / 100 }});
+    border-radius: {{ module.style.corner_radius ~ 'px' }};
+    border-color: rgba({{ module.style.border_color.color|convert_rgb }},{{ module.style.border_color.opacity / 100 }});
+    padding: {{ module.style.inner_padding }}px;
+  }
+   .social-links__link {
+    margin-right: {{ module.style.space_between }}px;
+  }
+   .social-links__link:last-child {
+    margin-right: 0;
+  }
+   .social-links__icon svg {
+    fill: {{ module.style.color.color }};
+    height: {{ module.style.size ~ 'px' }};
+    width: {{ module.style.size ~ 'px' }};
+  }
+   .social-links__icon:hover,
+   .social-links__icon:focus,
+   .social-links__icon:active {
+    background-color: rgba({{ module.style.hover.bg_color.color|convert_rgb }},{{ module.style.hover.bg_color.opacity / 100 }});
+  }
+   .social-links__icon:hover svg,
+   .social-links__icon:focus svg,
+   .social-links__icon:active svg {
+    fill: {{ module.style.hover.color.color }};
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+

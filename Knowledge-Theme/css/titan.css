@@ -1,0 +1,37 @@
+.menu-section .menu-link {
+    color: #424242 !important;
+    display: block !important;
+    font-family: open sans,sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    letter-spacing: normal !important;
+    padding-bottom: 8px !important;
+    position: relative !important;
+    text-decoration: none !important;
+}
+
+
+@media (min-width: 992px) {  
+  .level-0 > .has-submenu.menu-item {
+    display: flex !important;
+  }
+
+  ul.submenu.level-1 {
+      margin-top: 30px !important;
+  }
+}
+
+
+/*
+ * temp hide hamburger menu
+ */
+
+ .header__navigation--toggle {
+  display: none;
+}
+ 
+
+
+.blog-bost__post-tags {
+  display: none !important;
+}

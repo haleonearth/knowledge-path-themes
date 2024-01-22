@@ -1,0 +1,21 @@
+<!--
+  templateType: global_partial
+  label: Landing Page Header
+-->
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      {% module "header_logo" 
+        path="@hubspot/logo", 
+        label='Logo',
+        img={
+          'alt':'Horizon Logo',
+          "override_inherited_src" : true,
+          'src': get_asset_url('../../images/style-guide-images/logo-header.png'),
+          'height': '65',
+          'width': '60',
+        }
+      %}
+    </div>
+  </div>
+</header>

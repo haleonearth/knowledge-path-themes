@@ -1,0 +1,87 @@
+<footer class="footer">
+  <form class="footer-form" action="">
+    <h3 class="footer-form__title" >{{ module.form_content.form_title }}</h3>
+    <p class="footer-form__description">{{ module.form_content.form_description }}</p>
+    {% form
+      form_to_use="{{ module.form_content.footer_form.form_id }}"
+      response_response_type="{{ module.form_content.footer_form.response_type }}"
+      response_message="{{ module.form_content.footer_form.message }}"
+      response_redirect_id="{{ module.form_content.footer_form.redirect_id }}"
+      response_redirect_url="{{module.form_content.footer_form.redirect_url}}"
+      gotowebinar_webinar_key="{{ module.form_content.footer_form.gotowebinar_webinar_key }}"
+    %}
+  </form>
+  <div class="footer-contact">
+    <div class="footer-contact__details">
+      <h3 class="footer-contact__details-title">{{ module.contact_details.contact_details_title }}</h3>
+      {% for item in module.contact_details.contact_details_description %}
+      <p class="footer-contact__details-description">
+        {% inline_text field="contact_details.contact_details_description" value="{{ item }}" %}
+      </p>
+      {% endfor %}
+    </div>
+    <div class="footer-contact__offices">
+      <p class="footer-contact__offices-title">{{ module.offices.offices_in_title }}</p>
+      <div class="footer-contact__offices-content">
+        <ul class="footer-contact__ul">
+          {% for item in module.offices.offices_column_1 %}
+          <li class="footer-contact__li">{% inline_text field="offices.offices_column_1" value="{{ item }}" %}</li>
+          {% endfor %}
+        </ul>
+        <ul class="footer-contact__ul">
+          {% for item in module.offices.offices_column_2 %}
+          <li class="footer-contact__li">{% inline_text field="offices.offices_column_2" value="{{ item }}" %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="footer-contact__info">
+      <div class="footer-contact__info-description">
+        <p>P: <a class="footer-contact__info-description--link" href="{{ module.contact_info.contact_phone.contact_phone_link.href }}">{{ module.contact_info.contact_phone.contact_phone }}</a></p>
+        <p>E: <a class="footer-contact__info-description--link" href="{{ module.contact_info.contact_email.contact_email_link.href }}">{{ module.contact_info.contact_email.contact_email }}</a></p>
+      </div>
+      <div class="footer-contact__info-icons">
+        {% for item in module.contact_info.social_media_footer %}
+        <a href="{{ item.social_media_url.href }}">
+          {% if item.social_media_icon.src %}
+            {% set sizeAttrs = 'width="{{ item.social_media_icon.width }}" height="{{ item.social_media_icon.height }}"' %}
+            {% if item.social_media_icon.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ item.social_media_icon.width }}" height="{{ item.social_media_icon.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.social_media_icon.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.social_media_icon.max_width }}" height="{{ item.social_media_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+             {% set loadingAttr = item.social_media_icon.loading != 'disabled' ? 'loading="{{ item.social_media_icon.loading }}"' : '' %}
+            <img src="{{ item.social_media_icon.src }}" alt="{{ item.social_media_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="footer-under">
+    <div class="footer-under__items" >
+      {% for item in module.footer_under.footer_under_list %}
+        <a class="footer-under__list" href="{{ item.footer_under_list_url.href }}">{% inline_text field="footer_under_list" value="{{ item.footer_under_list }}" %}</a>
+      {% endfor %}
+     </div>
+  </div>
+  <div class="footer-copyright">
+    <h5 class="footer-copyright__text">
+      {% inline_text field="footer_under.footer_copyright" value="{{ module.footer_under.footer_copyright }}" %}
+    </h5>
+  </div>
+</footer>
+
+
+
+
+	
+	
+
+
+
+
+	
+
+
+

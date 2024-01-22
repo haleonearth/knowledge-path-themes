@@ -1,0 +1,112 @@
+{
+  "email_text.default" : {
+    "message" : "info@kpcteam.com",
+    "description" : null,
+    "placeholders" : null
+  },
+  "email_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "email_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "email_text.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "email_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "email_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "include_search_button.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "input-search",
+    "description" : "",
+    "placeholders" : null
+  },
+  "phone_text.default" : {
+    "message" : "1-888-238-4205",
+    "description" : null,
+    "placeholders" : null
+  },
+  "phone_text.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "phone_text.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "phone_text.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "phone_text.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "phone_text.validation_regex" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.default" : {
+    "message" : "Search KnowledgePath",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.label" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "placeholder.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  }
+}

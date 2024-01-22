@@ -1,0 +1,8 @@
+.cards {
+  position: relative;
+  z-index: 2;
+}
+
+.cards__card .hs_cos_wrapper_type_inline_rich_text *:last-child {
+  margin-bottom: 0;
+}

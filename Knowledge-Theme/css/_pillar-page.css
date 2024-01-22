@@ -1,0 +1,14 @@
+.body-container.body-container--pillar-page .span4 {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 767px) { 
+  .body-container.body-container--pillar-page .span4 {
+    position: static;  
+  }
+}
+
+.body-container.body-container--pillar-page .row-fluid-wrapper > .row-fluid{
+  align-items: start;
+}

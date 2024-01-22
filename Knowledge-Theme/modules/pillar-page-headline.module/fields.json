@@ -1,0 +1,27 @@
+[ {
+  "id" : "f3ff209f-3855-cb36-44e8-22d4c89eb0e1",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "inline_help_text" : "Must be a unique title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Headline"
+}, {
+  "id" : "d67da99c-cad1-6d4e-ed21-f9a3acb03f06",
+  "name" : "headline_classname",
+  "display_width" : null,
+  "label" : "Headline Class Name",
+  "inline_help_text" : "This Class Name connects all of the Pillar Page Headline modules with their respective Pillar Page Index module. ",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "pillar-page-one"
+} ]

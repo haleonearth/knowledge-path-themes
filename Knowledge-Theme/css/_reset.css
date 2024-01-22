@@ -1,0 +1,35 @@
+:root {
+  --primary: {{ theme.colors.primary.color }};
+  --secondary: {{ theme.colors.secondary.color }};
+  --tertiary: {{ theme.colors.tertiary.color }};
+  --heading: {{ theme.colors.heading_color.color }};
+  --body: {{ theme.colors.body_color.color }};
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html {
+  moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+p, 
+pre, 
+blockquote,
+ol,
+ul,
+dl {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+

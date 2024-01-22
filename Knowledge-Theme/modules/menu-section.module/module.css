@@ -1,0 +1,97 @@
+.menu-section ul,
+.menu-section li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.menu-section a{
+  text-decoration: none;
+}
+
+.menu-section .main-menu{
+  display: flex;
+}
+
+.menu-section .submenu{
+  position: absolute;
+  padding: 0 0 24px ;
+  z-index: 0;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+  min-width: 240px;
+}
+.menu-section .main-menu .submenu .has-submenu.menu-item .menu-link {
+  display: inline-block;
+  width: calc(100% - 65px);
+  padding-right: 0;
+}
+.menu-section .has-submenu{
+  position: relative;
+}
+.menu-section .main-menu .submenu > li {
+  padding: 22px 0px 0px;
+}
+.menu-section .main-menu .submenu > li a {
+  padding: 0 40px;
+}
+.menu-section .has-submenu:hover > .submenu{
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.menu-section .main-menu .submenu > li.has-submenu:hover {
+  border-bottom-color: transparent;
+}
+.menu-section .main-menu .submenu > li.has-submenu .menu-arrow svg{
+  transition: .5s ease;
+}
+.menu-section .main-menu .submenu > li.has-submenu .submenu-toggle:checked ~ .menu-arrow svg {
+  transform: rotate(180deg);
+}
+.menu-section .main-menu .has-submenu .menu-item .submenu-toggle:checked ~ .submenu.level-2 {
+  margin-top: 14px;
+  padding-bottom: 14px;
+}
+.menu-section .submenu:not(.level-1){
+  position: inherit;
+  height: 0;
+  padding: 0;
+}
+
+.menu-section .submenu-toggle{
+  display: none;
+}
+
+
+.menu-section .has-submenu > .menu-arrow{
+  cursor: pointer;
+  margin-left: 5px;
+}
+.menu-section .main-menu .submenu .level-2 .menu-item {
+  padding-right: 40px;
+  padding-left: 40px;
+}
+.menu-section .main-menu .submenu .level-2 .menu-link {
+  background: transparent;
+  width: auto;
+  padding: 0;
+}
+.menu-section .main-menu .submenu .level-2 > li:hover, .menu-section .main-menu .submenu .level-2 > li {
+  border-bottom-color: transparent;
+}
+.menu-section .has-submenu >.submenu .level-2 {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: height .5s ease;
+}
+.menu-section .has-submenu .submenu-toggle:checked ~ .submenu{
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}

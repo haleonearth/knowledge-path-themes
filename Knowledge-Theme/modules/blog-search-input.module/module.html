@@ -1,0 +1,92 @@
+{# Need help setting up site search?
+   Start here: https://knowledge.hubspot.com/articles/kcs_article/cos-general/how-do-i-set-up-a-results-page-for-my-search-field-in-hubspot #}
+
+<div class="hs-search-field">
+    <div class="hs-search-field__bar">
+      <form data-hs-do-not-collect="true" action="/{{ site_settings.content_search_results_page_path }}">
+        <div class="hs-search-field__bar-label">
+          {% if module.field_label %}
+            <label for="term">{{ module.field_label }}</label>
+          {% endif %}
+        </div>
+        <div class="hs-search-field__bar-inputs">
+          <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="{{ module.field_label || "Search" }}" placeholder="{{ module.placeholder }}">
+
+          {% if module.content_types.website_pages %}
+          <input type="hidden" name="type" value="SITE_PAGE">
+          {% endif %}
+          {% if module.content_types.landing_pages %}
+          <input type="hidden" name="type" value="LANDING_PAGE">
+          {% endif %}
+          {% if module.content_types.blog_posts %}
+          <input type="hidden" name="type" value="BLOG_POST">
+          <input type="hidden" name="type" value="LISTING_PAGE">
+          {% endif %}
+          {% if module.content_types.knowledge_articles %}
+          <input type="hidden" name="type" value="KNOWLEDGE_ARTICLE">
+          {% endif %}
+
+          {% if module.include_search_button %}
+          <button aria-label="Search">{% icon name="search" style="solid" %}</button>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+    <ul class="hs-search-field__suggestions"></ul>
+</div>
+
+{% require_css %}
+  <style>
+  {% scope_css %}
+    button{
+      background: {{ module.style.color.button_color.css }};
+      border: 1px solid {{ module.style.color.button_color.css }};
+    }  
+    
+    button span{
+      display: flex;
+    }
+    
+    .hs-search-field__bar-inputs{
+      display: flex;
+    }
+    
+    .hs-search-field__bar-inputs input{
+      {{ module.style.typography.input.font.style }};
+      color: {{ module.style.typography.input.font.color }};
+      font-size: {{ module.style.typography.input.font_size.desktop }}px;
+      line-height: {{ module.style.typography.input.line_height.desktop }}px;
+    }
+    
+    .hs-search-field__bar-label label{
+      {{ module.style.typography.labels.font.css }}
+      font-size: {{ module.style.typography.labels.font_size.desktop }}px;
+      line-height: {{ module.style.typography.labels.line_height.desktop }}px;
+    }
+    
+    @media(max-width: 992px){
+      .hs-search-field__bar-label label{
+        font-size: {{ module.style.typography.labels.font_size.tablet }}px;
+        line-height: {{ module.style.typography.labels.line_height.tablet }}px;
+      }
+      
+      .hs-search-field__bar-inputs input{
+        font-size: {{ module.style.typography.input.font_size.tablet}}px;
+        line-height: {{ module.style.typography.input.line_height.tablet }}px;
+      }
+    }
+    
+    @media(max-width: 767px){
+      .hs-search-field__bar-label label{
+        font-size: {{ module.style.typography.labels.font_size.mobile }}px;
+        line-height: {{ module.style.typography.labels.line_height.mobile }}px;
+      }
+      .hs-search-field__bar-inputs input{
+        font-size: {{ module.style.typography.input.font_size.mobile }}px;
+        line-height: {{ module.style.typography.input.line_height.mobile }}px;
+      }
+    }
+    
+  {% end_scope_css %}
+  </style>
+{% end_require_css %}

@@ -1,0 +1,123 @@
+<div class="blog-index__topic">
+  {% set blogID =  module.blog is truthy ? module.blog : 'default' %}
+  {% set my_tags = blog_tags(blogID, 250) %}
+  {% set currentURL = content.absolute_url %}
+
+{# Filter Select Optional#}  
+  {% if module.layouts == 'dropdown' %}
+  <form class="blog-tag-filter">
+    <div class="blog-tag-filter__select-wrapper">
+      <select name="tag-select" id="tag-select" class="blog-tag-filter__select">
+        <option {% if currentURL == group.absolute_url %}selected="selected"{% endif %} value="{{ group.absolute_url }}">Explore topics</option>
+        {% for item in my_tags %}
+        <option {% if currentURL == blog_tag_url(group.id, item.slug) %}selected="selected"{% endif %} value="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </form>
+  {% endif %}
+
+  
+{# List Select Optional #}
+  {% if module.layouts == 'list' %}
+  <div class="blog-tag-list__select-wrapper">
+    {% for tag in my_tags %}
+    <div class="blog-tag-list__tag">
+      <a class="blog-tag-list__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+
+  
+{# Script Filter Select Optional #}  
+{% require_js %}
+  <script>
+    (function() {
+      // Variables
+      var blogTagSelect = document.querySelector('#tag-select');
+
+      // Functions
+      blogTagSelect.addEventListener('change', function() {
+        if (blogTagSelect.value) {
+          window.location = blogTagSelect.value;
+        }
+        return false;
+      });
+    })();
+  </script>
+  {% end_require_js %} 
+</div>
+
+{# Style List Select Optional#}
+
+{% require_css %}
+  <style>
+  {% scope_css %}
+    
+    .blog-index__topic{
+      padding-top:30px
+    }
+
+    .blog-tag-list__select-wrapper, .blog-tag-filter__select-wrapper{
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .blog-tag-list__tag-link{
+      text-decoration: none;
+      line-height: 100%;
+      {{ module.style.typography.font.css }}
+      {{ module.style.padding.tag_padding.css }}
+      font-size: {{ module.style.typography.font_size.desktop }}px;
+      line-height: {{ module.style.typography.line_height.desktop }}px;
+      background: {{ module.style.color.tag_color.css }};
+      border-radius: 100px;
+      letter-spacing: 0.006em;
+    }   
+    
+    .blog-index__topic select {
+      {{ module.style.typography.font.css }}
+      width: 270px;
+      max-width: 100%;
+      background: {{ module.style.color.tag_color.css }};
+      border-color: {{ module.style.color.tag_color.css }};
+      {{ module.style.padding.tag_padding.css }}
+      font-size: {{ module.style.typography.font_size.desktop }}px;
+      line-height: {{ module.style.typography.line_height.desktop }}px;
+      appearance: none;
+      outline: none;
+      background-position: 94% center;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='13' viewBox='0 0 22 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 1L11 11L1 0.999999' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+    
+    @media (max-width: 992px) {
+      .blog-tag-list__tag-link,
+      .blog-index__topic select
+      {
+        font-size: {{ module.style.typography.font_size.tablet }}px;
+        line-height: {{ module.style.typography.line_height.tablet }}px;
+      }
+    }
+    
+
+    @media (max-width: 767px) {
+      .blog-index__topic select,
+      .blog-index__topic {
+        width: 100%; 
+      }
+      
+      .blog-tag-list__tag-link,
+      .blog-index__topic select
+      {
+        font-size: {{ module.style.typography.font_size.mobile }}px;
+        line-height: {{ module.style.typography.line_height.mobile }}px;
+      }
+    }
+    
+  {% end_scope_css %}
+  </style>
+{% end_require_css %}

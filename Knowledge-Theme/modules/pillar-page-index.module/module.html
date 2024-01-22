@@ -1,0 +1,93 @@
+{# ----- Module Styles ----- #}
+{% require_css %}
+<style>
+  {% scope_css %}
+
+  .pillar-page-index {
+    border-radius: 8px;
+    {% if module.style.table_box_shadow %}
+    -webkit-box-shadow: {{ module.style.table_shadow.shift_right }}px {{ module.style.table_shadow.shift_down }}px {{ module.style.table_shadow.blur }}px {{ module.style.table_shadow.spread }}px {{ module.style.table_shadow.color.color }}; 
+    box-shadow: {{ module.style.table_shadow.shift_right }}px {{ module.style.table_shadow.shift_down }}px {{ module.style.table_shadow.blur }}px {{ module.style.table_shadow.spread }}px {{ module.style.table_shadow.color.color }};
+    {% endif %}
+    padding: 20px;
+  }
+
+  .pillar-page-index .pillar-page-index__list li {
+    margin-bottom: 15px;
+  }
+
+  .pillar-page-index .pillar-page-index__list li a {      
+    display: initial;
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  .pillar-page-index .pillar-page-index__list li.nav-active a {
+    opacity: 1;
+    color: {{ module.style.active_item.color.color }};    
+  }
+
+  {% end_scope_css %}
+</style>
+{% end_require_css %} 
+
+{# ----- END Module Styles ----- #}
+
+<div class="pillar-page-index" id="{{ name }}">
+  <h3 class="pillar-page-index__title">
+    {{ module.title }}
+  </h3>
+  <{{ module.type_of_list }} class="{{ module.headline_classname ~  "--parent pillar-page-index__list"}}">
+  </{{ module.type_of_list }}>
+</div>
+
+{% require_js %}
+<script>
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+  	const selector = ".{{ module.headline_classname }}";
+    const nav = document.querySelector('.pillar-page-index');
+    const navList = document.querySelector('.pillar-page-index__list');
+    const content = document.querySelectorAll('.{{ module.headline_classname }}');
+    const headerHeight = document.querySelector('header.header').offsetHeight;
+
+    /* Function to dynamically pull all the headings from the content */
+    document.querySelectorAll(selector).forEach( title=> {
+      var string_1 =  title.innerText; 
+      var string_2 =  title.innerText.replace(/\s/g, '');
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.setAttribute('href', '#'+string_2);
+      a.appendChild(document.createTextNode(string_1)); 
+      li.appendChild(a);        
+      document.querySelector('.{{ module.headline_classname }}--parent').appendChild(li);    
+      title.setAttribute('id', string_2);
+    });
+    
+    /* Attaching the below function to the scroll event */
+    window.addEventListener('scroll', () => scrollNav());
+    
+    /* Function to highlight one link at the time when scrolling down */
+    scrollNav = () => {
+      let activeIndex = -1;
+      
+      /* Loop through all the list items, removing the active class **/
+      /* Then only adding index of the list item to the one closer to the top of the window page */
+      for (let i=0; i<content.length; i++) {
+        navList.children[i].classList.remove('nav-active');
+        let el = content[i];
+        if (el.getBoundingClientRect().top - headerHeight <=0){
+          activeIndex = i;
+        }
+      }
+      
+      /* Assigning the active class with the index set above */
+      if (activeIndex>=0)
+        navList.children[activeIndex].classList.add('nav-active');
+    };
+    
+  });
+
+</script>
+{% end_require_js %} 
+

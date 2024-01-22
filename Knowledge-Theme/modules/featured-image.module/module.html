@@ -1,0 +1,133 @@
+{% from '../../templates/macros/macros.html' import generate_responsive_img %}
+
+{% require_css %}
+<style>
+	{% scope_css %}
+	.featured-image img {
+		border-radius: {{ module.styles.border_radius }}px;
+		opacity: {{ module.styles.opacity / 100 }};
+	}
+
+	.image-container {
+		background:{{ module.styles.container_settings.container_color.color }};
+		{{ module.styles.container_settings.mobile_spacing_.css }};
+		-webkit-box-shadow: 5px 7px 17px 3px rgba(148,148,148,0.4); 
+		box-shadow: 5px 7px 17px 3px rgba(148,148,148,0.4);
+		width:fit-content;
+		margin:0 auto;
+	}
+
+
+	@media(min-width:768px) {
+		.image-container {
+			{{ module.styles.container_settings.tablet_spacing.css }}
+		}
+	}
+
+	@media(min-width:990px) {
+		.image-container {
+			{{ module.styles.container_settings.desktop_spacing.css }}
+		}
+
+	}
+  
+	{% for item in module.details %}
+	.decoration_{{loop.index}} {
+		{{ item.positioning.vertical_orientation }}:{{ item.positioning.mobile.vertical_offset }}%;
+		{{ item.positioning.horizontal_orientation }}:{{ item.positioning.mobile.horizontal_offset }}%;
+	}
+
+	@media(min-width:767px) {
+		.decoration_{{loop.index}} {
+			{{ item.positioning.vertical_orientation }}:{{ item.positioning.tablet.vertical_offset }}%;
+			{{ item.positioning.horizontal_orientation }}:{{ item.positioning.tablet.horizontal_offset }}%;
+		}
+	}
+	
+	@media(min-width:990px) {
+		.decoration_{{loop.index}} {
+			{{ item.positioning.vertical_orientation }}:{{ item.positioning.desktop.vertical_offset }}%;
+			{{ item.positioning.horizontal_orientation }}:{{ item.positioning.desktop.horizontal_offset }}%;
+		}
+	}
+	
+	{% endfor %}
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{# END STYLES #}
+
+<div class="featured-image 
+     {{ module.styles.horizontal_alignment.desktop }} 
+     {{ module.styles.horizontal_alignment.tablet }} 
+     {{ module.styles.horizontal_alignment.mobile }}"
+		 id="{{name}}"
+		 data-aos="{{ module.animation.type }}" 
+		 data-aos-once="{{ !module.animation.repeat }}"
+		 data-aos-duration="{{ module.animation.duration }}"
+		 data-aos-delay="{{ module.animation.delay }}">
+	{% if  module.layouts == 'details' %}
+    {% for item in module.details %}
+      <div class="decoration decoration_{{loop.index}}" 
+           data-aos="{{ item.animation_settings.type }}" 
+           data-aos-once="{{ !item.animation_settings.repeat }}"
+           data-aos-duration="{{ item.animation_settings.duration }}"
+           data-aos-delay="{{ item.animation_settings.delay }}"
+           >
+        {% if item.detail_image.src %}
+        {% set sizeAttrs = 'width="{{ item.detail_image.width }}" height="{{ item.detail_image.height }}"' %}
+        {% if item.detail_image.size_type == 'auto' %}
+        {% set sizeAttrs = 'width="{{ item.detail_image.width }}" height="{{ item.detail_image.height }}" style="max-width: 100%; height: auto;"' %}
+        {% elif item.detail_image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.detail_image.max_width }}" height="{{ item.detail_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.detail_image.loading != 'disabled' ? 'loading="{{ item.detail_image.loading }}"' : '' %}
+        <img src="{{ item.detail_image.src }}" alt="{{ item.detail_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+      </div>
+    {% endfor %}
+	{% endif %}
+	
+	<div class="{% if  module.layouts == 'container' or module.layouts == 'details' %}image-container {% endif %}">
+		{% if module.add_link %}
+		{% set href = module.link.url.href %}
+		{% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
+		{% set href = "mailto:" + href %}
+		{% endif %}
+		{% set rel = [] %}
+		{% if module.link.no_follow %}
+		{% do rel.append("nofollow") %} 
+		{% endif %}
+		{% if module.link.open_in_new_tab %}
+		{% do rel.append("noopener") %}
+		{% endif %}
+		<a href="{{ href }}"
+			 {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
+			 {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+			 >
+			{% endif %}
+			{% if module.image.src %}
+			<div class="featured-image__image">
+        {% set image_url= module.image.src %}
+        {% set image_alt = module.image.alt %}
+        {% set image_classes = "" %}
+        {% if module.styles.add_custom_sizes %}
+        {% set image_sizes = [module.styles.sizes.large_screen,module.styles.sizes.small_screen,module.styles.sizes.tablet,module.styles.sizes.mobile] %}
+        {% else %}
+        {% set image_sizes = [1600, 1024, 768, 480] %}
+        {% endif %}
+        {% set loading = module.image.loading != 'disabled' ? module.image.loading  : '' %}
+        {% set type =  module.animation.type %}
+        {% set repeat =module.animation.repeat %}
+        {% set duration =  module.animation.duration %}
+        {% set delay = module.animation.delay %}
+        {{ generate_responsive_img(image_url, image_alt, image_classes, image_sizes, loading, type, repeat, duration, delay ) }}
+      </div>
+      {% endif %}
+			
+			{% if module.add_link %}
+		</a>
+		{% endif %}
+	</div>
+</div>

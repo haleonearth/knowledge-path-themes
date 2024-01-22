@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "https://f.hubspotusercontent20.net/hubfs/7107973/checklist.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 94199716223,
+  "label" : "Icon List",
+  "is_available_for_new_content" : true
+}

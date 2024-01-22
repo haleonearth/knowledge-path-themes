@@ -1,0 +1,10 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "inline_help_text" : "<strong>IMPORTANT</strong>\nMake sure to add this to a brand new section in Hubspot but also set it to full width and remove all the padding from the section, column, and row.",
+  "icon" : "fontawesome-5.14.0:Alternate%20Arrows%20Horizontal:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 94199716235,
+  "label" : "Shape Divider",
+  "is_available_for_new_content" : true
+}

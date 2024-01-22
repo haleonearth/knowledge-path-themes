@@ -1,0 +1,165 @@
+{% set arrow_icon = 
+  '<svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 5 8" fill="#FFFFFF">
+    <path d="M4.35355 3.64645C4.54882 3.84171 4.54882 4.15829 4.35355 4.35355L1.17157 7.53553C0.976311 7.7308 0.659728 7.7308 0.464466 7.53553C0.269204 7.34027 0.269204 7.02369 0.464466 6.82843L3.29289 4L0.464466 1.17157C0.269204 0.976311 0.269204 0.659728 0.464466 0.464466C0.659728 0.269204 0.976311 0.269204 1.17157 0.464466L4.35355 3.64645ZM3 3.5H4V4.5H3V3.5Z"/
+  </svg>' 
+%}
+
+
+{% macro blog_post_formatter(content, index, count) %}
+
+
+<div class="col-12">
+<div class="content_relaterpost pb-4" data-count="{{ count }}">
+  
+  
+  
+  <div class="row">
+    
+    <div class="col-5 sidebar-img img" style="background-image: url({{ content.featured_image }});">
+      <a href="{{ content.absolute_url }}" class="blog-index__post-content-link">
+      </a>
+    </div>
+    
+    <div class="col-7">
+      
+        
+        <div class="blog-index__post-title">
+          <h5 class="related_title mb-2"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h5>
+        </div>
+      
+      <div class="blog_related_meta-time">
+        <div class="blog-post__meta">
+         <p>{{ content.publish_date|datetimeformat(' %b %e, %Y') }} </p> 
+        </div>
+
+        <div class="blog-post__time">
+          {% set initialPostWords = content.post_body|striptags|wordcount %}
+          {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+          {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+          {% set number = finishedPostWords|round %}
+          {% if number < 1 %}
+          A super quick read.
+          {% else %}
+          {{ finishedPostWords|round }}min
+          {% endif %}
+        </div>
+      </div>
+      
+<!--         <div class="blog-index__post-content mb-5">
+          <div class="blog-index__post-content-summary">
+            {{ content.post_list_content|striptags|truncatehtml(140,'...',true) }} 
+          </div>
+        </div>  -->
+      
+        <div class="blog-index_button">
+          <a class="button" href="{{ content.absolute_url }}">Read more</a>
+        </div>
+     
+    </div>
+  </div>
+</div>
+
+</div>
+
+{% endmacro %}
+<div class="related-post-slider" id="{{ name }}">
+  <h4 class="blog-post__title-related text-center mb-4">Related Post</h4>
+  <div class="row">
+    {% related_blog_posts limit=4, tags="{{ content.tag_list|join(',') }}", post_formatter="blog_post_formatter" %}
+  </div>
+</div>
+
+{% require_css %}
+
+<style>
+  {% scope_css %}
+  button, 
+  button:hover {
+    background: {{ theme.colors.primary.color }};
+    color: #fff;
+    border-color: {{ theme.colors.primary.color }};
+  }
+  .related-post-slider li button {
+    color: {{ theme.colors.primary.color }};
+    border: 2px solid {{ theme.colors.primary.color }};
+  }
+  .myswiper-{{name}}{
+    padding: 35px;
+  }
+  .related-post-slider .related-post-slider-prev , .related-post-slider .related-post-slider-next {
+      z-index: 25 !important;
+    }
+    .swiper-pagination-bullet{
+      background: transparent;
+      border: 3px solid #333;
+      background: transparent;
+      height: 40px;
+      width: 40px;
+      border-radius: 0;
+      padding-top: 4px;
+      opacity: 1;
+    }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      border: 3px solid #333;
+      background: #333;
+      height: 40px;
+      width: 40px;
+      border-radius: 0;
+      padding-top: 4px;
+      color: #fff;
+    }
+    
+  }
+    {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{% set nameVariable = name|regex_replace("[^a-zA-Z]", "") %}
+
+{% require_js %}
+<script>
+  var contentSlider{{nameVariable}} = document.querySelector('.hs_cos_wrapper_type_related_blog_posts')
+  contentSlider{{nameVariable}}.classList.add('swiper-wrapper')
+  
+	if(document.querySelector('.swiper-slide')){
+		let relatedCount = document.querySelector('.swiper-slide').dataset.count;
+		var swiper{{nameVariable}} = new Swiper(".myswiper-{{name}}", {
+        slidesPerView: 2,
+        grabCursor: true, 
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        navigation: {
+          nextEl: ".related-post-slider-next",
+          prevEl: ".related-post-slider-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+                                     
+       {% if module.slider_opts.autoplay %}
+        autoplay: {
+         delay: {{ module.slider_opts.autoplay_speed }},
+         disableOnInteraction: true,
+       },
+        {% endif %}
+       
+        breakpoints: {
+          150: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+        },
+      });
+	}	
+</script>
+{% end_require_js %}

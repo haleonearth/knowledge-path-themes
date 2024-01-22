@@ -1,0 +1,82 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+{% import './tools/_macros.css' %}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+{# Configuration variables #}
+
+/** Colors **/
+{% set primary_color = color(theme.colors.primary) %}
+{% set secondary_color = color(theme.colors.secondary) %}
+
+/** Body **/
+{% set page_max_width = theme.spacing.max_width ~ 'px' %}
+
+/** Buttons **/
+{% set button_small_spacing = theme.buttons.size.small.vertical_spacing ~ 'em' ~ ' ' ~ theme.buttons.size.small.horizontal_spacing ~ 'em' %}
+
+{% set button_regular_spacing = theme.buttons.size.regular.vertical_spacing ~ 'em' ~ ' ' ~ theme.buttons.size.regular.horizontal_spacing ~ 'em' %}
+
+{% set button_large_spacing = theme.buttons.size.large.vertical_spacing ~ 'em' ~ ' ' ~ theme.buttons.size.large.horizontal_spacing ~ 'em' %}
+
+{% set button_primary_font = theme.buttons.primary.font %}
+{% set button_primary_text_transform = theme.buttons.primary.text_transform %}
+{% set button_primary_bg_color = color(theme.buttons.primary.bg_color) %}
+{% set button_primary_border = theme.buttons.primary.border.width ~ 'px' ~ ' ' ~ theme.buttons.primary.border.style ~ ' ' ~ theme.buttons.primary.border.color.color %}
+{% set button_primary_corner_radius = theme.buttons.primary.border.corner_radius ~ 'em' %}
+
+{% set button_primary_bg_color_hover = color(theme.buttons.primary.hover.bg_color) %}
+{% set button_primary_border_hover = theme.buttons.primary.hover.border.width ~ 'px' ~ ' ' ~ theme.buttons.primary.hover.border.style ~ ' ' ~ theme.buttons.primary.hover.border.color.color %}
+
+{% set button_secondary_font = theme.buttons.secondary.font %}
+{% set button_secondary_text_transform = theme.buttons.secondary.text_transform %}
+{% set button_secondary_bg_color = color(theme.buttons.secondary.bg_color) %}
+{% set button_secondary_border = theme.buttons.secondary.border.width ~ 'px' ~ ' ' ~ theme.buttons.secondary.border.style ~ ' ' ~ theme.buttons.secondary.border.color.color %}
+{% set button_secondary_corner_radius = theme.buttons.secondary.border.corner_radius ~ 'em' %}
+
+{% set button_secondary_bg_color_hover = color(theme.buttons.secondary.hover.bg_color) %}
+{% set button_secondary_border_hover = theme.buttons.secondary.hover.border.width ~ 'px' ~ ' ' ~ theme.buttons.secondary.hover.border.style ~ ' ' ~ theme.buttons.secondary.hover.border.color.color %}
+
+{% set button_tertiary_font = theme.buttons.tertiary.font %}
+{% set button_tertiary_text_transform = theme.buttons.tertiary.text_transform %}
+{% set button_tertiary_bg_color = color(theme.buttons.tertiary.bg_color) %}
+{% set button_tertiary_border = theme.buttons.tertiary.border.width ~ 'px' ~ ' ' ~ theme.buttons.tertiary.border.style ~ ' ' ~ theme.buttons.tertiary.border.color.color %}
+{% set button_tertiary_corner_radius = theme.buttons.tertiary.border.corner_radius ~ 'em' %}
+
+{% set button_tertiary_bg_color_hover = color(theme.buttons.tertiary.hover.bg_color) %}
+{% set button_tertiary_border_hover = theme.buttons.tertiary.hover.border.width ~ 'px' ~ ' ' ~ theme.buttons.tertiary.hover.border.style ~ ' ' ~ theme.buttons.tertiary.hover.border.color.color %}
+
+{% set button_simple_font = theme.buttons.simple.font %}
+{% set button_simple_text_transform = theme.buttons.simple.text_transform %}
+{% set button_simple_underline = theme.buttons.simple.underline %}
+
+{% set button_simple_underline_hover = theme.buttons.simple.hover.underline %}
+
+{% set button_disabled_bg_color = gray %}
+{% set button_disabled_color = light_gray %}
+
+/** Forms **/
+{% set form_submit_style = theme.forms.submit.button_style %}
+{% set form_submit_size = theme.forms.submit.button_size %}
+
+/** Fonts **/
+{% set base_font_size = theme.typography.paragraph.size_desktop %}
+
+{% include '../vendor/bootstrap/bootstrap-grid.css' %}
+{% include '../vendor/aos/aos.css' %}    
+{% include './layout.css' %} 
+{% include './_modules.css' %}
+{% include './_reset.css' %}
+{% include './_normalize.css' %}
+{% include './_dnd_areas.css' %}
+{% include './_typography.css' %}
+{% include './_buttons.css' %}
+{% include './_forms.css' %}
+{% include './_menus.css' %}
+{% include './_tables.css' %}
+{% include './_header.css' %}
+{% include './_footer.css' %}
+{% include './_blog.css' %}
+{% include './_system.css' %}
+{% include './_custom_typography.css' %}
+{% include './_pillar-page.css' %}

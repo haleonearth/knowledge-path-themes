@@ -1,0 +1,487 @@
+{% from '../../templates/macros/macros.html' import select_color, color %}
+
+{# MACROS VARIABLE #}
+
+{% set select_background_color = color(module.style.general_styles.background_color, module.style.general_styles.custom_background_color.css)|trim %}
+{% set select_color_icon = color(module.style.social_icons.color_icon, module.style.social_icons.color.css )|trim %}
+{% set select_background_color_icon = color(module.style.social_icons.choose_the_background_color, module.style.social_icons.background_color.css)|trim %}
+{% set select_background_color_icon_hover = color(module.style.social_icons.hover_options.choose_the_background_color_hover, module.style.social_icons.hover_options.background_color_hover.css)|trim %}
+{% set select_color_link = color(module.style.overwrite_font_colors.choose_the_color_link, module.style.overwrite_font_colors.link.css)|trim %}
+{% set select_color_heading = color(module.style.overwrite_font_colors.choose_the_color_heading, module.style.overwrite_font_colors.heading.css)|trim %}
+{% set select_color_paragraph = color(module.style.overwrite_font_colors.choose_the_color_paragraph, module.style.overwrite_font_colors.paragraph.css)|trim %}
+{% set select_color_icon_hover = color(module.style.social_icons.hover_options.choose_the_color_hover, module.style.social_icons.hover_options.color_hover.css)|trim %}
+{% set select_background_color_form = color(module.style.override_style_forms.choose_the_color_form,module.style.override_style_forms.background_color_for_inputs_fields.css)|trim %}
+
+{# END MACROS VARIABLES #}
+
+
+{# ----- Module Styles ----- #}
+
+{% require_css %}
+<style>
+  {% scope_css %}
+    {% if module.style.general_styles.add_horizontal_orientation_for_menus %}
+      .footer__columns--menu div.footer__columns--menu-items ul{
+        display: flex;
+        gap: 30px;
+      }
+    {% endif %}
+
+   .footer__columns{
+      {{ module.style.general_styles.spacing.spacing_field.css }};
+    }
+
+    {% if item.add_border_column %}
+      {% for item in module.columns %}
+      .footer__columns--{{ loop.index }}{
+        {% if item.select_the_border is containing 'border-bottom' %} 
+        border-bottom: {{ item.width_border }}px solid {{item.color_field.css}};
+        padding-bottom: 40px;
+        height: 100%;
+        align-content: center;
+        {% endif %}
+        
+        {% if item.select_the_border is containing 'border-top' %} 
+        border-top: {{ item.width_border }}px solid {{item.color_field.css}};
+        padding-top: 40px;
+        height: 100%;
+        align-content: center;
+        {% endif %}
+        
+        {% if item.select_the_border is containing 'border-left' %}
+        border-left: {{ item.width_border }}px solid {{item.color_field.css}};
+        padding-left: 40px;
+        height: 100%;
+        align-content: center;
+        {% endif %}
+        
+        {% if item.select_the_border is containing 'border-right' %}
+        border-right: {{ item.width_border }}px solid {{item.color_field.css}};
+        padding-right: 40px;
+        height: 100%;
+        align-content: center;
+        {% endif %}
+      }
+    {% endfor %}
+    {% endif %}
+
+    .footer__columns--inner{
+      {% if module.style.general_styles.vertical_horizontal_alignment.vertical_align == 'MIDDLE' %} 
+        align-self: center;
+      {% elif module.style.general_styles.vertical_horizontal_alignment.vertical_align == 'TOP' %}
+        align-self: start;
+      {% elif module.style.general_styles.vertical_horizontal_alignment.vertical_align == 'BOTTOM' %}
+        align-self: end;
+      {% endif %}
+
+      {% if module.style.general_styles.vertical_horizontal_alignment.horizontal_align == 'LEFT' %} 
+        justify-items: start;
+        text-align: left;
+        justify-self: start;
+      {% elif module.style.general_styles.vertical_horizontal_alignment.horizontal_align == 'RIGHT' %}
+        justify-items: end;
+        text-align: right;
+        justify-self: end;
+      {% elif module.style.general_styles.vertical_horizontal_alignment.horizontal_align == 'CENTER' %}
+        justify-items: center;
+        text-align: center;
+        justify-self: center;
+      {% endif %}
+  }
+  
+  footer.footer{
+    background-color: {{select_background_color}};
+  }
+  .footer__columns--inner{
+    display: grid;
+    grid-row-gap: {{ module.style.general_styles.spaces_between_elements.menus_copy }}px;
+  }
+  .footer__columns,
+  .section-bottom{
+    padding-top: 20px;
+    max-width: calc({{ theme.spacing.max_width }}px );
+    margin: 0 auto;
+  }
+    .section-bottom{
+      padding-left : {{ module.style.general_styles.spacing.spacing_field.padding.left.value }}px ;
+      padding-right: {{ module.style.general_styles.spacing.spacing_field.padding.right.value }}px;
+    }
+   .footer__columns{
+      {{ module.style.general_styles.spacing.spacing_field.css }};
+    }
+  .section-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+  }
+  .actions {
+    margin-top: 16px !important;
+  }
+  .section-bottom--menu ul{
+    display: flex;
+  }
+  .footer__columns--form{
+    width: 100%;
+  }
+
+  .footer__columns--menu {
+    grid-column-gap: {{ module.style.general_styles.spaces_between_elements.spaces_between_menus }}px;
+  }
+  .section-bottom{
+    
+  }
+  {% for item in module.columns %}
+  .footer__columns--{{ loop.index }} .footer__columns--menu {
+    grid-template-columns: repeat( {{ item.menus|length }}, minmax(auto, 1fr) );
+    display: grid;
+  }
+  {% endfor %}
+    .footer__columns--icon a svg,
+    .footer__columns--icon a img{
+      max-width: {{ module.style.social_icons.size }}px;
+      width: {{ module.style.social_icons.size }}px;
+      height: {{ module.style.social_icons.size }}px;
+    }
+    
+    .footer__columns--icon a svg{
+      fill: {{select_color_icon}};
+    }
+    
+    .footer__columns--icon{
+      display: inline-flex;
+      gap: {{ module.style.general_styles.spaces_between_elements.social_icons }}px;
+    }
+    {% if module.style.social_icons.add_border %}
+    .footer__columns--container{
+      {{ module.style.social_icons.border.border_field.css }};
+      border-radius: {{ module.style.social_icons.border.border_radius }}px
+    }
+    {% endif %}
+    .footer__columns--container{
+      transition: all 0.5s;
+    }    
+    .footer__columns--container{
+      background-color: {{ select_background_color_icon }};
+    }
+    
+    {% if module.style.social_icons.add_hover_options %}
+    .footer__columns--container:hover a svg{
+      fill: {{ select_color_icon_hover }};
+    }
+    {% if module.style.social_icons.hover_options.add_border_hover %}
+    .footer__columns--container:hover{
+      {{ module.style.social_icons.hover_options.border_hover.border_field.css }}
+      border-radius: {{ module.style.social_icons.border.border_radius }}px
+    }
+    {% endif %}
+    .footer__columns--container:hover{
+      background-color: {{ select_background_color_icon_hover }};
+    }
+  {% endif %}
+  
+  .footer__columns{
+    display: grid;
+    grid-template-columns: {% for item in module.columns %} 
+      {% if item.add_a_custom_width %}
+      {% if item.width != "" %}
+      calc({{ item.width }}% {% if !loop.last %} - {{ module.style.general_styles.spaces_between_elements.columns }}px{% endif %})
+      {% else %} 1fr 
+      {% endif %}
+      {% else %} 1fr 
+      {% endif %}
+      {% endfor %};
+    grid-column-gap: {{ module.style.general_styles.spaces_between_elements.columns }}px;
+  }
+  {% for item in module.columns %}
+  .footer__columns--{{loop.index}}{
+    {% if item.align_column == 'left' %} 
+    justify-self: start;
+    text-align: left;
+    {% elif item.align_column == 'center' %} 
+    justify-self: center;
+    text-align: center;
+    {% elif item.align_column == 'right' %} 
+    justify-self: end;
+    text-align: right;
+    {% else %}
+    justify-self: normal;
+    {% endif %}
+  }
+  {% endfor %}
+  {% if module.section_bottom.add_border_top %}
+    .section-bottom__outside{
+      border-top: 1px solid #747474;
+      margin-top: 30px;
+      max-width: 100%;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+  {% endif %}
+  
+  {% if module.style.override_style_forms.full_width_button %}
+  input[type=submit]{
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+  {% endif %}
+  
+  li{
+    list-style: none;
+  }
+  ul{
+    padding: 0;
+  }
+  .section-bottom--menu li{
+    line-height: 1.2;
+  }
+  .footer a {
+    color: {{select_color_link}};    
+  }
+  
+  .footer h1,
+  .footer h2,
+  .footer h3,
+  .footer h4,
+  .footer h5,
+  .footer h6 {
+    color: {{ select_color_heading }};
+    margin-bottom: 0;
+  }
+  .footer p,
+  .footer span {
+    color: {{select_color_paragraph}};
+  }
+  .section-bottom--menu li{
+    border-right: 1px solid #747474; 
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .section-bottom--menu li:last-child{
+    border-right: 0px solid #747474; 
+    padding-left: 15px;
+    padding-right: 0;
+  }
+  {% if module.section_bottom.reverse_elements %}
+  .section-bottom {
+    flex-direction: row-reverse;
+  }
+  {% endif %}
+  
+  input[type=text],
+  input[type=email],
+  textarea{
+    background-color: {{select_background_color_form}};
+  }
+  
+  {# ---- Tablet Breakpoint ---- #}
+  
+  @media screen and (max-width:991px){
+    .footer__columns--menu div.footer__columns--menu-items ul {
+      display: grid;
+    }
+    footer form{
+      min-width: 300px;
+      max-width: 300px;
+      width: 100%;
+      margin: auto;
+    }
+    .footer__columns--menu {
+      grid-row-gap: 10px;
+    }
+    .footer__columns--inner {
+      grid-template-columns: 1fr;
+    }
+    .footer__columns--menu-items ul {
+      display: grid;
+    }
+    .section-bottom {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      grid-row-gap: 20px;
+      text-align: center;
+    }
+    .footer__columns {
+      grid-template-columns: 1fr;
+      grid-row-gap: 30px;
+    }
+    .footer__columns--inner{
+      justify-self: center;
+      text-align: center;
+      align-self: center;
+      border: none;
+      justify-content: center;
+      justify-items: center;
+      padding: 0;
+      grid-row-gap: 14px;
+    }
+
+  }
+  
+  {# ---- Tablet Breakpoints ---- #}
+  
+  @media screen and (max-width:768px){
+    footer.footer .footer__columns .footer__columns--inner div.footer__columns--menu {
+      grid-template-columns: 1fr;
+    }
+    footer.footer{
+      {{ module.style.general_styles.spacing.tablet.css }};
+    }
+  }
+  @media screen and (max-width:480px){
+    footer.footer{
+      {{ module.style.general_styles.spacing.mobile.css }}
+    }
+  }
+  @media screen and (max-width: 380px){
+    footer form {
+      min-width: initial;
+    }
+  }
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{# ----- END Module Styles ----- #}
+
+<footer class="footer ">
+  <div class="footer__columns">
+    {% for item in module.columns %}
+    <div class="footer__columns--inner footer__columns--{{ loop.index }}">
+      
+      {# LOGO #}
+      {% if item.add_logo %}
+      <div class="footer__columns--logo">
+        {% set loadingAttr = item.logo_field.loading != 'disabled' ? '{{ item.logo_field.loading }}' : '' %}
+        {% logo
+          override_inherited_src="{{ item.logo_field.override_inherited_src }}"
+          src="{{ item.logo_field.src }}"
+          alt="{{ item.logo_field.alt }}"
+          width="{{ item.logo_field.width }}"
+          height="{{ item.logo_field.height }}"
+          loading="{{ loadingAttr }}"
+          suppress_company_name="{{ item.logo_field.suppress_company_name }}"
+         %}
+      </div>
+      {% endif %}
+      {# END LOGO #}
+
+      {# TEXT #}
+      {% if item.add_text %}
+      <div class="footer__columns--text">
+        {% inline_rich_text field="text" value="{{ item.text }}" %}
+      </div>
+      {% endif %}
+      {# END TEXT #} 
+
+      {# MENU #}
+      {% if item.add_menu %}
+      <div class="footer__columns--menu">
+        {% for item2 in item.menus %}
+        <div class="footer__columns--menu-items">
+          {% if item2.title %}
+          <div class="heading__menu">
+            {{ "<" ~ item2.choose_the_heading ~ ">" }}  {{ item2.title }} {{ "</" ~ item2.choose_the_heading ~ ">" }}
+          </div>
+          {% endif %}
+          {% menu id="{{ item2.menu_field }}" %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {# END MENU #}
+    
+    {# ICONS #}
+      {% if item.add_social_icons %}
+      {% if item.title_icons %}
+      <div class="icons__heading">
+        {{ "<" ~ item.choose_the_heading_icons ~ ">" }}  {{ item.title_icons }} {{ "</" ~ item.choose_the_heading_icons ~ ">" }}
+      </div>
+      {% endif %}
+      <div class="footer__columns--icon">
+        
+        {% for item2 in item.icons %}
+        {% set href = item2.link_field.url.href %}
+        {% if item2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <div class="footer__columns--container">
+          <a href="{{ href }}"
+             {% if item2.link_field.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item2.link_field.rel %}rel="{{ item2.link_field.rel }}"{% endif %}
+             >
+            {% if item.select_the_icon_format == 'icon' %}
+            {% icon
+               name="{{ item2.icon_field.name }}"
+               style="{{ item2.icon_field.type }}"
+               unicode="{{ item2.icon_field.unicode }}"
+               icon_set="{{ item2.icon_field.icon_set }}"
+             %}
+            {% elif item.select_the_icon_format == 'image' %}
+            {% if item2.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item2.image_field.width }}" height="{{ item2.image_field.height }}"' %}
+            {% if item2.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item2.image_field.width }}" height="{{ item2.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item2.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item2.image_field.max_width }}" height="{{ item2.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item2.image_field.loading != 'disabled' ? 'loading="{{ item2.image_field.loading }}"' : '' %}
+            <img src="{{ item2.image_field.src }}" alt="{{ item2.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            {% endif %}
+          </a>
+        </div>
+        {% endfor %} 
+      </div>
+      {% endif %}
+      {# END ICONS #}
+    
+    {# FORM #}
+      {% if item.add_form %}
+      <div class="footer__columns--form">
+        {% form
+          form_to_use="{{ item.form_field.form_id }}"
+          response_response_type="{{ item.form_field.response_type }}"
+          response_message="{{ item.form_field.message }}"
+          response_redirect_id="{{ item.form_field.redirect_id }}"
+          response_redirect_url="{{item.form_field.redirect_url}}"
+          gotowebinar_webinar_key="{{ item.form_field.gotowebinar_webinar_key }}"
+         %}
+      </div>
+      {% endif %}
+    {# END FORM #}
+    
+      {# COPYRIGHT #}
+      {% if item.add_copyright %}
+      <div class="footer__columns--copyright">
+        {% inline_rich_text field="copyright" value="{{ item.copyright }}" %}
+      </div>
+      {% endif %}
+      {# END COPYRIGHT #}
+      
+      </div>
+      {% endfor %}
+    </div>
+
+  {# SECTION BOTTOM #}
+  {% if module.add_section_bottom %}
+  <div class="section-bottom__outside"></div>
+    <div class="section-bottom">
+    {% if module.section_bottom.add_copyright_bottom %}
+    <div class="section-bottom--copyright">
+      {% inline_rich_text field="section_bottom.copyright" value="{{ module.section_bottom.copyright }}" %}
+    </div>
+    {% endif %}
+
+    {% if module.section_bottom.add_menu_bottom %}
+    <div class="section-bottom--menu">
+      {% menu id="{{ module.section_bottom.menu_bottom }}" %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% endif %}
+  {# END SECTION BOTTOM #}
+</footer>

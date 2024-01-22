@@ -1,0 +1,15 @@
+{
+  "label" : "Knowledge Theme",
+  "preview_path" : "./templates/style-guide.html",
+  "enable_domain_stylesheets" : false,
+  "version" : "2.3.1",
+  "responsive_breakpoints": [
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 991px)",
+      "previewWidth": {
+        "value": 520
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+.breadcrumbs{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  padding-top: 100px;
+}
+
+.breadcrumbs svg{
+  padding-right: 5px;
+}
+
+.breadcrumbs_title{
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}

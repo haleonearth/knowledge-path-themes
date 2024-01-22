@@ -1,0 +1,155 @@
+[ {
+  "id" : "1ba929f6-878b-55b9-0fd9-e27658671db9",
+  "name" : "content_shape_divider",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5b806660-0c78-8138-4055-9b00f087d28b",
+    "name" : "shape_divider_style",
+    "display_width" : null,
+    "label" : "Shape Divider Style",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "angle-01", "Angle 01" ], [ "angle-02", "Angle 02" ], [ "angle-03", "Angle 03" ], [ "angle-04", "Angle 04" ], [ "angle-05", "Angle 05" ], [ "angle-06", "Angle 06" ], [ "wave-01", "Wave 01" ], [ "wave-02", "Wave 02" ], [ "wave-03", "Wave 03" ], [ "custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "angle-01"
+  }, {
+    "id" : "ecf369c8-21cd-883f-785b-d88823ea24b3",
+    "name" : "custom_svg",
+    "display_width" : null,
+    "label" : "Custom SVG",
+    "inline_help_text" : "This needs to have the HTML code of the SVG and it's VERY IMPORTANT that the SVG has the preserveAspectRatio=\"none\" property added, otherwise it wont work",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "5b806660-0c78-8138-4055-9b00f087d28b",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "7f847891-f8f3-d382-a502-c61a27afe4bc",
+    "name" : "position",
+    "display_width" : null,
+    "label" : "Position",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "overlap_above", "Overlap Above" ], [ "overlap_below", "Overlap Below" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "overlap_above"
+  }, {
+    "id" : "9a3ce336-84cc-a1d8-1fbe-232883eb5b60",
+    "name" : "color",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "primary", "Primary" ], [ "secondary", "Secondary" ], [ "tertiary", "Tertiary" ], [ "heading", "Heading" ], [ "body", "Body" ], [ "custom", "Custom" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "primary"
+  }, {
+    "id" : "ee2d6437-58c4-d199-0f7b-a569103e7da3",
+    "name" : "custom_color",
+    "display_width" : null,
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "9a3ce336-84cc-a1d8-1fbe-232883eb5b60",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "custom",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : true,
+  "type" : "group",
+  "default" : {
+    "shape_divider_style" : "angle-01",
+    "position" : "overlap_above",
+    "color" : "primary",
+    "custom_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "9715881c-e7e5-3bb3-c605-1c84462d00ac",
+  "name" : "height",
+  "display_width" : null,
+  "label" : "Height",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "2277e5c9-0532-8c38-afbc-ec213f8218c2",
+    "name" : "desktop",
+    "display_width" : null,
+    "label" : "Desktop",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "default" : 192
+  }, {
+    "id" : "d28264b9-ee21-e969-50a6-9a41e99c46b1",
+    "name" : "tablet",
+    "display_width" : null,
+    "label" : "Tablet",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "default" : 128
+  }, {
+    "id" : "c8a94cdd-297e-004b-a416-eb9da4e219a1",
+    "name" : "mobile",
+    "display_width" : null,
+    "label" : "Mobile",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "suffix" : "px",
+    "type" : "number",
+    "default" : 96
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : true,
+  "type" : "group",
+  "default" : {
+    "desktop" : 192,
+    "tablet" : 128,
+    "mobile" : 96
+  }
+} ]

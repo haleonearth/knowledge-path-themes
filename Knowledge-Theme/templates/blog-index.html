@@ -1,0 +1,449 @@
+<!--
+templateType: blog
+isAvailableForNewContent: true
+label: Blog Listing
+-->
+
+{% extends "./layouts/base.html" %}
+
+{% set arrow_icon =
+'<svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" viewBox="0 0 5 8"
+  fill="#FFFFFF">
+  <path d="M4.35355 3.64645C4.54882 3.84171 4.54882 4.15829 4.35355
+    4.35355L1.17157 7.53553C0.976311 7.7308 0.659728 7.7308 0.464466
+    7.53553C0.269204 7.34027 0.269204 7.02369 0.464466 6.82843L3.29289
+    4L0.464466 1.17157C0.269204 0.976311 0.269204 0.659728 0.464466
+    0.464466C0.659728 0.269204 0.976311 0.269204 1.17157 0.464466L4.35355
+    3.64645ZM3 3.5H4V4.5H3V3.5Z"/
+</svg>'
+%}
+
+{% block body %}
+
+<div class="blog-banner-section" style="background-image: url('{% image_src
+  "executve_image_src" src="", no_wrapper=True %}');">
+  <div class="container">
+    <div class="blog-bnr-innr">
+      <div class="blog-title">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20
+              18.5V10.736L20.1822 10.886C20.3953 11.0615 20.7104 11.031 20.886
+              10.8179C21.0615 10.6047 21.031 10.2896 20.8179 10.114L12.3179
+              3.11403C12.1332 2.96199 11.8668 2.96199 11.6822 3.11403L3.18216
+              10.114C2.969 10.2896 2.9385 10.6047 3.11405 10.8179C3.28959 11.031
+              3.60471 11.0615 3.81787 10.886L4.00001 10.736V18.5C4.00001 19.8807
+              5.1193 21 6.50001 21H9.50001C9.77616 21 10 20.7761 10 20.5V14.5C10
+              14.2239 10.2239 14 10.5 14H13.5C13.7762 14 14 14.2239 14
+              14.5V20.5C14 20.7761 14.2239 21 14.5 21H17.5C18.8807 21 20 19.8807
+              20 18.5ZM12 4.14773L19.0067 9.91795C19.0023 9.94465 19 9.97206 19
+              10V18.5C19 19.3284 18.3284 20 17.5 20H15V14.5C15 13.6716 14.3284
+              13 13.5 13H10.5C9.67159 13 9.00001 13.6716 9.00001
+              14.5V20H6.50001C5.67159 20 5.00001 19.3284 5.00001 18.5V10C5.00001
+              9.97206 4.99772 9.94465 4.99331 9.91795L12 4.14773Z"
+              fill="white"/>
+            </svg></span> <span class="home-s">Blog</span>
+        </div>
+        <div class="banner-two-col">
+          <div class="banner-left">
+
+            <div class="blog-title">
+              <h1>
+                {% text "title" label="Title", value="Blog", no_wrapper=True %}
+              </h1>
+            </div>
+          </div>
+          <div class="banner-right" style="display: none;">
+            <div class="search-cols">
+              <form action="/{{ site_settings.content_search_results_page_path
+                }}">
+                <input name="term" type="text" placeholder="Search the
+                  KnowledgePath Blog" id="searchfilter">
+                <input type="submit" value="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-svg">
+        <a href="#scroll"><svg xmlns="http://www.w3.org/2000/svg" width="28"
+            height="33" viewBox="0 0 28 33" fill="none">
+            <path d="M26.7969 20.3672L15.5469 31.6172C15.125 32.0391 14.5625
+              32.25 14 32.25C13.3672 32.25 12.8047 32.0391 12.3828
+              31.6172L1.13281 20.3672C0.21875 19.5234 0.21875 18.0469 1.13281
+              17.2031C1.97656 16.2891 3.45312 16.2891 4.29688 17.2031L11.75
+              24.5859V3C11.75 1.80469 12.7344 0.820312 13.9297 0.820312C15.0547
+              0.820312 16.25 1.80469 16.25 3V24.5859L23.6328 17.2031C24.4766
+              16.2891 25.9531 16.2891 26.7969 17.2031C27.7109 18.0469 27.7109
+              19.5234 26.7969 20.3672Z" fill="white"/>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-list-section" id="scroll">
+      <div class="container">
+        <div class="blog-list-inr">
+          <div class="blog-two-col">
+            <div class="blog-left">
+              <div class="lft-inr" {% if next_page_num %} data-next-page="{{
+                blog_page_link(next_page_num) }}" {% endif %}>
+                {% for content in contents %}
+                <div class="blog-box-col">
+                  <div class="blog-box ">
+                    <div class="blog-col-s">
+                      <a href="{{content.absolute_url}}"></a>
+                      <div class="blog-bg-img" style="background-image: url('{{
+                        content.featured_image }}')">
+                        <a href="{{content.absolute_url}}"></a>
+                      </div>
+                      <div class="blog-bottom-col">
+                        <div class="equal_title">
+                          <div class="list-items">
+                            {% if content.topic_list %}
+                            {% for topic in content.topic_list %}
+                            {% if loop.index == 1 %}
+                            <a class="note" href="{{ group.absolute_url
+                              }}/topic/{{ topic.slug }}">{{ topic.name }}</a>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                          </div>
+                          <div class="box-title">
+                            <h4>
+                              <a href="{{content.absolute_url}}">{{ content.name
+                                }}</a>
+                            </h4>
+                          </div>
+                          <div class="date-two-col">
+                            <div class="date-left">
+                              <div class="date-s">
+                                {{
+                                datetimeformat(content.publish_date_local_time,
+                                '%B %e, %Y') }}
+                              </div>
+                            </div>
+                            <div class="date-right">
+                              <div class="min-title">
+                                {% set initialPostWords =
+                                content.post_body|striptags|wordcount %}
+                                {% set calculatedPostWords =
+                                (initialPostWords/100) * 100 %}
+                                {% set finishedPostWords =
+                                calculatedPostWords|divide(300)|round(2) %}
+                                {% set number = finishedPostWords|round %}
+                                {% if number <1 %}
+
+                                  {% else %}
+                                  {{ finishedPostWords|round }} min
+                                  {% endif %}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="equal_height">
+                          <div class="button">
+                            <a href="{{content.absolute_url}}">Read More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <div class="next-btn">
+                <a href="javascript:void(0)" id="loadMore">Older Entries</a>
+              </div>
+            </div>
+            <div class="blog-right">
+              <div class="sidebar">
+                <h3 style="font-size: 23px;">
+                  Subscribe
+                </h3>
+                <div class="kp_container__form--sidebar">
+                  <script charset="utf-8" type="text/javascript"
+                    src="//js.hsforms.net/forms/embed/v2.js"></script>
+                  <script>
+  hbspt.forms.create({
+    region: "na1",
+    portalId: "21128909",
+    formId: "216adb64-c89c-4b2a-a21d-132105090000"
+  });
+</script>
+                </div>
+
+                <div class="blog-tag-s" style="display:none;">
+                  <div class="tag-title">
+                    <h4>
+                      {% text "title" label="Title", value="Tags",
+                      no_wrapper=True %}
+                    </h4>
+                  </div>
+                  <div class="tag-list-s">
+                    {% set my_topics = blog_tags('default', 250) %}
+                    <ul>
+                      {% for item in my_topics %}
+                      <li>
+                        <h4>
+                          <a href="{{ blog_tag_url(group.id, item.slug) }}">
+                            {{ item }}
+                          </a>
+                        </h4>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+                <div class="read-section" style="display: none;">
+                  <div class="want-title">
+                    <h4>
+                      {% text "title" label="Title", value="Want to read more?",
+                      no_wrapper=True %}
+                    </h4>
+                  </div>
+                  <div class="content-s">
+                    {% rich_text "left_column" label="Enter HTML here"
+                    html="Sign up for notifications when we post - about three
+                    to four times per month." %}
+                  </div>
+                </div>
+                <div class="right-form-sec" style="display: none;">
+                  <script charset="utf-8" type="text/javascript"
+                    src="//js.hsforms.net/forms/embed/v2.js"></script>
+                  <script>
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "21128909",
+                formId: "57e39c52-b305-4315-aa40-cd5aa70f9197",
+                css: ""
+              });
+            </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% require_css %}
+      <style>
+
+  .blog-banner-section {padding-top: 84px;padding-bottom: 50px;background-position: center center;background-repeat: no-repeat;background-size: cover;position: relative;}
+  .blog-banner-section .container {position: relative;z-index: 2;}
+  .banner-two-col {display: flex;flex-wrap: wrap;align-items: center; }
+  .banner-left {width: 50%;}
+  .banner-right {width: 50%;text-align: right;padding-left: 30px;}
+  .blog-title span {   line-height: 0;display: inline-block;   vertical-align: middle;padding-right: 8px;}
+  .blog-title {   color: #fff;}
+  .blog-banner-section span.home-s {font-size: 16px;line-height: 1.5;font-weight: 700;padding-left: 4px; position: relative; font-family: 'Open Sans', sans-serif;}
+  .blog-title h1 {font-weight: 700;color: #fff;padding-top: 20px;   margin-bottom: 0;padding-left: 10px;}
+  .search-cols input[type="text"] {border: 2px solid #fff;padding: 8px 10px;font-size: 14px;line-height: 1.28;width: 380px;border-radius: 3px;margin: 0 0 0 auto;color: #0E75BC;}
+  .search-cols input[type="submit"] {padding: 9px 16px;font-size: 14px;line-height: 1.28;border-radius: 3px;position: absolute;top: 0;right: -1px;cursor: pointer;
+    transition: all ease 0.3s;box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);}
+  .search-cols {position: relative;}
+  .search-cols ::placeholder {color: #0E75BC;}
+  .blog-banner-section span.home-s:before {content: '/';position: absolute;left: -8px;font-weight: 400;   z-index: 2; }
+  .search-cols input[type="submit"]:hover {background-color: #ffffff;border-color: 1px solid #666666;color: #666666;  }
+  .bottom-svg {text-align: center;line-height: 0;padding-top: 40px;}
+  .bottom-svg a {display: inline-block;vertical-align: middle;}
+  .list-items a:hover {text-decoration: none;}
+  .list-items a { transition: all ease 0.3s; }
+  .blog-list-section {padding-top: 51px;}
+  .blog-two-col {display: flex;flex-wrap: wrap;}
+  .blog-left {width: 79%;padding-right: 5px;}
+  .lft-inr { display: flex; flex-wrap: wrap; margin: 0 -10px;}
+  .blog-right {width: 21%;padding-left: 25px;padding-top:15px;}
+  .blog-box-col {width: 33.33%;padding: 15px 10px;}
+  .blog-box {background-color: #fff;height: 100%;   filter: drop-shadow(0px 4px 15px rgba(149, 157, 165, 0.15));}
+  .blog-bg-img {height: 251px;background-position: center center;background-repeat: no-repeat;background-size: cover;position: relative;}
+  .blog-bg-img a { position: absolute; top:0; left:0;width:100%; height:100%; z-index:1; }
+  .blog-bottom-col {padding: 30px 20px;}
+  .list-items a {   font-size: 20px;line-height: 1.25;font-weight: 700;}
+  .box-title {padding-top: 20px;}
+  .box-title a {line-height: 1.25;font-size: 20px;   font-weight: 700;color: #797C7E;}
+  .box-title h4 {margin-bottom: 0;}
+  .date-two-col {display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;padding-top: 20px;}
+  .date-s , .min-title {font-size: 14px;line-height: 1.28;font-weight: 400;color: #797C7E;text-transform: uppercase;}
+  .min-title { text-transform: none; }
+  .blog-list-section .button {margin-top: 20px;}
+  .blog-list-section .button {background-color: #0C3770;border: 1px solid #0C3770;padding: 8px 20px;font-size: 16px;line-height: 1.5;font-weight: 700;font-family: 'Open Sans', sans-serif;}
+  .blog-list-section .button a {color: #fff;}
+  .tag-title { font-size: 20px;line-height: 1.25;color: #0E75BC;font-weight: 700;}
+  .tag-title h4 { margin-bottom:0; }
+  .tag-list-s ul {margin: 0 -8px;padding: 0;list-style: none;display: flex;flex-wrap: wrap;}
+  .tag-list-s ul > li  a {padding: 4px 16px;background-color: #0E75BC;border: 1px solid #0E75BC;color: #fff;font-size: 16px;line-height: 1.75;font-weight: 400;display: block;transition: all ease 0.3s;
+    text-align: center;    font-family: 'Lato', sans-serif;}
+  .tag-list-s ul > li {padding: 8px;width: auto}
+  .tag-list-s {padding-top: 16px;}
+  .tag-list-s ul > li  a:hover {text-decoration: none;}
+  .read-section {padding-top: 42px;}
+  .want-title {background-color: #0E75BC;display: block;padding: 10px;}
+  .want-title h4 {margin-bottom: 0;font-size: 20px;    color: #fff;line-height: 1.25;font-weight: 700;}
+  .content-s {padding-top: 31px;font-size: 16px;line-height: 1.75;font-family: 'Open Sans', sans-serif;}
+  .right-form-sec {padding-top: 31px; }
+  .right-form-sec label span:not(.hs-form-required) { font-size: 16px;line-height: 1.75;color: #BDBDBD;}
+  .right-form-sec textarea,.right-form-sec input[type="text"], .right-form-sec input[type="number"], .right-form-sec input[type="email"], .right-form-sec input[type="tel"],
+  .right-form-sec select {padding: 12px 8px !important;border: 1px solid #BDBDBD !important;border-radius: 2px;font-size: 16px;line-height: 1.75;color: #BDBDBD;}
+  .right-form-sec .hs-form-field {margin-bottom: 31px;}
+  .right-form-sec form input[type=submit] {padding: 8px 16px;font-size: 14px;line-height: 1.28;box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);border-radius: 3px;transition: all ease 0.3s;}
+
+  .next-btn {text-align: center;padding: 30px 0 45px;}
+  .next-btn a {padding: 8px 20px;background-color: #0C3770;box-shadow: 0px 4px 15px rgba(149, 157, 165, 0.15);border-radius: 3px;border: 1px solid #0C3770;color: #fff;font-size: 16px;
+    line-height: 1.5;font-weight: 700;font-family: 'Open Sans', sans-serif;display: inline-block;vertical-align: middle;transition: all ease 0.3s;}
+  .next-btn a:hover {background-color: transparent;color: #0C3770;text-decoration: none;}
+  .blog-list-section .button {transition: all ease 0.2s;}
+  .blog-list-section .button:hover {background-color: transparent;border-color: #666666;}
+  .blog-list-section .button:hover a {color: #666666;text-decoration: none;}
+  .box-title a:hover , .box-title a:focus {text-decoration: none;color: #0e75bc;}
+
+  .blog-col-s:hover .box-title a {text-decoration: none;color: #0e75bc;}
+  .blog-col-s {position: relative;}
+  .blog-col-s > a {position: absolute;top: 0;left: 0;width: 100%;height: 100%;   z-index: 1;}
+
+  @media (max-width: 1230px) {
+
+    .blog-box-col {width: 50%; }
+
+  }
+
+  @media (max-width: 1080px) {
+    .lft-inr { margin: 0; }
+    .search-cols input[type="text"] {width: 100%;}
+    .blog-left {width: 70%; padding-right: 0;}
+    .blog-right {width: 30%;}
+
+  }
+
+  @media (max-width: 991px) {
+
+    .blog-left , .blog-right {width: 100%;}
+    .blog-right {padding-left: 0;padding-top:0}
+    .tag-list-s ul > li {width: auto;}
+
+  }
+
+  @media (max-width: 767px) {
+
+    .banner-right , .banner-left {width: 100%;}
+    .blog-banner-section {padding-top: 30px;padding-bottom: 36px;}
+    .blog-title h1 {padding-top: 40px;font-size: 48px;line-height: 1.25;}
+    .banner-right {padding-left: 0;padding-top: 20px;}
+    .blog-bnr-innr {max-width: 297px;margin: 0 auto;}
+    .bottom-svg {padding-top: 30px;}
+
+    .blog-box-col {width: 100%;padding: 0;}
+    .blog-list-section {padding-top: 35px;}
+    .list-items a {font-size: 16px;line-height: 1.5;font-family: 'Open Sans', sans-serif;   }
+    .box-title {padding-top: 16px;}
+    .box-title h4 {font-size: 24px;line-height: 1.25;}
+    .date-two-col {padding-top: 17px;}
+    .blog-list-section .button {margin-top: 16px;}
+    .blog-box-col + .blog-box-col {padding-top: 20px;}
+    .next-btn {padding-top: 30px;}
+    .blog-right {padding-top: 130px;}
+    .blog-tag-s, .read-section , .right-form-sec {max-width: 221px;}
+    .want-title h4 {font-weight: 400; font-size: 24px;line-height: 1.25;}
+    .want-title {padding: 10px 8px;}
+    .content-s {font-weight: 400;}
+    .box-title a {font-size: 24px;line-height: 1.25;font-weight:400;}
+    .blog-banner-section .container , .blog-list-section .container { padding-left: 30px;padding-right: 30px; }
+
+  }
+
+</style>
+      {% end_require_css %}
+
+      {% endblock body %}
+      {% require_js %}
+      <script>
+  // Set the sidebar sticky position with the header height
+  const header = document.querySelector('header.header');
+  const sidebar = document.querySelector('.sidebar__inner');
+  const isHeaderFixed = header.dataset.position == 'fixed' ? true : false;
+  if(isHeaderFixed) {
+    sidebar.style.top = `${header.offsetHeight}px`;
+  }
+
+  $(document).ready(function(){
+    var postContainer = $(".lft-inr");
+    var ajaxUrl = postContainer.attr('data-next-page');
+    if(!ajaxUrl){
+      $('#loadMore').hide();
+    }
+    $('#loadMore').click(function(event){
+      $.get(ajaxUrl, function(data){
+        page = $(data);
+        var posts = page.find('.blog-box-col');
+        posts.each(function(){
+          var blogPost = $(this);
+          //$isotope.isotope( 'insert', blogPost );
+          $('.lft-inr').append(blogPost);
+          setTimeout(function(){
+            equalheight('.equal_title');
+            equalheight('.equal_height');
+          },2000)
+        });
+        ajaxUrl = page.find('.lft-inr').attr('data-next-page');
+        if(!ajaxUrl){
+          $('#loadMore').hide();
+        }
+      });
+    });
+
+    $('.bottom-svg a[href*="#"]:not([href="#"])').on('click',function (e) {
+      var target = this.hash;
+      var $target = $(target);
+      //     console.log('target',target)
+      if($($target).length > 0){
+        e.preventDefault();
+
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+        }, 1500, 'swing'); 
+      }
+
+    });
+
+
+  });
+
+  $(document).ready(function(){
+    equalheight('.equal_title');
+    equalheight('.equal_height');
+  });
+  $(window).on('load',function(){
+    equalheight('.equal_title');
+    equalheight('.equal_height');
+  });
+  $(window).on('resize',function(){
+    equalheight('.equal_title');
+    equalheight('.equal_height');
+  });
+  // Equal Height Function
+  equalheight = function(container){
+    var currentTallest = 0, currentRowStart = 0, rowDivs = new Array(), $el, topPosition = 0;
+    $(container).each(function() {
+      $el = $(this);
+      $($el).height('auto')
+      topPostion = $el.position().top;
+      if (currentRowStart != topPostion) {
+        for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+          rowDivs[currentDiv].height(currentTallest);
+        }
+        rowDivs.length = 0; // empty the array
+        currentRowStart = topPostion;
+        currentTallest = $el.outerHeight();
+        rowDivs.push($el);
+      } else {
+        rowDivs.push($el);
+        currentTallest = (currentTallest < $el.outerHeight()) ? ($el.outerHeight()) : (currentTallest);
+      }
+      for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+        rowDivs[currentDiv].height(currentTallest);
+      }
+    });
+  }
+
+</script>
+      {% end_require_js %}

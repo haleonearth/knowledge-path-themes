@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
+  "icon" : "https://f.hubspotusercontent40.net/hubfs/6113045/image-card.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 76311278725,
+  "label" : "Cards",
+  "is_available_for_new_content" : true
+}

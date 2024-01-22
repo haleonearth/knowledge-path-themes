@@ -1,0 +1,153 @@
+{% import "../../templates/macros/divider_macro.html" as divider_generator %}
+{% from '../../templates/macros/macros.html' import color %}
+
+{% set shape_divider_svg = divider_generator.shapeDividerSvg() %}
+{% set shape_color = color(module.content_shape_divider.color,module.content_shape_divider.custom_color.css)|trim %}
+
+{# ----- Module Styles ----- #}
+
+{% require_css %}
+<style>
+  {% scope_css %}
+  
+  /* -------
+ * Shape Divider 
+ * --------------------- */
+
+.divider_shape svg path {
+  fill: {{ shape_color }};
+}
+
+@media(max-width: 767px) {
+  .divider_shape  {
+    height: {{ module.height.mobile }}px;
+  }
+}
+  
+@media(min-width: 768px) {
+  .divider_shape {
+    height: {{ module.height.tablet }}px;
+  }
+}
+@media(min-width: 992px) {
+  .divider_shape {
+    height: {{ module.height.desktop }}px;
+  }
+}
+  
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
+
+{# ----- END Module Styles ----- #}
+
+<div class="relative divider hidden" data-divider="shape_divider" data-divider-position="{{ module.content_shape_divider.position }}">
+   
+	  {# ----------------------- Shape Divider ---------------------------- #}
+		<div class="divider_shape divider_{{ module.content_shape_divider.position }} divider_shape-{{ module.content_shape_divider.shape_divider_style }} {% if module.content_shape_divider.color != 'custom' %}{{ module.content_shape_divider.color }}-{{ module.content_shape_divider.color_saturation }} {{ module.content_shape_divider.opacity }}{% endif %}" {% if module.content_shape_divider.color == 'custom' %}style="color: {{ module.content_shape_divider.custom_color.color }}; opacity:{{ module.content_shape_divider.custom_color.opacity/100 }};"{% endif %}>
+			{{ shape_divider_svg }}
+		</div>
+	  {# ----------------------- Shape Divider ---------------------------- #}
+
+</div>
+
+{{ require_js(get_asset_url('../../vendor/jquery/jquery.min.js')) }}
+{% require_js %}
+<script>
+$('.divider').each(function(){
+	let dataDivider = $(this).data('divider');
+	let dataDividerPos = $(this).data('divider-position');
+	let svgHeight = $(this).find('.divider_shape').height() - 1;
+	let marginTarget;
+
+  if (window != top) {
+		$(this).append('<div class="shape-divider-editor"><span>Here you can change the shape divider (This box is only rendered in the Page Editor)</span></div>');
+	}
+	
+	if ( dataDivider == 'shape_divider') {
+		// Target Section
+		if ( dataDividerPos == 'overlap_above' ) {
+			let spacingSize = parseInt($(this).closest('.dnd-section').prev('.dnd-section').css("padding-bottom").replace('px',''));
+			let marginSize = spacingSize + svgHeight;
+			let targetSection = $(this).closest('.dnd-section').prev('.dnd-section');
+			$(this).css('margin-top', '-' + svgHeight + 'px');
+			$(targetSection).css({
+				'cssText': 'padding-bottom: '+ marginSize + 'px!important'
+			});
+			$(targetSection).find('> div').addClass('relative z-10');
+			
+			// Check if Module is hidden on mobile (automatically use section padding top size)
+			if (window.matchMedia('(max-width: 767px)').matches) {
+				// do functionality on screens smaller than 767px
+				if ($(this).closest('.dnd-module').css('display') == 'none') {
+					let spacingTopSize = parseInt($(this).closest('.dnd-section').prev('.dnd-section').css("padding-top").replace('px',''));
+					$(targetSection).css({
+						'cssText': 'padding-bottom: '+ spacingTopSize + 'px!important'
+					});
+				}
+			}
+
+		}
+		else if ( dataDividerPos == 'overlap_below' ) {
+			let spacingSize = parseInt($(this).closest('.dnd-section').next('.dnd-section').css("padding-top").replace('px',''));
+			let marginSize = spacingSize + svgHeight;
+			let targetSection = $(this).closest('.dnd-section').next('.dnd-section');
+			$(this).css('margin-bottom', '-' +svgHeight + 'px');
+			$(targetSection).css({
+				'cssText': 'padding-top: '+ marginSize + 'px!important'
+			});
+			$(this).addClass('transform rotate-180');
+			$(targetSection).find('> div').addClass('relative z-10');
+			
+			// Check if Module is hidden on mobile (automatically use section padding top size)
+			if (window.matchMedia('(max-width: 767px)').matches) {
+				// do functionality on screens smaller than 767px
+				if ($(this).closest('.dnd-module').css('display') == 'none') {
+					let spacingBottomSize = parseInt($(this).closest('.dnd-section').next('.dnd-section').css("padding-bottom").replace('px',''));
+					$(targetSection).css({
+						'cssText': 'padding-top: '+ spacingBottomSize + 'px!important'
+					});
+				}
+			}
+			
+		}
+		$(this).removeClass('hidden');
+	}
+});
+
+function dividerUpdateSpacing() {
+	$('.divider').each(function(){
+		let svgHeight = $(this).find('.divider_shape').height() -1;
+		let dataDividerPos = $(this).data('divider-position');
+		
+		if ( dataDividerPos == 'overlap_above' ) {
+			let spacingSizeTop = parseInt($(this).closest('.dnd-section').prev('.dnd-section').css("padding-top").replace('px',''));
+			let spacingSizeBottom = parseInt($(this).closest('.dnd-section').prev('.dnd-section').css("padding-bottom").replace('px',''));
+			let targetSection = $(this).closest('.dnd-section').prev('.dnd-section');
+			// Append and Update Height
+			let paddingUpdate = svgHeight + spacingSizeTop;
+			// Update margin
+			$(this).css('margin-top', '-' + svgHeight + 'px');
+			// Update Padding Bottom
+			$(targetSection).css({
+				'cssText': 'padding-bottom: '+ paddingUpdate + 'px!important'
+			});
+		}
+		else if ( dataDividerPos == 'overlap_bottom' ) {
+			let spacingSizeTop = parseInt($(this).closest('.dnd-section').next('.dnd-section').css("padding-top").replace('px',''));
+			let spacingSizeBottom = parseInt($(this).closest('.dnd-section').next('.dnd-section').css("padding-bottom").replace('px',''));
+			let targetSection = $(this).closest('.dnd-section').next('.dnd-section');
+			// Append and Update Height
+			let paddingUpdate = svgHeight + spacingSizeBottom;
+			// Update margin
+			$(this).css('margin-bottom', '-' + svgHeight + 'px');
+			// Update Padding Bottom
+			$(targetSection).css({
+				'cssText': 'padding-top: '+ paddingUpdate + 'px!important'
+			});
+		}
+	});
+}
+$(window).resize(dividerUpdateSpacing);
+</script>
+{% end_require_js %}

@@ -1,0 +1,96 @@
+[ {
+  "id" : "35ea4f43-d854-a8ef-b251-7e60e72ab4ab",
+  "name" : "img_icon",
+  "display_width" : null,
+  "label" : "Image Icon",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : ""
+  }
+}, {
+  "id" : "6981b8d2-cc8c-a440-f538-6d1213942b3e",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Subscribe"
+}, {
+  "id" : "2f9b5ef2-d5bc-2759-b1be-a2e00fc44c2c",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus commodo metus cras pulvinar et non nisl."
+}, {
+  "id" : "e087bf47-acab-c7ff-4639-f1289bd3768a",
+  "name" : "form",
+  "display_width" : null,
+  "label" : "Form",
+  "required" : false,
+  "locked" : true,
+  "type" : "form",
+  "default" : {
+    "form_id" : "",
+    "response_type" : "inline",
+    "message" : "Thanks for submitting the form.",
+    "gotowebinar_webinar_key" : null,
+    "form_type" : "HUBSPOT"
+  }
+}, {
+  "id" : "4a78d5bc-1147-1f3a-5afe-f6a57a1ff2fe",
+  "name" : "styles",
+  "display_width" : null,
+  "label" : "Style Options",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "ab91cbd6-af55-6cfa-de8d-006f2bd19a84",
+    "name" : "title_color",
+    "display_width" : null,
+    "label" : "Title Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "eef431ed-b6fc-ff23-cc81-eaa6efd0376d",
+    "name" : "bg_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#3C3C3B",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "bg_color" : {
+      "color" : "#3C3C3B",
+      "opacity" : 100
+    }
+  }
+} ]

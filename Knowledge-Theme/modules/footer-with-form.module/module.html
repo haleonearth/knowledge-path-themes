@@ -1,0 +1,105 @@
+<footer class="footer">
+  <form class="footer-form" action="">
+    <h3 class="footer-form__title" >{{ module.form_content.form_title }}</h3>
+    <p class="footer-form__description">{{ module.form_content.form_description }}</p>
+    {% form
+      form_to_use="{{ module.form_content.footer_form.form_id }}"
+      response_response_type="{{ module.form_content.footer_form.response_type }}"
+      response_message="{{ module.form_content.footer_form.message }}"
+      response_redirect_id="{{ module.form_content.footer_form.redirect_id }}"
+      response_redirect_url="{{module.form_content.footer_form.redirect_url}}"
+      gotowebinar_webinar_key="{{ module.form_content.footer_form.gotowebinar_webinar_key }}"
+    %}
+  </form>
+  
+  
+  
+<!-- START :: New Contact Info Section -->
+
+  <div class="footer-contact">
+	<div class="positioning-wrapper">
+		<div class="cstm_row cstm_row-1">
+			<div class="col-1-100">
+				<h3 class="title_section">Contact Details</h3>
+        <hr class="cstm_rule">
+			</div>
+		</div>
+		<div class="cstm_row cstm_row-2">
+			<div class="cstm_col col_2-50">
+
+				<a class="link_address" href="https://maps.app.goo.gl/fHm2bxgYeE15WBrUA" target="_blank">
+					<div itemscope itemtype="http://schema.org/PostalAddress">
+						<span itemprop="streetAddress">1 Chase Corporate Dr. Suite 400</span>
+						<br>
+						<span itemprop="addressLocality">Birmingham</span>,
+						<span itemprop="addressRegion">AL</span>
+						<span itemprop="postalCode">35244</span>
+					</div>
+				</a>
+
+				<div class="contain_links-social cls_large">
+					<a style="margin-right: 10px;" class="link_social" href="https://www.linkedin.com/company/knowledgepath-consulting/" target="_blank"><img src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/social-icons/gx-icon-social-linkedin-navy-blue.svg" alt=""></a>
+
+					<a class="link_social" href="https://twitter.com/KPC_Team" target="_blank"><img src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/social-icons/gx-icon-social-x-twitter-navy-blue.svg" alt=""></a>
+				</div>
+			</div>
+
+			<div class="cstm_col col_2-50">
+				<div class="contain_list-offices">
+					<h4 class="subtitle_offices">Offices In:</h4>
+					<ul>
+						<li>Alabama</li>
+						<li>Arkansas</li>
+						<li>Colorado</li>
+						<li>Florida</li>
+						<li>Georgia</li>
+						<li>Illinois</li>
+						<li>Michigan</li>
+						<li>North Carolina</li>
+						<li>South Carolina</li>
+						<li>Texas</li>
+					</ul>
+				</div>
+
+				<div class="contain_links-social cls_small">
+					<a style="margin-right: 25px;" class="link_social" href="https://www.linkedin.com/company/knowledgepath-consulting/" target="_blank"><img src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/social-icons/gx-icon-social-linkedin-navy-blue.svg" alt=""></a>
+
+					<a class="link_social" href="https://twitter.com/KPC_Team" target="_blank"><img src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/social-icons/gx-icon-social-x-twitter-navy-blue.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+  
+  <!-- END :: New Contact Info Section -->
+  
+  
+  
+  
+  <div class="footer-under">
+    <div class="footer-under__items" >
+      {% for item in module.footer_under.footer_under_list %}
+        <a class="footer-under__list" href="{{ item.footer_under_list_url.href }}">{% inline_text field="footer_under_list" value="{{ item.footer_under_list }}" %}</a>
+      {% endfor %}
+     </div>
+  </div>
+  <div class="footer-copyright">
+    <h5 class="footer-copyright__text">
+      {% inline_text field="footer_under.footer_copyright" value="{{ module.footer_under.footer_copyright }}" %}
+    </h5>
+  </div>
+</footer>
+
+
+
+
+	
+	
+
+
+
+
+	
+
+
+

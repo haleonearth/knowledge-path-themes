@@ -1,0 +1,20 @@
+{
+  "global" : true,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "smart_type" : "NOT_SMART",
+  "icon" : "https://f.hubspotusercontent20.net/hubfs/7691572/slider.svg",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 94197223173,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../vendor/swiperjs/swiper-bundle.min.css",
+    "name" : "swiper-bundle.min.css"
+  } ],
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../vendor/swiperjs/swiper-bundle.min.js",
+    "name" : "swiper-bundle.min.js"
+  } ],
+  "label" : "Related Blog Posts",
+  "is_available_for_new_content" : true
+}

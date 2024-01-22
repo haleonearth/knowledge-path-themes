@@ -1,0 +1,14 @@
+<h2 class="{{module.headline_classname}}">{{module.title}}</h2>
+{% require_css %}
+  <style>
+		{% scope_css %}
+			{{"."~module.headline_classname}}::before {
+				content: '';
+				display: block;
+				height: 100px;
+				margin-top: -100px;
+				visibility: hidden;
+			}
+		{% end_scope_css %}
+  </style>
+{% end_require_css %}

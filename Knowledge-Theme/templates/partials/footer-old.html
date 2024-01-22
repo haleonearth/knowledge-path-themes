@@ -1,0 +1,249 @@
+<!--
+  templateType: global_partial
+  label: Page Footer
+-->
+<div class="footer px-0">
+  {% module "footer" path="../../modules/footer", label="Footer",
+    columns=[ {
+          "add_a_custom_width" : true,
+          "add_border_column" : false,
+          "add_copyright" : false,
+          "add_form" : false,
+          "add_logo" : true,
+          "add_menu" : false,
+          "add_social_icons" : true,
+          "add_text" : true,
+          "color_field" : { },
+          "form_field" : {
+            "form_id" : "",
+            "form_type" : "HUBSPOT",
+            "message" : "Thanks for submitting the form.",
+            "response_type" : "inline"
+          },
+          "icons" : [ {
+            "icon_field" : {
+              "name" : "facebook-f",
+              "type" : "REGULAR",
+              "unicode" : "f39e"
+            },
+            "image_field" : {
+              "loading" : "lazy",
+              "size_type" : "auto",
+              "src" : ""
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon_field" : {
+              "name" : "twitter",
+              "type" : "REGULAR",
+              "unicode" : "f099"
+            },
+            "image_field" : {
+              "loading" : "lazy",
+              "size_type" : "auto",
+              "src" : ""
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon_field" : {
+              "name" : "linkedin-in",
+              "type" : "REGULAR",
+              "unicode" : "f0e1"
+            },
+            "image_field" : {
+              "loading" : "lazy",
+              "size_type" : "auto",
+              "src" : ""
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          }, {
+            "icon_field" : {
+              "name" : "instagram",
+              "type" : "REGULAR",
+              "unicode" : "f16d"
+            },
+            "image_field" : {
+              "loading" : "lazy",
+              "size_type" : "auto",
+              "src" : ""
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          } ],
+          "logo_field" : {
+            "alt" : "logo",
+            "height" : 96,
+            "override_inherited_src" : true,
+            "src" : get_asset_url('../../images/logo-horizon-dark.svg'),
+            "suppress_company_name" : true,
+            "width" : 74
+          },
+          "menus" : {
+            "choose_the_heading" : "h4",
+            "menu_field" : "",
+            "title" : "Title"
+          },
+          "select_the_border" : [ ],
+          "select_the_icon_format" : "icon",
+          "text" : '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
+          "width" : 70
+        }, {
+          "add_a_custom_width" : false,
+          "add_border_column" : false,
+          "add_copyright" : true,
+          "add_form" : false,
+          "add_logo" : false,
+          "add_menu" : false,
+          "add_social_icons" : false,
+          "add_text" : false,
+          "color_field" : { },
+          "copyright" : 'Copyright © {{ year }} <a href=\"#\">{{ company.name }}</a> . All Rights Reserved.',
+          "form_field" : {
+            "form_id" : "04132370-7f55-4cb3-8f8b-91c1fe366bf2",
+            "form_type" : "HUBSPOT",
+            "message" : "Thanks for submitting the form.",
+            "response_type" : "inline"
+          },
+          "icons" : {
+            "icon_field" : { },
+            "image_field" : {
+              "loading" : "lazy",
+              "size_type" : "auto",
+              "src" : ""
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            }
+          },
+          "logo_field" : {
+            "override_inherited_src" : false
+          },
+          "menus" : {
+            "choose_the_heading" : "h4",
+            "menu_field" : "",
+            "title" : "Title"
+          },
+          "select_the_border" : [ ],
+          "width" : 25
+        } ],
+        style={
+          "general_styles" : {
+            "background_color" : "custom",
+            "custom_background_color" : {
+              "color" : "#1F1F1F",
+              "opacity" : 100
+            },
+            "spacing" : {
+              "mobile" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 20
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 20
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 20
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 20
+                  }
+                }
+              },
+              "spacing_field" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 64
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 64
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 64
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 64
+                  }
+                }
+              },
+              "tablet" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "left" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "right" : {
+                    "units" : "px",
+                    "value" : 30
+                  },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 30
+                  }
+                }
+              }
+            },
+            "vertical_horizontal_alignment" : {
+              "horizontal_align" : "LEFT",
+              "vertical_align" : "BOTTOM"
+            }
+          },
+          "overwrite_font_colors" : {
+            "choose_the_color_paragraph" : "body"
+          },
+          "social_icons" : {
+            "background_color" : {
+              "color" : "#CCCCCC",
+              "opacity" : 0
+            },
+            "choose_the_background_color" : "custom",
+            "color_icon" : "body",
+            "size" : 32
+          }
+        }
+  %}
+</div>

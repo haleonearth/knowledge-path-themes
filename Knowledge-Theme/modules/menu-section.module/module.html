@@ -1,0 +1,216 @@
+{# MEDIA QUERY CUSTOM FOR MOBILE VERSION #}
+{% require_css %}
+<style>
+	.menu-section .menu-link {
+		text-transform: {{ theme.header.menu.text_transform }};
+		{% if theme.typography.line_height %}
+			line-height: {{ theme.header.menu.line_height_desktop }}px;
+		{% else %}
+			line-height: {{ theme.header.menu.line_height }}em;
+		{% endif %}
+		font-size: {{ theme.header.menu.size_desktop }}px;
+		letter-spacing: {{ theme.header.menu.letter_spacing }}em;
+		font-family: {{ theme.header.menu.font.font }};
+		font-weight: {{ theme.header.menu.font.styles|attr('font-weight') }};
+		color: rgba({{ theme.header.menu.link_color.color|convert_rgb if theme.header.menu.link_color.color }}, {{ theme.header.menu.link_color.opacity * 0.01 }});
+	}
+	.menu-section .menu-item:hover .menu-link { 
+		color: rgba({{ theme.header.menu.link_hover.color|convert_rgb if theme.header.menu.link_hover.color }}, {{ theme.header.menu.link_hover.opacity * 0.01 }});
+	}
+  .menu-section .menu-item:hover svg path {
+    fill: rgba({{ theme.header.menu.link_hover.color|convert_rgb if theme.header.menu.link_hover.color }}, {{ theme.header.menu.link_hover.opacity * 0.01 }});
+  }
+	.menu-section .main-menu > .menu-item:not(:first-child) {
+		margin-left: {{ theme.header.menu.space_between }}px;
+	}
+  .menu-section .main-menu .submenu > li, .menu-section .main-menu .submenu .level-2 > li a {
+    border-bottom: 2px solid rgba({{ theme.header.menu.dropdown.border_color.color|convert_rgb if theme.header.menu.dropdown.border_color.color }}, {{ theme.header.menu.dropdown.border_color.opacity * 0.01 }});;
+  }
+	.menu-section .main-menu .submenu > li:hover, .menu-section .main-menu .submenu .level-2 > li:hover a {
+    border-bottom: 2px solid rgba({{ theme.header.menu.dropdown.border_color_hover.color|convert_rgb if theme.header.menu.dropdown.border_color_hover.color }}, {{ theme.header.menu.dropdown.border_color_hover.opacity * 0.01 }});
+	}
+	.menu-section .main-menu .submenu {
+		background-color: rgba({{ theme.header.menu.dropdown.background_color.color|convert_rgb if theme.header.menu.dropdown.background_color.color }}, {{ theme.header.menu.dropdown.background_color.opacity * 0.01 }});
+	}
+	.menu-section .main-menu .level-1 .menu-link {
+		color: rgba({{ theme.header.menu.dropdown.link_color.color|convert_rgb if theme.header.menu.dropdown.link_color.color }}, {{ theme.header.menu.dropdown.link_color.opacity * 0.01 }});
+	}
+  .menu-section .main-menu .submenu .menu-item .menu-arrow svg path {
+    fill: rgba({{ theme.header.menu.dropdown.link_color.color|convert_rgb if theme.header.menu.dropdown.link_color.color }}, {{ theme.header.menu.dropdown.link_color.opacity * 0.01 }});
+  } 
+  .menu-section .main-menu .submenu .menu-item:hover,
+	.menu-section .main-menu .submenu .menu-item:focus {
+		color: rgba({{ theme.header.menu.dropdown.link_hover.color|convert_rgb if theme.header.menu.dropdown.link_hover.color }}, {{ theme.header.menu.dropdown.link_hover.opacity * 0.01 }});
+		background-color: rgba({{ theme.header.menu.dropdown.background_hover.color|convert_rgb if theme.header.menu.dropdown.background_hover.color }}, {{ theme.header.menu.dropdown.background_hover.opacity * 0.01 }});
+	}
+	.menu-section .main-menu .submenu .menu-item:hover > .menu-link ,
+	.menu-section .main-menu .submenu .menu-item:focus > .menu-link {
+		color: rgba({{ theme.header.menu.dropdown.link_hover.color|convert_rgb if theme.header.menu.dropdown.link_hover.color }}, {{ theme.header.menu.dropdown.link_hover.opacity * 0.01 }});
+	}
+  .menu-section .main-menu .submenu .menu-item:hover > .menu-arrow svg path ,
+	.menu-section .main-menu .submenu .menu-item:focus > .menu-arrow svg path {
+    fill: rgba({{ theme.header.menu.dropdown.link_hover.color|convert_rgb if theme.header.menu.dropdown.link_hover.color }}, {{ theme.header.menu.dropdown.link_hover.opacity * 0.01 }});
+  }
+	.menu-section .menu-arrow svg path { 
+		fill: rgba({{ theme.header.menu.link_color.color|convert_rgb if theme.header.menu.link_color.color }}, {{ theme.header.menu.link_color.opacity * 0.01 }});
+	}
+  
+  .menu-section .main-menu .submenu.level-2, 
+  .menu-section .main-menu .level-2 .menu-link  {
+    background-color: rgba({{ theme.header.menu.dropdown.level_3.background_color.color|convert_rgb if theme.header.menu.dropdown.level_3.background_color.color }}, {{ theme.header.menu.dropdown.level_3.background_color.opacity * 0.01 }});
+  }
+  @media screen and (max-width: {{ theme.layout.responsive_breakpoint ~ 'px' }}){
+		.menu-section{
+			position: absolute;
+			width: 100%;
+			height: 0;
+			background: white;
+			top: 100%;
+			left: 0;
+			z-index: 3;
+			overflow: hidden;
+			transition: all ease-in-out 0.3s;
+		}
+		.menu-section .main-menu{
+			padding: 32px 0;
+			flex-direction: column;
+		}
+		.menu-section .main-menu>.menu-item:not(:first-child){
+			margin-left: 0;
+		}
+		.menu-section .menu-arrow{
+			right: 24px;
+			position: absolute;
+			top: 12px;
+		}
+		.menu-section .submenu:not(.level-1){
+			left: 0;
+			top: 0;
+		}
+    .menu-section .menu-item {
+      border-bottom: 1px solid #f8f8f8;
+    }
+		.menu-section .menu-link{
+			padding: 10px 24px;
+			display: block;
+			width: 100%;
+			font-size: 22px;
+		}
+    .menu-section .main-menu .submenu .has-submenu.menu-item .menu-link {
+      width: 100%;
+      padding: 10px 24px;
+    }
+		.menu-section :not(.main-menu) li:not(:first-child){
+			margin-top: 0;
+		}
+		.menu-section .menu-arrow svg{
+			width: 14px;
+			height: 8px;
+		}
+		.main-menu.level-0 > .has-submenu > .menu-arrow{
+      top: 12px;
+      right: 24px;
+		}
+		.menu-section .has-submenu:hover > .menu-arrow svg {
+			transform: rotate(0deg);
+		}
+		.menu-section .submenu-toggle:checked ~ .menu-arrow svg{
+			transform: rotate(-181deg);
+		}
+    .menu-section .main-menu .submenu>li {
+      padding: 0; 
+    }
+    .menu-section .main-menu .submenu>li a {
+      padding: 10px 24px;
+    }
+		.menu-section .submenu{
+			position: absolute;
+			top: -20px;
+			opacity: 0;
+			visibility: hidden;
+			transition: none;
+		}
+    
+		.menu-section .has-submenu:hover > .submenu{
+			opacity: 0;
+			visibility: hidden;
+		}
+		.menu-section .submenu-toggle:checked ~ .submenu{
+			position: relative;
+			top: 0;
+			opacity: 1;
+			visibility: visible;
+			transition: all ease-in-out 0.3s;
+		}
+		.menu-section .menu-link {			
+			{% if theme.typography.line_height %}
+				line-height: {{ theme.header.menu.line_height_tablet }}px;
+			{% endif %}
+			font-size: {{ theme.header.menu.size_tablet }}px;
+		}
+    .menu-section .main-menu .has-submenu .menu-item .submenu-toggle:checked~.submenu.level-2 {
+      margin-top: 0;
+      padding-bottom: 0;
+    }
+    .menu-section .main-menu .submenu .level-2 .menu-item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+	}
+	@media screen and (max-width: 767px){ 
+		.menu-section .menu-link {			
+			{% if theme.typography.line_height %}
+				line-height: {{ theme.header.menu.line_height_mobile }}px;
+			{% endif %}
+			font-size: {{ theme.header.menu.size_mobile }}px;
+		}
+	}
+</style>
+{% end_require_css%}
+
+{% set arrow = 
+  '<svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.98325 8.74227C8.2715 8.73261 8.5463 8.61747 8.75556 8.41872L14.6382 2.77137C14.8634 2.55497 14.9937 2.2579 15 1.94528C15.0063 1.63266 14.8882 1.33096 14.6714 1.10532C14.455 0.880094 14.1575 0.749835 13.8453 0.743953C13.5331 0.73765 13.2306 0.856144 13.0058 1.07254L7.93913 5.9333L2.8729 1.07296C2.56952 0.781349 2.13336 0.67378 1.72914 0.790593C1.32492 0.907826 1.01398 1.23137 0.91271 1.6398C0.811864 2.04822 0.936661 2.47976 1.24004 2.77137L7.1227 8.41872C7.35422 8.6389 7.66474 8.75572 7.98325 8.74227Z" fill="#323232"/>
+  </svg>' 
+%}
+{# MACROS FOR GENERATE CLASSES WITH "xmlattr" HUBL FILTER #}
+{% macro defaultItemClasses() %}
+ {{ {"class": "no-submenu menu-item"}|xmlattr }}
+{% endmacro %}
+
+{% macro childClasses() %}
+ {{ {"class": "has-submenu menu-item"}|xmlattr }}
+{% endmacro %}
+
+{% macro activeNode() %}
+ {{ {"class": "menu-link active-item", "aria-current": "page"}|xmlattr }}
+{% endmacro %}
+
+{# MACROS FOR LINK CREATION AND HIS SUBLEVELS, THESE ARE RECURSIVE FUNCTIONS THAT IF THE NODE HAS CHILDS, CREATES ANOTHER LEVEL OF NAVIGATION BETWEEN THEM #}
+{% macro renderNavigation(menuTree, level) %}
+  <ul class="{{"submenu" if level > 0 else "main-menu" }} level-{{ level }}" aria-hidden="{{ level != 0 }}">
+    {% for node in menuTree.children %}
+      {{ link(node) }}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro link(node) %}
+  <li {{ childClasses() if node.children else defaultItemClasses() }}>
+		<a class="menu-link" {% if node.linkTarget %} target="_blank" {% endif %} href="{{ node.url }}" {{ activeNode() if node.activeNode }}>{{ node.label }}</a>
+    {% if node.children %}
+		  {% set randomInt = range(0,1000)|random ~ range(0,1000)|random %}
+		  {% set linkId = "pageId-" ~ node.pageId ~ "-random-" ~ randomInt %}
+		  <input type="checkbox" id="{{ linkId }}" class="submenu-toggle">
+      <label class="menu-arrow" for="{{ linkId }}">
+        {{ arrow }}
+      </label>
+      {{ renderNavigation(node, node.level) }}
+    {% endif %}
+  </li>
+{% endmacro %}
+
+{% if module.menu %}
+	{% set menuTree = menu(module.menu)%}
+	{{ renderNavigation(menuTree, 0) }}
+{% endif %}

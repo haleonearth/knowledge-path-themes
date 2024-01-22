@@ -1,0 +1,10 @@
+{
+  "global" : false,
+  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "inline_help_text" : "This is the main navigation module for the Pillar Page Template, it has a dependency on the Pillar Page - Headline module for a correct functionality",
+  "icon" : "fontawesome-5.14.0:List:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 90956645706,
+  "label" : "Pillar Page - Index",
+  "is_available_for_new_content" : true
+}

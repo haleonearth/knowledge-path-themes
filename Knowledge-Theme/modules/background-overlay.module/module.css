@@ -1,0 +1,34 @@
+.bg-overlay-editor {
+  padding: 10px;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.bg-overlay-editor { display: none; }
+.hs-inline-edit .bg-overlay-editor { display: block; } 
+
+.bg-overlay__overlay {
+  width: 100%;
+  height: 100%;
+}
+.bg-overlay__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.dnd-section {
+  position: relative;
+}
+.bg-overlay-content {
+  position: relative;
+}
+.bg-overlay__video--mobile {
+  display: none;
+}

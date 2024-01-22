@@ -1,0 +1,61 @@
+<!--
+templateType: blog_post
+isAvailableForNewContent: true
+label: Blog Post
+-->
+
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  <div class="blog-post">
+    {% module "module_16704318033875" path="/Knowledge-Theme/modules/hero-blog-post", label="hero-blog-post" %}  
+    <section>
+      <div class="container post">
+        <div class="row">
+          <div class="col-md-12 col-lg-8 blog_post_content">
+            <div class="blog_post_redes">
+              {% module "blog-social-sharing" path="./../modules/blog-social-sharing", label="Social Sharing" %}
+            </div>
+            <div class="blog-bost__post-tags">
+              {% if content.tag_list %}
+                <h4>
+                  Tag 
+                </h4>
+                {% for tag in content.tag_list %}
+                  <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %} {% endif %}
+                {% endfor %}
+              {% endif %}
+            </div>
+            <div class="content_post">
+              <h1 class="blog-post__title mb-4 mt-5">{{ content.name }}</h1>
+              {{ content.post_body }}
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 blog_post_sidebar">
+            <div class="sidebar">
+              <h3>
+                Subscribe
+              </h3>
+              <div class="kp_container__form--sidebar">
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "21128909",
+                    formId: "216adb64-c89c-4b2a-a21d-132105090000"
+                  });
+                </script>
+              </div>
+              <div class="divider">
+              </div>
+              {% module "related-blog-posts" path="./../modules/related-blog-posts", label="Related Blog Posts" %} 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock body %}
+
