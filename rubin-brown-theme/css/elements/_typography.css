@@ -81,7 +81,7 @@ blockquote {
 
 hr {
   border: none;
-  border-bottom: 1px solid #CCC;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Image alt text */
@@ -89,4 +89,129 @@ hr {
 img {
   font-size: 0.583rem;
   word-break: normal;
+}
+
+/* Type Scaling */
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "century-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  color: #13294b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1d4f91;
+  margin: 0 0 16px;
+  overflow-wrap: normal;
+}
+
+h1 {
+  font-size: calc(5.61rem / 2);
+  line-height: 1.1;
+}
+h2 {
+  font-size: calc(4.209rem / 2);
+}
+h3 {
+  font-size: calc(1.9rem);
+}
+h4 {
+  font-size: calc(1.7rem);
+}
+h5 {
+  font-size: calc(1.5rem);
+}
+h6 {
+  font-size: calc(1.3rem);
+}
+
+small,
+.text-small {
+  font-size: 0.75rem;
+}
+.extra-small {
+  font-size: 0.563rem;
+  line-height: 1.2;
+}
+
+/* 1.333 Perfect fourth Typescale */
+@media (min-width: 675px) {
+  h1 {
+    font-size: calc(5.61rem * 0.875);
+  }
+  h2 {
+    font-size: calc(4.209rem * 0.875);
+  }
+  h3 {
+    font-size: calc(3.157rem * 0.875);
+  }
+  h4 {
+    font-size: calc(2.369rem * 0.875);
+  }
+  h5 {
+    font-size: calc(1.777rem * 0.875);
+  }
+  h6 {
+    font-size: calc(1.333rem * 0.875);
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5.61rem;
+  }
+  h2 {
+    font-size: 4.209rem;
+  }
+
+  h3 {
+    font-size: 3.157rem;
+  }
+  h4 {
+    font-size: 2.369rem;
+  }
+  h5 {
+    font-size: 1.777rem;
+  }
+  h6 {
+    font-size: 1.333rem;
+  }
+}
+
+/* Typefaces */
+
+.face-century-gothic {
+  font-family: "century-gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.face-century-gothic-italic {
+  font-family: "century-gothic", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.face-century-gothic-bold {
+  font-family: "century-gothic", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.face-century-bold-italic {
+  font-family: "century-gothic", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }

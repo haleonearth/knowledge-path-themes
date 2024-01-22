@@ -1,0 +1,40 @@
+footer .flexor {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  footer .flexor {
+    justify-content: flex-end;
+  }
+}
+
+.footer-info-cluster {
+  width: fit-content;
+}
+
+.footer-info-cluster .footer-phone {
+  color: #1d4f91;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.footer-info-cluster .footer-phone svg {
+  width: 20px;
+  fill: #1d4f91;
+  margin-right: 6px;
+}
+.footer-info-cluster .footer-phone span {
+  color: #1d4f91;
+  font-weight: 700;
+}
+.footer-info-cluster .cpa-line {
+  color: #a45a2a;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.footer-info-cluster .ranked-line {
+  color: #13294b;
+  line-height: 1.2;
+}

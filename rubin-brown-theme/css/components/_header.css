@@ -78,7 +78,7 @@
   display: flex;
   height: auto;
   margin-right: auto;
-  max-width: 200px;
+  max-width: 300px;
   overflow: hidden;
 }
 
@@ -471,4 +471,11 @@
   .header__close--toggle.show {
     display: block;
   }
+}
+
+
+.pointless-aw-box {
+    background-color: #13294b;
+    height: 32px;
+    margin-bottom: 25px;
 }
