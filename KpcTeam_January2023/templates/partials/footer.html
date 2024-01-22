@@ -3,21 +3,53 @@ templateType: global_partial
 label: Footer
 -->
 <footer class="footer">
+  <div class="container_form">
+    <div class="wrap_form">
+      <script
+        charset="utf-8"
+        type="text/javascript"
+        src="//js.hsforms.net/forms/embed/v2.js"
+      ></script>
+      <script>
+        hbspt.forms.create({
+          region: "na1",
+          portalId: "21128909",
+          formId: "fe3ad772-eede-42dc-b464-9fea72049585",
+        });
+      </script>
+    </div>
+  </div>
   <div class="back-to-top"></div>
   <div class="footer-top">
     <div class="container">
-      {% menu "footer_menu" id=98212630388,  overrideable=True, root_type='site_root', flyouts='true', max_levels='2', label='Menu' %}
+      {% menu "footer_menu" id=98212630388, overrideable=True,
+      root_type='site_root', flyouts='true', max_levels='2', label='Menu' %}
+      <div class="container_links-social">
+        <a
+          class="link_social"
+          href="https://www.linkedin.com/company/knowledgepath-consulting/"
+          target="_blank"
+          ><img
+            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/social-icons/icon-social-linkedin-whiite.svg"
+            alt="linkedin icon"
+        /></a>
+        <a
+          class="link_social"
+          href="https://twitter.com/KPC_Team"
+          target="_blank"
+          ><img
+            src="https://5357708.fs1.hubspotusercontent-na1.net/hubfs/5357708/gx/social-icons/gx-icon-social-x-twitter-white-1.svg"
+            alt="x twitter icon"
+        /></a>
+      </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="container">
       {% module_block module 'footer_copyright_text' path='@hubspot/text'
-        label='Copyright Text'
-      %}
-      {% module_attribute 'value' %}
+      label='Copyright Text' %} {% module_attribute 'value' %}
       <p>© Copyright KnowledgePath. All Rights Reserved.</p>
-      {% end_module_attribute %}
-      {% end_module_block %}
+      {% end_module_attribute %} {% end_module_block %}
     </div>
   </div>
 </footer>
